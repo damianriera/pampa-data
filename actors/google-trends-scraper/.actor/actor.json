@@ -13,5 +13,6 @@
         "dataset": "./dataset_schema.json"
     },
     "dockerfile": "./Dockerfile",
-    "defaultMemoryMbytes": 256
+    "defaultMemoryMbytes": 256,
+    "output": "./output_schema.json"
 }

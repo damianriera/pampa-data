@@ -1,0 +1,29 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Google Trends Scraper output",
+    "properties": {
+        "exploreResults": {
+            "type": "string",
+            "title": "Explore results",
+            "description": "One item per search term or comparison: interest over time, by region, related queries and topics.",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+        },
+        "trendingNow": {
+            "type": "string",
+            "title": "Trending Now",
+            "description": "One item per trending search, with approximate traffic and news links.",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=trendingNow"
+        },
+        "allResults": {
+            "type": "string",
+            "title": "All results (full JSON)",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        },
+        "failedTargets": {
+            "type": "string",
+            "title": "Failed terms",
+            "description": "Terms or countries that could not be scraped after all retries (not charged).",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/FAILED"
+        }
+    }
+}
