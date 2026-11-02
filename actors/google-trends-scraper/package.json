@@ -1,0 +1,24 @@
+{
+  "name": "google-trends-scraper",
+  "version": "0.1.0",
+  "description": "Reliable Google Trends scraper: interest over time, interest by region, related queries and topics, and Trending Now.",
+  "type": "module",
+  "main": "src/main.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node --test test/*.test.js",
+    "test:live": "LIVE=1 node --test test/live.test.js"
+  },
+  "author": "pampa-data",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "apify": "^3.7.2",
+    "crawlee": "^3.18.2",
+    "got-scraping": "^4.2.2",
+    "tough-cookie": "^6.0.2"
+  }
+}

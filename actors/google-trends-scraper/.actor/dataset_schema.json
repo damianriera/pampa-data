@@ -1,0 +1,65 @@
+{
+    "actorSpecification": 1,
+    "fields": {
+        "type": "object",
+        "properties": {
+            "type": { "type": "string", "enum": ["explore", "trendingNow"] },
+            "searchTerms": { "type": "array", "items": { "type": "string" } },
+            "geo": { "type": "string" },
+            "timeRange": { "type": "string" },
+            "category": { "type": "integer" },
+            "searchProperty": { "type": "string" },
+            "interestOverTime": { "type": "object" },
+            "interestByRegion": { "type": "object" },
+            "relatedQueries": { "type": "object" },
+            "relatedTopics": { "type": "object" },
+            "exploreUrl": { "type": ["string", "null"] },
+            "rank": { "type": "integer" },
+            "title": { "type": ["string", "null"] },
+            "approxTraffic": { "type": ["string", "null"] },
+            "approxTrafficNumber": { "type": ["integer", "null"] },
+            "publishedAt": { "type": ["string", "null"] },
+            "newsItems": { "type": "array" },
+            "scrapedAt": { "type": "string" }
+        }
+    },
+    "views": {
+        "overview": {
+            "title": "Explore results",
+            "transformation": {
+                "fields": ["searchTerms", "geo", "timeRange", "searchProperty", "interestOverTime.averages", "exploreUrl", "scrapedAt"],
+                "flatten": ["interestOverTime"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "searchTerms": { "label": "Search terms", "format": "array" },
+                    "geo": { "label": "Location", "format": "text" },
+                    "timeRange": { "label": "Time range", "format": "text" },
+                    "searchProperty": { "label": "Search type", "format": "text" },
+                    "interestOverTime.averages": { "label": "Average interest", "format": "object" },
+                    "exploreUrl": { "label": "Open in Google Trends", "format": "link" },
+                    "scrapedAt": { "label": "Scraped at", "format": "date" }
+                }
+            }
+        },
+        "trendingNow": {
+            "title": "Trending Now",
+            "transformation": {
+                "fields": ["geo", "rank", "title", "approxTraffic", "publishedAt", "picture", "exploreUrl"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "geo": { "label": "Country", "format": "text" },
+                    "rank": { "label": "Rank", "format": "number" },
+                    "title": { "label": "Trending search", "format": "text" },
+                    "approxTraffic": { "label": "Searches", "format": "text" },
+                    "publishedAt": { "label": "Started", "format": "date" },
+                    "picture": { "label": "Image", "format": "image" },
+                    "exploreUrl": { "label": "Open in Google Trends", "format": "link" }
+                }
+            }
+        }
+    }
+}

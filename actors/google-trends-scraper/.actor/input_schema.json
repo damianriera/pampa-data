@@ -1,0 +1,216 @@
+{
+    "title": "Google Trends Scraper input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "mode": {
+            "title": "What to scrape",
+            "type": "string",
+            "description": "<b>Explore</b> returns interest over time, by region, and related queries/topics for your search terms. <b>Trending Now</b> returns today's trending searches for one or more countries.",
+            "editor": "select",
+            "enum": [
+                "explore",
+                "trendingNow"
+            ],
+            "enumTitles": [
+                "Explore search terms",
+                "Trending Now (daily trending searches)"
+            ],
+            "default": "explore"
+        },
+        "searchTerms": {
+            "title": "Search terms",
+            "type": "array",
+            "description": "One line per result. Put up to 5 terms on one line, separated by commas, to compare them on the same scale (e.g. <code>bitcoin, ethereum</code>). Each line is one dataset item.",
+            "editor": "stringList",
+            "prefill": [
+                "yerba mate",
+                "bitcoin, ethereum"
+            ]
+        },
+        "geo": {
+            "title": "Location",
+            "type": "string",
+            "description": "Country code (<code>US</code>, <code>AR</code>, <code>DE</code>) or region code (<code>US-CA</code>, <code>AR-B</code>). Leave empty for worldwide.",
+            "editor": "textfield",
+            "default": ""
+        },
+        "timeRange": {
+            "title": "Time range",
+            "type": "string",
+            "description": "Preset time range. Ignored if a custom time range is set.",
+            "editor": "select",
+            "enum": [
+                "now 1-H",
+                "now 4-H",
+                "now 1-d",
+                "now 7-d",
+                "today 1-m",
+                "today 3-m",
+                "today 12-m",
+                "today 5-y",
+                "all"
+            ],
+            "enumTitles": [
+                "Past hour",
+                "Past 4 hours",
+                "Past day",
+                "Past 7 days",
+                "Past 30 days",
+                "Past 90 days",
+                "Past 12 months",
+                "Past 5 years",
+                "2004 to present"
+            ],
+            "default": "today 12-m"
+        },
+        "customTimeRange": {
+            "title": "Custom time range",
+            "type": "string",
+            "description": "Optional. Two dates separated by a space: <code>2024-01-01 2024-06-30</code>. Overrides the preset time range.",
+            "editor": "textfield"
+        },
+        "searchProperty": {
+            "title": "Search type",
+            "type": "string",
+            "description": "Which Google property to measure.",
+            "editor": "select",
+            "enum": [
+                "web",
+                "images",
+                "news",
+                "youtube",
+                "shopping"
+            ],
+            "enumTitles": [
+                "Web search",
+                "Image search",
+                "News search",
+                "YouTube search",
+                "Google Shopping"
+            ],
+            "default": "web"
+        },
+        "category": {
+            "title": "Category ID",
+            "type": "integer",
+            "description": "Google Trends category ID, e.g. 0 = all categories, 7 = Finance, 71 = Food & Drink, 958 = Jobs. You can read the ID from the <code>cat=</code> parameter of a Trends URL.",
+            "minimum": 0,
+            "default": 0
+        },
+        "includeInterestOverTime": {
+            "title": "Interest over time",
+            "type": "boolean",
+            "description": "Timeline of search interest (0-100).",
+            "default": true,
+            "sectionCaption": "Data to include"
+        },
+        "includeInterestByRegion": {
+            "title": "Interest by region",
+            "type": "boolean",
+            "description": "Search interest per country, region, city or metro.",
+            "default": true
+        },
+        "regionResolution": {
+            "title": "Region level",
+            "type": "string",
+            "description": "Level of detail for interest by region. Auto = countries for worldwide, regions/states for a country. Metro (DMA) works only for the US.",
+            "editor": "select",
+            "enum": [
+                "AUTO",
+                "COUNTRY",
+                "REGION",
+                "CITY",
+                "DMA"
+            ],
+            "enumTitles": [
+                "Auto",
+                "Country",
+                "Region / state",
+                "City",
+                "Metro area (US only)"
+            ],
+            "default": "AUTO"
+        },
+        "includeLowVolumeRegions": {
+            "title": "Include low-volume regions",
+            "type": "boolean",
+            "description": "Also return regions with low search volume.",
+            "default": false
+        },
+        "includeRelatedQueries": {
+            "title": "Related queries",
+            "type": "boolean",
+            "description": "Top and rising related search queries for each term.",
+            "default": true
+        },
+        "includeRelatedTopics": {
+            "title": "Related topics",
+            "type": "boolean",
+            "description": "Top and rising related topics for each term. Off by default: Google currently returns empty topic lists for most automated requests, so this often adds requests without adding data.",
+            "default": false
+        },
+        "trendingGeos": {
+            "title": "Trending Now countries",
+            "type": "array",
+            "description": "Only for Trending Now mode. Country codes, e.g. <code>US</code>, <code>AR</code>, <code>GB</code>. Defaults to the Location field, or US.",
+            "editor": "stringList",
+            "sectionCaption": "Trending Now",
+            "prefill": [
+                "US"
+            ]
+        },
+        "maxTrendingItems": {
+            "title": "Max trending searches per country",
+            "type": "integer",
+            "description": "0 = all items in the feed.",
+            "minimum": 0,
+            "default": 0
+        },
+        "language": {
+            "title": "Language",
+            "type": "string",
+            "description": "Language for names of regions and topics, e.g. <code>en-US</code>, <code>es-AR</code>.",
+            "editor": "textfield",
+            "default": "en-US",
+            "sectionCaption": "Advanced"
+        },
+        "timezoneOffset": {
+            "title": "Timezone offset (minutes)",
+            "type": "integer",
+            "description": "Minutes behind UTC, as Google expects it: 0 = UTC, 180 = UTC-3 (Buenos Aires), 300 = UTC-5 (New York, standard time), -60 = UTC+1.",
+            "minimum": -840,
+            "maximum": 840,
+            "default": 0
+        },
+        "maxConcurrency": {
+            "title": "Max concurrency",
+            "type": "integer",
+            "description": "How many terms to scrape in parallel. Keep it low to avoid Google rate limits.",
+            "minimum": 1,
+            "maximum": 10,
+            "default": 3
+        },
+        "maxRetries": {
+            "title": "Max retries",
+            "type": "integer",
+            "description": "Retries per term when Google rate-limits a request. Each retry uses a new proxy session and waits longer.",
+            "minimum": 0,
+            "maximum": 20,
+            "default": 8
+        },
+        "proxyConfiguration": {
+            "title": "Proxy configuration",
+            "type": "object",
+            "description": "Google rate-limits shared IPs. The default Apify Proxy works for most runs; switch to the RESIDENTIAL group if you see many retries.",
+            "editor": "proxy",
+            "prefill": {
+                "useApifyProxy": true
+            },
+            "default": {
+                "useApifyProxy": true
+            }
+        }
+    },
+    "required": []
+}

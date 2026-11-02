@@ -1,0 +1,18 @@
+{
+    "actorSpecification": 1,
+    "name": "google-trends-scraper",
+    "title": "Google Trends Scraper",
+    "description": "Get Google Trends data as clean JSON: interest over time, interest by region, related queries and topics for up to 5 compared terms, plus daily Trending Now searches for any country.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "meta": {
+        "templateId": "js-crawlee-basic"
+    },
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "./Dockerfile",
+    "defaultMemoryMbytes": 256,
+    "output": "./output_schema.json"
+}
