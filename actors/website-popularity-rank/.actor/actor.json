@@ -1,0 +1,15 @@
+{
+    "actorSpecification": 1,
+    "name": "website-popularity-rank",
+    "title": "Website Popularity Rank Checker",
+    "description": "Check the popularity rank of thousands of websites at once: Tranco top 1M rank, daily history for the last month, trend, and optional homepage title, status and language. A free-data alternative to Similarweb rank checks.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "./Dockerfile",
+    "defaultMemoryMbytes": 256,
+    "output": "./output_schema.json"
+}

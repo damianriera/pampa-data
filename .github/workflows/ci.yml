@@ -6,11 +6,22 @@ on:
   pull_request:
 
 jobs:
+  list-actors:
+    runs-on: ubuntu-latest
+    outputs:
+      actors: ${{ steps.list.outputs.actors }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: list
+        run: echo "actors=$(ls -d actors/*/ | xargs -n1 basename | jq -R . | jq -cs .)" >> "$GITHUB_OUTPUT"
+
   test:
+    needs: list-actors
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        actor: [google-trends-scraper]
+        actor: ${{ fromJson(needs.list-actors.outputs.actors) }}
     defaults:
       run:
         working-directory: actors/${{ matrix.actor }}

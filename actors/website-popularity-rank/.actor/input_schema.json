@@ -1,0 +1,36 @@
+{
+    "title": "Website Popularity Rank Checker",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "domains": {
+            "title": "Domains or URLs",
+            "type": "array",
+            "description": "Websites to check, one per line. Full URLs and subdomains are fine: they are reduced to the registrable domain (docs.github.com becomes github.com). Up to 10,000 per run.",
+            "editor": "stringList",
+            "prefill": ["github.com", "mercadolibre.com.ar", "bbc.co.uk"]
+        },
+        "includeHistory": {
+            "title": "Include rank history and trend",
+            "type": "boolean",
+            "description": "Adds the daily rank for about the last month, best/worst/average rank, 7- and 30-day change and a rising/falling/stable trend. The history source allows about one domain per second, so large lists take longer.",
+            "default": true
+        },
+        "includeSiteInfo": {
+            "title": "Include homepage info",
+            "type": "boolean",
+            "description": "Visits each homepage once and adds HTTP status, final URL, HTTPS, server, response time, title, meta description and language.",
+            "default": false
+        },
+        "maxConcurrency": {
+            "title": "Parallel homepage checks",
+            "type": "integer",
+            "description": "How many homepages to check at the same time when homepage info is on.",
+            "default": 5,
+            "minimum": 1,
+            "maximum": 20,
+            "sectionCaption": "Advanced"
+        }
+    },
+    "required": ["domains"]
+}
