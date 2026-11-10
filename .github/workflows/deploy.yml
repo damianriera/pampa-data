@@ -1,0 +1,68 @@
+name: Deploy
+
+# After a merge to main, push every Actor whose folder changed to Apify and build it.
+# Needs the repository secret APIFY_TOKEN. Without it the job only logs a notice.
+
+on:
+  push:
+    branches: [main]
+    paths: ['actors/**']
+  workflow_dispatch:
+    inputs:
+      actor:
+        description: Actor folder to deploy (empty = all)
+        required: false
+
+concurrency: deploy
+
+jobs:
+  changed:
+    runs-on: ubuntu-latest
+    outputs:
+      actors: ${{ steps.diff.outputs.actors }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - id: diff
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            if [ -n "${{ inputs.actor }}" ]; then list="${{ inputs.actor }}"; else list=$(ls -d actors/*/ | xargs -n1 basename); fi
+          else
+            list=$(git diff --name-only HEAD~1 HEAD -- actors | cut -d/ -f2 | sort -u)
+          fi
+          json=$(for a in $list; do [ -f "actors/$a/.actor/actor.json" ] && echo "$a"; done | jq -R . | jq -cs .)
+          echo "actors=$json" >> "$GITHUB_OUTPUT"
+          echo "Actors to deploy: $json"
+
+  deploy:
+    needs: changed
+    if: needs.changed.outputs.actors != '[]'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        actor: ${{ fromJson(needs.changed.outputs.actors) }}
+    defaults:
+      run:
+        working-directory: actors/${{ matrix.actor }}
+    env:
+      APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check token
+        id: token
+        run: |
+          if [ -z "$APIFY_TOKEN" ]; then
+            echo "::notice::APIFY_TOKEN secret is not set; skipping deploy of ${{ matrix.actor }}."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Push and build on Apify
+        if: steps.token.outputs.ok == 'true'
+        run: npx --yes apify-cli@1 push --force

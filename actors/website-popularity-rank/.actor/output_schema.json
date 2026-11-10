@@ -1,0 +1,28 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Website Popularity Rank Checker output",
+    "properties": {
+        "overview": {
+            "type": "string",
+            "title": "Ranks and trends",
+            "description": "One item per domain: Tranco rank, tier, history summary and trend.",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+        },
+        "site": {
+            "type": "string",
+            "title": "Homepage info",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=site"
+        },
+        "allResults": {
+            "type": "string",
+            "title": "All results (full JSON, with daily history)",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        },
+        "invalidInputs": {
+            "type": "string",
+            "title": "Skipped inputs",
+            "description": "Values that are not valid public domains (not charged).",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/FAILED"
+        }
+    }
+}

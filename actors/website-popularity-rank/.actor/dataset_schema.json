@@ -1,0 +1,48 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": ["domain", "rank", "tier", "trend", "change7d", "change30d", "bestRank", "worstRank", "listDate"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "domain": { "label": "Domain", "format": "text" },
+                    "rank": { "label": "Rank (top 1M)", "format": "number" },
+                    "tier": { "label": "Tier", "format": "text" },
+                    "trend": { "label": "Trend", "format": "text" },
+                    "change7d": { "label": "Places gained, 7 days", "format": "number" },
+                    "change30d": { "label": "Places gained, 30 days", "format": "number" },
+                    "bestRank": { "label": "Best rank", "format": "number" },
+                    "worstRank": { "label": "Worst rank", "format": "number" },
+                    "listDate": { "label": "List date", "format": "text" }
+                }
+            }
+        },
+        "site": {
+            "title": "Homepage info",
+            "transformation": {
+                "fields": ["domain", "rank", "site.reachable", "site.statusCode", "site.finalUrl", "site.title", "site.description", "site.language", "site.server", "site.responseTimeMs"],
+                "flatten": ["site"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "domain": { "label": "Domain", "format": "text" },
+                    "rank": { "label": "Rank", "format": "number" },
+                    "site.reachable": { "label": "Reachable", "format": "boolean" },
+                    "site.statusCode": { "label": "Status", "format": "number" },
+                    "site.finalUrl": { "label": "Final URL", "format": "link" },
+                    "site.title": { "label": "Title", "format": "text" },
+                    "site.description": { "label": "Description", "format": "text" },
+                    "site.language": { "label": "Language", "format": "text" },
+                    "site.server": { "label": "Server", "format": "text" },
+                    "site.responseTimeMs": { "label": "Response time (ms)", "format": "number" }
+                }
+            }
+        }
+    }
+}
