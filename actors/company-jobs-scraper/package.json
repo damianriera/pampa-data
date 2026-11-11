@@ -1,0 +1,21 @@
+{
+  "name": "company-jobs-scraper",
+  "version": "0.1.0",
+  "description": "All open jobs of any company from its public Greenhouse, Lever, Ashby or Workday career board, in one normalized schema.",
+  "type": "module",
+  "main": "src/main.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node --test test/*.test.js",
+    "test:live": "LIVE=1 node --test test/live.test.js"
+  },
+  "author": "pampa-data",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "apify": "^3.7.2"
+  }
+}

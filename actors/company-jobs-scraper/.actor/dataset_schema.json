@@ -1,0 +1,46 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Jobs",
+            "transformation": {
+                "fields": ["company", "title", "department", "location", "workplaceType", "employmentType", "salaryText", "postedAt", "url", "ats"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "company": { "label": "Company", "format": "text" },
+                    "title": { "label": "Title", "format": "text" },
+                    "department": { "label": "Department", "format": "text" },
+                    "location": { "label": "Location", "format": "text" },
+                    "workplaceType": { "label": "Workplace", "format": "text" },
+                    "employmentType": { "label": "Type", "format": "text" },
+                    "salaryText": { "label": "Salary", "format": "text" },
+                    "postedAt": { "label": "Posted", "format": "date" },
+                    "url": { "label": "Job page", "format": "link" },
+                    "ats": { "label": "Source", "format": "text" }
+                }
+            }
+        },
+        "salary": {
+            "title": "Salary",
+            "transformation": {
+                "fields": ["company", "title", "location", "salaryMin", "salaryMax", "salaryCurrency", "salaryInterval", "url"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "company": { "label": "Company", "format": "text" },
+                    "title": { "label": "Title", "format": "text" },
+                    "location": { "label": "Location", "format": "text" },
+                    "salaryMin": { "label": "Min", "format": "number" },
+                    "salaryMax": { "label": "Max", "format": "number" },
+                    "salaryCurrency": { "label": "Currency", "format": "text" },
+                    "salaryInterval": { "label": "Per", "format": "text" },
+                    "url": { "label": "Job page", "format": "link" }
+                }
+            }
+        }
+    }
+}
