@@ -58,3 +58,4 @@ You pay per domain in the results, including domains that are not in the top 1M 
 ### Related Actors
 
 - [Google Trends Scraper](https://apify.com/pampa-data/google-trends-scraper): search interest over time for keywords and brands.
+- [Company Jobs Scraper](https://apify.com/pampa-data/company-jobs-scraper): open jobs of the companies behind the domains you check, from Greenhouse, Lever, Ashby and Workday.

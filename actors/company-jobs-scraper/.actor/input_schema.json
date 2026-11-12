@@ -1,0 +1,62 @@
+{
+    "title": "Company Jobs Scraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "companies": {
+            "title": "Companies (career page URLs or board names)",
+            "type": "array",
+            "description": "One per line. Paste a career page URL from Greenhouse (boards.greenhouse.io/airbnb), Lever (jobs.lever.co/spotify), Ashby (jobs.ashbyhq.com/ramp) or Workday (nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite). You can also write ats:name (greenhouse:stripe) or just the board name (stripe), which is tried on Greenhouse, Lever and Ashby. Up to 500 per run.",
+            "editor": "stringList",
+            "prefill": ["https://boards.greenhouse.io/airbnb", "https://jobs.lever.co/spotify", "https://jobs.ashbyhq.com/ramp"]
+        },
+        "keywords": {
+            "title": "Job title keywords",
+            "type": "array",
+            "description": "Keep only jobs whose title contains at least one of these words (not case-sensitive). Leave empty for all jobs.",
+            "editor": "stringList",
+            "prefill": ["engineer"]
+        },
+        "excludeKeywords": {
+            "title": "Exclude title keywords",
+            "type": "array",
+            "description": "Drop jobs whose title contains any of these words, for example intern or senior.",
+            "editor": "stringList"
+        },
+        "locations": {
+            "title": "Locations",
+            "type": "array",
+            "description": "Keep only jobs whose location or country contains one of these, for example London, Germany or Remote.",
+            "editor": "stringList"
+        },
+        "remoteOnly": {
+            "title": "Remote jobs only",
+            "type": "boolean",
+            "description": "Keep only jobs the company marks as remote.",
+            "default": false
+        },
+        "postedWithinDays": {
+            "title": "Posted within the last N days",
+            "type": "integer",
+            "description": "Keep only jobs posted in the last N days. Leave empty or 0 for all.",
+            "minimum": 0,
+            "maximum": 3650
+        },
+        "includeDescription": {
+            "title": "Include full job description",
+            "type": "boolean",
+            "description": "Adds the job description as plain text. Makes results much larger.",
+            "default": false
+        },
+        "maxJobsPerCompany": {
+            "title": "Max jobs per company",
+            "type": "integer",
+            "description": "Newest jobs first. 0 means no limit.",
+            "default": 0,
+            "minimum": 0,
+            "maximum": 100000,
+            "sectionCaption": "Limits"
+        }
+    },
+    "required": ["companies"]
+}

@@ -1,0 +1,15 @@
+{
+    "actorSpecification": 1,
+    "name": "company-jobs-scraper",
+    "title": "Company Jobs Scraper (Greenhouse, Lever, Ashby, Workday)",
+    "description": "Get every open job of any company from its public Greenhouse, Lever, Ashby or Workday career page, in one clean schema: title, department, location, remote, salary when published, posted date and apply link. Filter by keyword, location, remote and date.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "./Dockerfile",
+    "defaultMemoryMbytes": 256,
+    "output": "./output_schema.json"
+}
