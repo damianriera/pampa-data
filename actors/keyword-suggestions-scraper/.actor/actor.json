@@ -1,0 +1,15 @@
+{
+    "actorSpecification": 1,
+    "name": "keyword-suggestions-scraper",
+    "title": "Keyword Suggestions Scraper (Google, YouTube, Bing Autocomplete)",
+    "description": "Get autocomplete keyword suggestions from Google, YouTube and Bing in one run, for any language and country. Expand each seed keyword with A to Z, question words, prepositions or your own modifiers to find hundreds of long-tail keywords for SEO, ads and content ideas.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "./Dockerfile",
+    "defaultMemoryMbytes": 256,
+    "output": "./output_schema.json"
+}
