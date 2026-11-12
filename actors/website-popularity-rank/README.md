@@ -47,6 +47,8 @@ The rank lookup for 10,000 domains takes well under a minute. History adds about
 
 ### Pricing
 
+**$0.001 per domain, which is $1 per 1,000 domains**. There is no start fee. Checking a list of 10,000 domains costs about $10, and Apify's free plan credit of $5 a month covers about 5,000 domains.
+
 You pay per domain in the results, including domains that are not in the top 1M (knowing that is part of the answer). Invalid values such as `not a domain` are skipped, listed in the `FAILED` record, and not charged. Set a maximum cost per run in Apify and the Actor stops cleanly when it is reached.
 
 ### Limits
@@ -54,6 +56,14 @@ You pay per domain in the results, including domains that are not in the top 1M 
 - Only the top 1 million sites have a rank. Small or new sites show `Not in top 1M`.
 - Ranks are per registrable domain, so subdomains share their parent's rank.
 - Homepage info is a single request to the homepage; sites that block bots may show an error there, while the rank is still returned.
+
+### FAQ
+
+**Is this an Alexa Rank alternative?** Yes. Alexa Rank was shut down in 2022. Tranco gives a similar "how popular is this site" number for the top 1 million domains, and it is free to cite and reproducible by list ID.
+
+**Does it show monthly visits like Similarweb?** No. Tranco ranks sites by popularity and does not publish visit counts. Use the rank and tier to sort, filter and compare sites; a lower rank number means a more popular site.
+
+**Can I check a CSV or Google Sheet of domains?** Yes. Paste the column into the domains field, or start the Actor from the API, Make, Zapier or n8n with your list. URLs, subdomains and `www.` prefixes are cleaned for you.
 
 ### Related Actors
 
