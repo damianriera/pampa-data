@@ -1,0 +1,88 @@
+{
+    "title": "Keyword Suggestions Scraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "keywords": {
+            "title": "Seed keywords",
+            "type": "array",
+            "description": "One per line. Each keyword is typed into the search boxes of the selected sources and every autocomplete suggestion is returned. Up to 1,000 per run.",
+            "editor": "stringList",
+            "prefill": ["coffee maker", "project management software"]
+        },
+        "sources": {
+            "title": "Sources",
+            "type": "array",
+            "description": "Where to get suggestions from. Default: all three.",
+            "editor": "select",
+            "items": {
+                "type": "string",
+                "enum": ["google", "youtube", "bing"],
+                "enumTitles": ["Google Search", "YouTube", "Bing"]
+            },
+            "default": ["google", "youtube", "bing"]
+        },
+        "language": {
+            "title": "Language",
+            "type": "string",
+            "description": "Language code of the suggestions, for example en, es, pt-BR, de or fr. It also picks the question words and prepositions used for expansion.",
+            "editor": "textfield",
+            "default": "en"
+        },
+        "country": {
+            "title": "Country",
+            "type": "string",
+            "description": "Two-letter country code, for example us, gb, ar, br or de. Leave empty for no country.",
+            "editor": "textfield",
+            "default": "us"
+        },
+        "expandAlphabet": {
+            "title": "A to Z expansion",
+            "type": "boolean",
+            "description": "Also query \"keyword a\" to \"keyword z\". About 27 times more suggestions per keyword and source.",
+            "default": false,
+            "sectionCaption": "Expansion (more long-tail keywords)"
+        },
+        "expandQuestions": {
+            "title": "Question expansion",
+            "type": "boolean",
+            "description": "Also query question words before the keyword (how, what, why, where, can, is...), in the chosen language. English, Spanish, Portuguese, French, German and Italian are supported; other languages use English.",
+            "default": false
+        },
+        "expandPrepositions": {
+            "title": "Preposition expansion",
+            "type": "boolean",
+            "description": "Also query the keyword followed by for, with, without, vs, near, to... in the chosen language.",
+            "default": false
+        },
+        "customModifiers": {
+            "title": "Custom modifiers",
+            "type": "array",
+            "description": "Your own words to add after each keyword (price, review, 2026). Use {keyword} to place the keyword yourself, for example best {keyword} or {keyword} alternative.",
+            "editor": "stringList"
+        },
+        "includeSeedKeyword": {
+            "title": "Include the seed keyword itself",
+            "type": "boolean",
+            "description": "Keep the suggestion that is exactly the seed keyword. Off by default so you only pay for new keywords.",
+            "default": false,
+            "sectionCaption": "Results and limits"
+        },
+        "maxSuggestionsPerKeyword": {
+            "title": "Max suggestions per keyword and source",
+            "type": "integer",
+            "description": "Stops collecting once this many unique suggestions were found for a keyword on a source. 0 means no limit.",
+            "default": 0,
+            "minimum": 0,
+            "maximum": 100000
+        },
+        "proxyConfiguration": {
+            "title": "Proxy",
+            "type": "object",
+            "description": "Not needed for normal runs. Turn it on only if a source starts answering with errors on very large runs.",
+            "editor": "proxy",
+            "default": { "useApifyProxy": false }
+        }
+    },
+    "required": ["keywords"]
+}

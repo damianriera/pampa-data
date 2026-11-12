@@ -1,0 +1,29 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Keyword Suggestions Scraper output",
+    "properties": {
+        "overview": {
+            "type": "string",
+            "title": "Suggestions",
+            "description": "One item per unique suggestion for each seed keyword and source.",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+        },
+        "allResults": {
+            "type": "string",
+            "title": "All results (full JSON)",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        },
+        "summary": {
+            "type": "string",
+            "title": "Per-keyword summary",
+            "description": "Queries sent and unique suggestions found for each keyword and source.",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/SUMMARY"
+        },
+        "failedInputs": {
+            "type": "string",
+            "title": "Failures",
+            "description": "Keywords and sources whose requests failed (not charged).",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/FAILED"
+        }
+    }
+}

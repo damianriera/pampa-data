@@ -1,0 +1,22 @@
+{
+  "name": "keyword-suggestions-scraper",
+  "version": "0.1.0",
+  "description": "Autocomplete keyword suggestions from Google, YouTube and Bing in one run, with A to Z, question and custom modifier expansion.",
+  "type": "module",
+  "main": "src/main.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node --test test/*.test.js",
+    "test:live": "LIVE=1 node --test test/live.test.js"
+  },
+  "author": "pampa-data",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "apify": "^3.7.2",
+    "got-scraping": "^4.2.2"
+  }
+}

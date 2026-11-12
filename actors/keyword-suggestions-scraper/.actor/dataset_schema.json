@@ -1,0 +1,25 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Suggestions",
+            "transformation": {
+                "fields": ["keyword", "source", "suggestion", "position", "query", "wordCount", "language", "country"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "keyword": { "label": "Seed keyword", "format": "text" },
+                    "source": { "label": "Source", "format": "text" },
+                    "suggestion": { "label": "Suggestion", "format": "text" },
+                    "position": { "label": "Position", "format": "number" },
+                    "query": { "label": "Typed query", "format": "text" },
+                    "wordCount": { "label": "Words", "format": "number" },
+                    "language": { "label": "Language", "format": "text" },
+                    "country": { "label": "Country", "format": "text" }
+                }
+            }
+        }
+    }
+}
