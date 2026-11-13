@@ -17,13 +17,6 @@ _Approved by Damián on 2026-11-10, in build order._
 - Access: public suggest endpoints (`suggestqueries.google.com`, `ds=yt` for YouTube, `completion.amazon.com`, `api.bing.com/osjson.aspx`) all 200 to plain requests. Caveat: unofficial endpoints, same risk level as Google Trends.
 - Suggested price: $0.0005 per suggestion. Expected users: 25 to 40 per month.
 
-### 2. Domain Availability and WHOIS Checker (RDAP)
-- What: bulk check whether domains are registered, plus registrar, creation and expiry dates, status and nameservers, from official RDAP servers. Cross-sells with our Website Popularity Rank Checker.
-- Scores: demand 3, competition 4, access 5, legal 5, cost 5.
-- Main competitor: bridgeworks/domain-checker, 49 users, 1.0 (1 review), free. automation-lab/domain-availability-checker has 48 users, no reviews, $0.0023/domain + $0.035 start.
-- Access: RDAP (official IANA bootstrap, `rdap.verisign.com` etc.) returned 200 for a registered and 404 for a free domain. Registrant contacts are not output.
-- Suggested price: $0.001 per domain. Expected users: 10 to 20 per month.
-
 ## Proposed
 
 _Niche Scout 2026-11-10. Scores are 1 to 5 (5 is best): demand, weak competition, access, legal safety, cost per result.
@@ -59,3 +52,4 @@ Competitor numbers are 30-day users from the Apify Store API on 2026-11-10. Rank
 | Wayback Machine snapshot scraper | web.archive.org resets connections from our cloud environment (2026-11-10). |
 | Trustpilot and Google Play review scrapers | Reviews carry reviewer names (personal data) and leaders already charge $0.0001 to $0.0006 per review (2026-11-10). |
 | YouTube transcript scraper | YouTube terms forbid automated access and it blocks datacenter IPs; would need bypassing (2026-11-10). |
+| Domain Availability and WHOIS Checker (RDAP) | RDAP answers plain requests, but Verisign's RDAP terms (.com/.net, most of the demand) forbid using the data to "enable high volume, automated, electronic processes" except as reasonably necessary to register domains. A paid bulk checker is exactly that (2026-11-13). |
