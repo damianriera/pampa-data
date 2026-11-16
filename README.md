@@ -7,6 +7,7 @@ Data tools published on the [Apify Store](https://apify.com/pampa-data) under th
 | Google Trends Scraper | [`actors/google-trends-scraper`](actors/google-trends-scraper) | Interest over time, by region, related queries/topics, and Trending Now. |
 | Website Popularity Rank Checker | [`actors/website-popularity-rank`](actors/website-popularity-rank) | Tranco top 1M rank, rank history and trend, optional homepage info, for up to 10,000 domains. |
 | Company Jobs Scraper | [`actors/company-jobs-scraper`](actors/company-jobs-scraper) | Open jobs of any company from Greenhouse, Lever, Ashby and Workday career boards, in one schema, with filters. |
+| Keyword Suggestions Scraper | [`actors/keyword-suggestions-scraper`](actors/keyword-suggestions-scraper) | Google, YouTube and Bing autocomplete suggestions with A to Z, question and custom modifier expansion. |
 
 ## Working on an Actor
 
