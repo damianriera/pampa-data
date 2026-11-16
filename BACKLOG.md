@@ -8,15 +8,6 @@ Rules for every idea: public data only, no logins, no personal data, no bypassin
 
 ## Approved
 
-_Approved by Damián on 2026-11-10, in build order._
-
-### 1. Domain Availability and WHOIS Checker (RDAP)
-- What: bulk check whether domains are registered, plus registrar, creation and expiry dates, status and nameservers, from official RDAP servers. Cross-sells with our Website Popularity Rank Checker.
-- Scores: demand 3, competition 4, access 5, legal 5, cost 5.
-- Main competitor: bridgeworks/domain-checker, 49 users, 1.0 (1 review), free. automation-lab/domain-availability-checker has 48 users, no reviews, $0.0023/domain + $0.035 start.
-- Access: RDAP (official IANA bootstrap, `rdap.verisign.com` etc.) returned 200 for a registered and 404 for a free domain. Registrant contacts are not output.
-- Suggested price: $0.001 per domain. Expected users: 10 to 20 per month.
-
 _Approved by Damián on 2026-11-16 (ideas 3 to 6 from the 2026-11-12 Scout, 8 and 9 from the 2026-11-16 Scout), in build order._
 
 ### 3. Remote Jobs Aggregator (Himalayas, Remotive, Remote OK, Arbeitnow, Jobicy)
@@ -178,3 +169,4 @@ monthly users. Scores as above (5 is best)._
 | Craigslist scraper | Plain requests work, but posts are by private people and Craigslist has sued scrapers (2026-11-12). |
 | Google Patents scraper | patents.google.com robots.txt disallows the `/xhr` search endpoint; leader has only 55 users (2026-11-12). |
 | Amazon autocomplete (part of Keyword Suggestions) | completion.amazon.com robots.txt disallows all paths and Amazon's Conditions of Use forbid robots and data extraction; the Actor ships with Google, YouTube and Bing only (2026-11-12). |
+| Domain Availability and WHOIS Checker (RDAP) | RDAP answers plain requests, but Verisign's RDAP terms (.com/.net, most of the demand) forbid using the data to "enable high volume, automated, electronic processes" except as reasonably necessary to register domains. A paid bulk checker is exactly that (2026-11-13). |
