@@ -26,6 +26,67 @@ _Approved by Damián on 2026-11-10, in build order._
 
 ## Proposed
 
+_Niche Scout 2026-11-16. Numbered 8 to 12 so they follow the 2026-11-12 batch (3 to 7, PR #7). Competitor numbers are 30-day
+users from the Apify Store API on 2026-11-16; about 70 searches checked. Ranked by expected monthly users. Scores as below
+(5 is best): demand, weak competition, access, legal safety, cost per result._
+
+### 8. SEO On-Page Audit and Metadata Checker
+- What: for a list of URLs (or a sitemap), one row per page with HTTP status, redirect chain, response time, title and
+  meta description (with lengths), canonical, robots meta and X-Robots-Tag, hreflang, H1/H2, word count, Open Graph and
+  Twitter tags, JSON-LD types, image alt coverage, internal/external link counts and a list of issues found. Cross-sells
+  with our Website Popularity Rank Checker (and the Sitemap and Tech Stack ideas if built).
+- Scores: demand 3, competition 4, access 4, legal 5, cost 4.
+- Main competitor: smart-digital/complete-seo-audit-tool, 86 users, 5.0 (4 reviews), $0.04 per page (expensive).
+  Also autofacts/metadata-scraper (31 users, 5.0 with 2 reviews, $0.005/page) and logiover/bulk-url-status-checker
+  (20 users, no reviews, $0.0025/URL).
+- Access: one plain GET per page, no browser. Pages that block plain requests are reported as failed and not charged.
+- Suggested price: $0.002 per page. Expected users: 20 to 30 per month.
+
+### 9. RSS and Atom Feed Reader (with feed discovery)
+- What: give feed URLs or plain website URLs; finds the feed (`<link rel="alternate">`, common paths), parses RSS 1/2,
+  Atom and JSON Feed, and outputs one row per item (title, link, date, author field, categories, summary, image,
+  enclosure for podcasts) with date and keyword filters and dedup across feeds. Works for blogs, news sites, Medium and
+  Substack feeds, podcasts and job boards; good for scheduled monitoring into Sheets or webhooks.
+- Scores: demand 3, competition 4, access 5, legal 5, cost 5.
+- Main competitor: santamaria-automations/rss-feed-reader, 56 users, no reviews, $0.002/item. automation-lab/rss-feed-reader
+  has 37 users, no reviews, $0.00115/item + $0.035 per start. (moving_beacon-owner1/medium-scraper, 63 users at $0.01,
+  shows extra demand for Medium, whose public `medium.com/feed/...` RSS returned 200.)
+- Access: feeds are published for machine reading; plain requests returned 200.
+- Suggested price: $0.0005 per item. Expected users: 15 to 25 per month.
+
+### 10. Shopify App Store Scraper
+- What: app listings from apps.shopify.com by category or app URL (from the public sitemap): name, developer, rating,
+  review count, pricing plans, free trial, categories, languages, "Built for Shopify" badge, launch date. No reviews
+  text, so no personal data. For app developers doing market research and agencies.
+- Scores: demand 2, competition 4, access 5, legal 4, cost 5.
+- Main competitor: applora/shopify-appstore-scraper, 40 users, 4.07 (5 reviews), $0.005/result.
+  jungle_synthesizer/shopify-app-store-scraper-2 has 2 users, 1.0 (1 review), $0.1 start + $0.002.
+- Access: app and category pages returned 200 to plain requests with JSON-LD (ratingValue, ratingCount). robots.txt
+  disallows search URLs (`*q=*`), so we use categories and the sitemap only, never search.
+- Suggested price: $0.002 per app. Expected users: 10 to 20 per month.
+
+### 11. Luma Events Scraper
+- What: public events from lu.ma by city or calendar: name, start/end with timezone, venue and coordinates (when public),
+  online/in person, ticket price range, sold out or waitlist, guest count, organizer calendar, URL. No attendee or
+  guest lists and no host personal profiles.
+- Scores: demand 3, competition 2, access 4, legal 3, cost 5.
+- Main competitor: matyascimbulka/luma-event-scraper, 40 users, 5.0 (1 review), $0.00007/event (very cheap). Others
+  are expensive: hypebridge (23 users, 1.0, $0.1 start + $0.006), aitorsm (14 users, $0.03), webdatalabs (12 users, $0.02).
+- Access: `api.lu.ma/discover/get-paginated-events` (the endpoint the site uses) returned 200 with JSON to a plain
+  request; robots.txt only disallows `/insights/`. Caveat: undocumented endpoint and we could not read Luma's terms
+  (page is rendered by JavaScript), so the Builder must check them before building.
+- Suggested price: $0.0008 per event. Expected users: 10 to 15 per month.
+
+### 12. Prediction Markets Odds Scraper (Polymarket and Kalshi)
+- What: markets and current odds from Polymarket's public Gamma API and Kalshi's public market-data API in one schema
+  (question, category, outcomes, probabilities, volume, liquidity, close date, resolution status), with keyword and
+  category filters and optional price history. Read only; no trading or wallet data.
+- Scores: demand 2, competition 4, access 5, legal 4, cost 5.
+- Main competitor: congism/polymarket-kalshi-arb-finder, 8 users, no reviews, $0.05 start + $0.002/row.
+  fatihtahta/polymarket-scraper-ppe has 6 users, $0.00099/record; logiover (3 users, $0.0025). Small but growing niche.
+- Access: `gamma-api.polymarket.com/markets` returned 200 to a plain request; both APIs are documented for public reads.
+- Suggested price: $0.001 per market. Expected users: 8 to 15 per month.
+
 _Niche Scout 2026-11-10. Scores are 1 to 5 (5 is best): demand, weak competition, access, legal safety, cost per result.
 Competitor numbers are 30-day users from the Apify Store API on 2026-11-10. Ranked by expected monthly users._
 
@@ -109,6 +170,9 @@ monthly users. Scores as above (5 is best)._
 
 | Idea | Why |
 | --- | --- |
+| Product Hunt, Kickstarter and Udemy scrapers | Good demand (Product Hunt leader 174 users, Udemy 129) but all three answer plain requests with a Cloudflare challenge (403); would need bypassing (2026-11-16). |
+| Coursera courses scraper | coursera.org robots.txt disallows `/api/` (2026-11-16). |
+| Bing search, Meetup, Vinted and Bluesky scrapers | Bing and Meetup terms forbid automated scraping, Vinted sits behind bot protection, Bluesky posts are personal data (2026-11-16). |
 | Similarweb traffic scraper | data.similarweb.com returns 403 to automated requests; getting around it would break their terms (2026-11-10). |
 | Wayback Machine snapshot scraper | web.archive.org resets connections from our cloud environment (2026-11-10). |
 | Trustpilot and Google Play review scrapers | Reviews carry reviewer names (personal data) and leaders already charge $0.0001 to $0.0006 per review (2026-11-10). |
