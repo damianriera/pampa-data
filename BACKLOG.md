@@ -24,11 +24,49 @@ _Approved by Damián on 2026-11-10, in build order._
 - Access: RDAP (official IANA bootstrap, `rdap.verisign.com` etc.) returned 200 for a registered and 404 for a free domain. Registrant contacts are not output.
 - Suggested price: $0.001 per domain. Expected users: 10 to 20 per month.
 
-## Proposed
+_Approved by Damián on 2026-11-16 (ideas 3 to 6 from the 2026-11-12 Scout, 8 and 9 from the 2026-11-16 Scout), in build order._
 
-_Niche Scout 2026-11-16. Numbered 8 to 12 so they follow the 2026-11-12 batch (3 to 7, PR #7). Competitor numbers are 30-day
-users from the Apify Store API on 2026-11-16; about 70 searches checked. Ranked by expected monthly users. Scores as below
-(5 is best): demand, weak competition, access, legal safety, cost per result._
+### 3. Remote Jobs Aggregator (Himalayas, Remotive, Remote OK, Arbeitnow, Jobicy)
+- What: remote job listings from five public job-board APIs in one run, filtered by keyword, category, seniority and
+  location restriction, deduplicated, with salary and the original apply link. Cross-sells with our Company Jobs Scraper.
+- Scores: demand 4, competition 3, access 5, legal 4, cost 5.
+- Main competitor: inlifeprojects/himalayas-jobs-scraper, 199 users, no reviews, $0.001/job (Himalayas only).
+  memo23/remote-jobs-aggregator 192 users, 5.0 (2 reviews), $0.002/job; hirebase/remote-jobs 185 users, $0.005/job.
+- Access: all five official JSON APIs returned 200 to plain requests (Himalayas reports about 119k jobs). Their terms
+  ask for attribution and a link back, which we give by keeping `source` and the original job URL in every item.
+- Suggested price: $0.0008 per job. Expected users: 30 to 50 per month.
+
+### 4. Substack Newsletter Posts Scraper
+- What: post list and metadata (title, subtitle, date, URL, audience free/paid, reactions, comment count, word count)
+  for any Substack publication or custom domain, plus optional full text of free posts. No comments or reader data.
+- Scores: demand 4, competition 3, access 5, legal 4, cost 5.
+- Main competitor: automation-lab/substack-scraper, 181 users, no reviews, $0.00115/post + $0.005 start.
+  Also sourabhbgp/substack-scraper (52 users, $0.0003) and fatihtahta/substack-scraper (48 users, $0.0025).
+- Access: the public `/api/v1/archive` endpoint returned 200 with JSON on a real publication; robots.txt allows it.
+- Suggested price: $0.0008 per post. Expected users: 25 to 40 per month.
+
+### 5. Website Tech Stack Detector
+- What: bulk detect the technologies a website uses (CMS, ecommerce platform, analytics, frameworks, CDN, payment,
+  chat widgets) from its homepage HTML, headers, cookies and scripts, with categories and versions when visible.
+  Cross-sells with our Website Popularity Rank Checker.
+- Scores: demand 3, competition 4, access 4, legal 4, cost 4.
+- Main competitor: scrapemint/website-tech-stack-detector, 66 users, 5.0 (2 reviews), $0.01 per tech row (expensive).
+  Others: motivational_nickel (40 users, $0.0015/site), magicfingers (39 users, free, 4.31), automation-lab (32 users,
+  $0.0023/site + $0.035 start).
+- Access: one plain GET per site. Fingerprints from the open webappanalyzer dataset (GPL-3.0, reachable on GitHub);
+  credit it in the README. Sites that block plain requests are reported as failed and not charged.
+- Suggested price: $0.0015 per website. Expected users: 20 to 30 per month.
+
+### 6. App Store Search and App Details (iTunes API)
+- What: search the Apple App Store by keyword, developer or app id in any country, returning app details (name,
+  developer, price, rating, rating count, version, release dates, size, genres, screenshots, description). No reviews,
+  so no personal data.
+- Scores: demand 3, competition 4, access 5, legal 5, cost 5.
+- Main competitor: automation-lab/apple-app-store-scraper, 108 users, 5.0 (1 review), $0.00345/app + $0.005 start.
+  johnvc/apple-app-store-search has 20 users, 5.0 (4 reviews), $0.003/result + $0.005 setup.
+- Access: Apple's official iTunes Search and Lookup APIs returned 200 to plain requests (documented limit about
+  20 requests per minute, so we pace calls).
+- Suggested price: $0.001 per app. Expected users: 15 to 25 per month.
 
 ### 8. SEO On-Page Audit and Metadata Checker
 - What: for a list of URLs (or a sitemap), one row per page with HTTP status, redirect chain, response time, title and
@@ -53,6 +91,12 @@ users from the Apify Store API on 2026-11-16; about 70 searches checked. Ranked 
   shows extra demand for Medium, whose public `medium.com/feed/...` RSS returned 200.)
 - Access: feeds are published for machine reading; plain requests returned 200.
 - Suggested price: $0.0005 per item. Expected users: 15 to 25 per month.
+
+## Proposed
+
+_Niche Scout 2026-11-16. Numbered 8 to 12 so they follow the 2026-11-12 batch (3 to 7, PR #7). Competitor numbers are 30-day
+users from the Apify Store API on 2026-11-16; about 70 searches checked. Ranked by expected monthly users. Scores as below
+(5 is best): demand, weak competition, access, legal safety, cost per result._
 
 ### 10. Shopify App Store Scraper
 - What: app listings from apps.shopify.com by category or app URL (from the public sitemap): name, developer, rating,
@@ -106,48 +150,6 @@ Competitor numbers are 30-day users from the Apify Store API on 2026-11-10. Rank
 
 _Niche Scout 2026-11-12. Competitor numbers are 30-day users from the Apify Store API on 2026-11-12. About 45 niches checked; ranked by expected
 monthly users. Scores as above (5 is best)._
-
-### 3. Remote Jobs Aggregator (Himalayas, Remotive, Remote OK, Arbeitnow, Jobicy)
-- What: remote job listings from five public job-board APIs in one run, filtered by keyword, category, seniority and
-  location restriction, deduplicated, with salary and the original apply link. Cross-sells with our Company Jobs Scraper.
-- Scores: demand 4, competition 3, access 5, legal 4, cost 5.
-- Main competitor: inlifeprojects/himalayas-jobs-scraper, 199 users, no reviews, $0.001/job (Himalayas only).
-  memo23/remote-jobs-aggregator 192 users, 5.0 (2 reviews), $0.002/job; hirebase/remote-jobs 185 users, $0.005/job.
-- Access: all five official JSON APIs returned 200 to plain requests (Himalayas reports about 119k jobs). Their terms
-  ask for attribution and a link back, which we give by keeping `source` and the original job URL in every item.
-- Suggested price: $0.0008 per job. Expected users: 30 to 50 per month.
-
-### 4. Substack Newsletter Posts Scraper
-- What: post list and metadata (title, subtitle, date, URL, audience free/paid, reactions, comment count, word count)
-  for any Substack publication or custom domain, plus optional full text of free posts. No comments or reader data.
-- Scores: demand 4, competition 3, access 5, legal 4, cost 5.
-- Main competitor: automation-lab/substack-scraper, 181 users, no reviews, $0.00115/post + $0.005 start.
-  Also sourabhbgp/substack-scraper (52 users, $0.0003) and fatihtahta/substack-scraper (48 users, $0.0025).
-- Access: the public `/api/v1/archive` endpoint returned 200 with JSON on a real publication; robots.txt allows it.
-- Suggested price: $0.0008 per post. Expected users: 25 to 40 per month.
-
-### 5. Website Tech Stack Detector
-- What: bulk detect the technologies a website uses (CMS, ecommerce platform, analytics, frameworks, CDN, payment,
-  chat widgets) from its homepage HTML, headers, cookies and scripts, with categories and versions when visible.
-  Cross-sells with our Website Popularity Rank Checker.
-- Scores: demand 3, competition 4, access 4, legal 4, cost 4.
-- Main competitor: scrapemint/website-tech-stack-detector, 66 users, 5.0 (2 reviews), $0.01 per tech row (expensive).
-  Others: motivational_nickel (40 users, $0.0015/site), magicfingers (39 users, free, 4.31), automation-lab (32 users,
-  $0.0023/site + $0.035 start).
-- Access: one plain GET per site. Fingerprints from the open webappanalyzer dataset (GPL-3.0, reachable on GitHub);
-  credit it in the README. Sites that block plain requests are reported as failed and not charged.
-- Suggested price: $0.0015 per website. Expected users: 20 to 30 per month.
-
-### 6. App Store Search and App Details (iTunes API)
-- What: search the Apple App Store by keyword, developer or app id in any country, returning app details (name,
-  developer, price, rating, rating count, version, release dates, size, genres, screenshots, description). No reviews,
-  so no personal data.
-- Scores: demand 3, competition 4, access 5, legal 5, cost 5.
-- Main competitor: automation-lab/apple-app-store-scraper, 108 users, 5.0 (1 review), $0.00345/app + $0.005 start.
-  johnvc/apple-app-store-search has 20 users, 5.0 (4 reviews), $0.003/result + $0.005 setup.
-- Access: Apple's official iTunes Search and Lookup APIs returned 200 to plain requests (documented limit about
-  20 requests per minute, so we pace calls).
-- Suggested price: $0.001 per app. Expected users: 15 to 25 per month.
 
 ### 7. Sitemap URL Extractor
 - What: find a website's sitemaps (robots.txt, `/sitemap.xml`, sitemap indexes, gzip) and output every URL with
