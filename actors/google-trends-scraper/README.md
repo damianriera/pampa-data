@@ -112,7 +112,9 @@ For Trending Now, choose **What to scrape → Trending Now** and list the countr
 
 ## Pricing
 
-You pay per result saved to the dataset: one result per search term or comparison line, and one per trending search. Failed terms are not charged. Set a maximum cost per run in the run options and the scraper stops cleanly when it is reached, keeping everything collected so far.
+**$0.002 per result, which is $2 per 1,000 results**. There is no start fee. One result is one search term or comparison line with every section you selected (timeline, regions, related queries), or one trending search. Failed terms are not charged.
+
+Example: tracking 50 keywords every day costs about $0.10 a day, or around $3 a month. Apify's free plan includes $5 of monthly credit, which covers about 2,500 results. Set a maximum cost per run in the run options and the scraper stops cleanly when it is reached, keeping everything collected so far.
 
 ## Good to know
 
@@ -127,6 +129,23 @@ You pay per result saved to the dataset: one result per search term or compariso
 - Track brand or competitor interest over time and by state.
 - Discover rising keywords for SEO and content ideas.
 - Feed daily trending topics into newsletters, dashboards or AI agents.
+
+## FAQ
+
+**Is there an official Google Trends API?** Google has no general public API for Trends data. This Actor gives you the same numbers you see on trends.google.com as structured JSON, through the Apify API, so you can use it as a Google Trends API.
+
+**Can I compare more than 5 keywords?** Google compares at most 5 terms on one scale. Put a common reference term (for example a well-known brand) on every line to chain comparisons across lines.
+
+**Can I schedule it?** Yes. Use Apify Schedules to run it daily or weekly, and send the results to Google Sheets, Make, Zapier, n8n or a webhook.
+
+**Can I use it from Python or JavaScript?** Yes, with the Apify API client: start the run with your input and read the dataset when it finishes. The API tab of this page shows ready-to-copy code.
+
+**Why are my values different from the website?** Google samples its data, so numbers can move by a few points between requests. Values within one run and one comparison line are consistent.
+
+## Related Actors
+
+- [Website Popularity Rank Checker](https://apify.com/pampa-data/website-popularity-rank): Tranco rank and trend for thousands of domains, to pair search interest with real site popularity.
+- [Company Jobs Scraper](https://apify.com/pampa-data/company-jobs-scraper): open jobs from Greenhouse, Lever, Ashby and Workday, to see which roles and skills companies are hiring for.
 
 ## Legal
 
