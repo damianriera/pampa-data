@@ -10,13 +10,6 @@ Rules for every idea: public data only, no logins, no personal data, no bypassin
 
 _Approved by Damián on 2026-11-10, in build order._
 
-### 1. Keyword Suggestions Scraper (Google, YouTube, Amazon, Bing)
-- What: autocomplete suggestions for seed keywords from four sources in one run, with optional a to z and question expansion. Cross-sells with our Google Trends Scraper.
-- Scores: demand 4, competition 3, access 5, legal 3, cost 5.
-- Main competitor: automation-lab/google-autocomplete-scraper, 251 users, 4.85 (3 reviews), $0.001/keyword + $0.005 start. Amazon-only leader has 50 users; no well-rated multi-source Actor.
-- Access: public suggest endpoints (`suggestqueries.google.com`, `ds=yt` for YouTube, `completion.amazon.com`, `api.bing.com/osjson.aspx`) all 200 to plain requests. Caveat: unofficial endpoints, same risk level as Google Trends.
-- Suggested price: $0.0005 per suggestion. Expected users: 25 to 40 per month.
-
 ## Proposed
 
 _Niche Scout 2026-11-10. Scores are 1 to 5 (5 is best): demand, weak competition, access, legal safety, cost per result.
@@ -42,7 +35,8 @@ Competitor numbers are 30-day users from the Apify Store API on 2026-11-10. Rank
 | --- | --- | --- | --- |
 | Google Trends Scraper | `actors/google-trends-scraper` | 2026-11-02 | https://apify.com/pampa-data/google-trends-scraper |
 | Website Popularity Rank Checker | `actors/website-popularity-rank` | 2026-11-10 | https://apify.com/pampa-data/website-popularity-rank |
-| Company Jobs Scraper | `actors/company-jobs-scraper` | 2026-11-11 | Not public yet (pending Damián) |
+| Company Jobs Scraper | `actors/company-jobs-scraper` | 2026-11-11 | https://apify.com/pampa-data/company-jobs-scraper |
+| Keyword Suggestions Scraper (Google, YouTube, Bing) | `actors/keyword-suggestions-scraper` | 2026-11-12 | Not public yet (pending Damián) |
 
 ## Rejected
 
@@ -52,4 +46,5 @@ Competitor numbers are 30-day users from the Apify Store API on 2026-11-10. Rank
 | Wayback Machine snapshot scraper | web.archive.org resets connections from our cloud environment (2026-11-10). |
 | Trustpilot and Google Play review scrapers | Reviews carry reviewer names (personal data) and leaders already charge $0.0001 to $0.0006 per review (2026-11-10). |
 | YouTube transcript scraper | YouTube terms forbid automated access and it blocks datacenter IPs; would need bypassing (2026-11-10). |
+| Amazon autocomplete (part of Keyword Suggestions) | completion.amazon.com robots.txt disallows all paths and Amazon's Conditions of Use forbid robots and data extraction; the Actor ships with Google, YouTube and Bing only (2026-11-12). |
 | Domain Availability and WHOIS Checker (RDAP) | RDAP answers plain requests, but Verisign's RDAP terms (.com/.net, most of the demand) forbid using the data to "enable high volume, automated, electronic processes" except as reasonably necessary to register domains. A paid bulk checker is exactly that (2026-11-13). |
