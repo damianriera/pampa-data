@@ -8,17 +8,8 @@ Rules for every idea: public data only, no logins, no personal data, no bypassin
 
 ## Approved
 
-_Approved by Damián on 2026-11-16 (ideas 3 to 6 from the 2026-11-12 Scout, 8 and 9 from the 2026-11-16 Scout), in build order._
-
-### 3. Remote Jobs Aggregator (Himalayas, Remotive, Remote OK, Arbeitnow, Jobicy)
-- What: remote job listings from five public job-board APIs in one run, filtered by keyword, category, seniority and
-  location restriction, deduplicated, with salary and the original apply link. Cross-sells with our Company Jobs Scraper.
-- Scores: demand 4, competition 3, access 5, legal 4, cost 5.
-- Main competitor: inlifeprojects/himalayas-jobs-scraper, 199 users, no reviews, $0.001/job (Himalayas only).
-  memo23/remote-jobs-aggregator 192 users, 5.0 (2 reviews), $0.002/job; hirebase/remote-jobs 185 users, $0.005/job.
-- Access: all five official JSON APIs returned 200 to plain requests (Himalayas reports about 119k jobs). Their terms
-  ask for attribution and a link back, which we give by keeping `source` and the original job URL in every item.
-- Suggested price: $0.0008 per job. Expected users: 30 to 50 per month.
+_Approved by Damián on 2026-11-16 (ideas 3 to 6 from the 2026-11-12 Scout, 8 and 9 from the 2026-11-16 Scout), in build order.
+Idea 3 (Remote Jobs Aggregator) was rejected by the Builder on 2026-11-17; see **Rejected**._
 
 ### 4. Substack Newsletter Posts Scraper
 - What: post list and metadata (title, subtitle, date, URL, audience free/paid, reactions, comment count, word count)
@@ -170,3 +161,4 @@ monthly users. Scores as above (5 is best)._
 | Google Patents scraper | patents.google.com robots.txt disallows the `/xhr` search endpoint; leader has only 55 users (2026-11-12). |
 | Amazon autocomplete (part of Keyword Suggestions) | completion.amazon.com robots.txt disallows all paths and Amazon's Conditions of Use forbid robots and data extraction; the Actor ships with Google, YouTube and Bing only (2026-11-12). |
 | Domain Availability and WHOIS Checker (RDAP) | RDAP answers plain requests, but Verisign's RDAP terms (.com/.net, most of the demand) forbid using the data to "enable high volume, automated, electronic processes" except as reasonably necessary to register domains. A paid bulk checker is exactly that (2026-11-13). |
+| Remote Jobs Aggregator (Himalayas, Remotive, Remote OK, Arbeitnow, Jobicy) | The APIs answer plain requests, but the terms of the main sources forbid passing their jobs to third parties: Himalayas API terms (section 113c) ban giving jobs to "other job boards, aggregators"; Remotive's API notice bans submitting jobs to third-party sites and its robots.txt disallows `/api/*`; Jobicy's terms forbid reselling or redistributing its content without written consent. Remote OK (about 100 recent jobs) and Arbeitnow (mostly German onsite jobs, website terms say non-commercial) alone are too thin for a paid Actor (2026-11-17). |
