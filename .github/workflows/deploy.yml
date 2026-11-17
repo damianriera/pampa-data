@@ -66,3 +66,6 @@ jobs:
       - name: Push and build on Apify
         if: steps.token.outputs.ok == 'true'
         run: npx --yes apify-cli@1 push --force
+      - name: Apply Store listing (categories, SEO title and description)
+        if: steps.token.outputs.ok == 'true'
+        run: node ../../scripts/apply-store-listing.mjs

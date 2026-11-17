@@ -146,6 +146,7 @@ Example: tracking 50 keywords every day costs about $0.10 a day, or around $3 a 
 
 - [Website Popularity Rank Checker](https://apify.com/pampa-data/website-popularity-rank): Tranco rank and trend for thousands of domains, to pair search interest with real site popularity.
 - [Company Jobs Scraper](https://apify.com/pampa-data/company-jobs-scraper): open jobs from Greenhouse, Lever, Ashby and Workday, to see which roles and skills companies are hiring for.
+- [Keyword Suggestions Scraper](https://apify.com/pampa-data/keyword-suggestions-scraper): hundreds of long-tail keyword ideas from Google, YouTube and Bing autocomplete, to feed into Trends.
 
 ## Legal
 

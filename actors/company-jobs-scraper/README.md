@@ -76,3 +76,4 @@ Greenhouse, Lever and Ashby return a whole company in one or a few requests, so 
 
 - [Website Popularity Rank Checker](https://apify.com/pampa-data/website-popularity-rank): popularity rank and trend of the companies' websites, to size the employers you track.
 - [Google Trends Scraper](https://apify.com/pampa-data/google-trends-scraper): search interest for companies, roles or skills over time.
+- [Keyword Suggestions Scraper](https://apify.com/pampa-data/keyword-suggestions-scraper): what people search about a company, role or skill, from Google, YouTube and Bing autocomplete.
