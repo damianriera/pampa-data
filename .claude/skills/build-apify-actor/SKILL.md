@@ -18,7 +18,9 @@ One folder per Actor: `actors/<name>/` with
 
 - `package.json` (type module, Node 22, scripts `start`, `test` = `node --test test/*.test.js`, `test:live`)
 - `src/main.js` (orchestration), `src/input.js` (validation with `InputError`), one module per data source
-- `.actor/actor.json` (`defaultMemoryMbytes: 256`, `output` set), `input_schema.json`, `dataset_schema.json`
+- `.actor/actor.json` (`defaultMemoryMbytes: 256`, `output` set, `title` at most 60 characters: `apify push` fails
+  above 63), `.actor/store-listing.json` (`categories`, `seoTitle` up to 60 chars, `seoDescription` up to 160 chars;
+  the Deploy workflow applies it after every push), `input_schema.json`, `dataset_schema.json`
   (an `overview` table view), `output_schema.json` (required to publish on the Store), `Dockerfile`
   (copy from an existing Actor)
 - `test/` with unit tests against saved real responses in `test/fixtures/`, plus one `live.test.js` gated by `LIVE=1`
@@ -54,7 +56,7 @@ The Apify token is in the environment as `APIFY_TOKEN` (older setups: `KEY`). Ne
 3. Set pay-per-event pricing with `PUT /v2/acts/<id>`:
    `{"pricingInfos":[{"pricingModel":"PAY_PER_EVENT","pricingPerEvent":{"actorChargeEvents":{"apify-default-dataset-item":{"eventTitle":"Result","eventDescription":"...","eventPriceUsd":0.002,"isPrimaryEvent":true}}}}]}`
    Price changes on a public Actor take effect after Apify's notice period; set the price before publishing.
-4. Set Store metadata in the same call: `title`, `description`, `seoTitle`, `seoDescription`, `categories`, and
-   `isPublic: true` to publish. Add the pampa-data logo from the project files if the listing needs it.
+4. Store metadata: `categories`, `seoTitle` and `seoDescription` come from `.actor/store-listing.json` (applied by
+   `scripts/apply-store-listing.mjs` in the Deploy workflow). Set `isPublic: true` only when Damián approves publishing. Add the pampa-data logo from the project files if the listing needs it.
 5. Run it once on the platform with the prefill input and check the dataset and cost per result.
 6. Move the idea to **Built** in `BACKLOG.md` and add it to the root README table.
