@@ -1,0 +1,47 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": ["domain", "technologyCount", "cms", "ecommerce", "analytics", "javascriptFrameworks", "cdn", "hosting", "paymentProcessors", "email", "technologyNames"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "domain": { "label": "Website", "format": "text" },
+                    "technologyCount": { "label": "Technologies", "format": "number" },
+                    "cms": { "label": "CMS", "format": "array" },
+                    "ecommerce": { "label": "Ecommerce", "format": "array" },
+                    "analytics": { "label": "Analytics", "format": "array" },
+                    "javascriptFrameworks": { "label": "JS frameworks", "format": "array" },
+                    "cdn": { "label": "CDN", "format": "array" },
+                    "hosting": { "label": "Hosting", "format": "array" },
+                    "paymentProcessors": { "label": "Payments", "format": "array" },
+                    "email": { "label": "E-mail", "format": "array" },
+                    "technologyNames": { "label": "All technologies", "format": "text" }
+                }
+            }
+        },
+        "marketing": {
+            "title": "Marketing and sales tools",
+            "transformation": {
+                "fields": ["domain", "tagManagers", "analytics", "advertising", "marketingAutomation", "liveChat", "cookieCompliance", "companyTools"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "domain": { "label": "Website", "format": "text" },
+                    "tagManagers": { "label": "Tag managers", "format": "array" },
+                    "analytics": { "label": "Analytics", "format": "array" },
+                    "advertising": { "label": "Advertising", "format": "array" },
+                    "marketingAutomation": { "label": "Marketing automation / CRM", "format": "array" },
+                    "liveChat": { "label": "Live chat", "format": "array" },
+                    "cookieCompliance": { "label": "Cookie consent", "format": "array" },
+                    "companyTools": { "label": "Tools from DNS records", "format": "array" }
+                }
+            }
+        }
+    }
+}
