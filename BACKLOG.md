@@ -24,17 +24,6 @@ the Builder; see **Rejected**._
   credit it in the README. Sites that block plain requests are reported as failed and not charged.
 - Suggested price: $0.0015 per website. Expected users: 20 to 30 per month.
 
-### 6. App Store Search and App Details (iTunes API)
-- What: search the Apple App Store by keyword, developer or app id in any country, returning app details (name,
-  developer, price, rating, rating count, version, release dates, size, genres, screenshots, description). No reviews,
-  so no personal data.
-- Scores: demand 3, competition 4, access 5, legal 5, cost 5.
-- Main competitor: automation-lab/apple-app-store-scraper, 108 users, 5.0 (1 review), $0.00345/app + $0.005 start.
-  johnvc/apple-app-store-search has 20 users, 5.0 (4 reviews), $0.003/result + $0.005 setup.
-- Access: Apple's official iTunes Search and Lookup APIs returned 200 to plain requests (documented limit about
-  20 requests per minute, so we pace calls).
-- Suggested price: $0.001 per app. Expected users: 15 to 25 per month.
-
 ### 8. SEO On-Page Audit and Metadata Checker
 - What: for a list of URLs (or a sitemap), one row per page with HTTP status, redirect chain, response time, title and
   meta description (with lengths), canonical, robots meta and X-Robots-Tag, hreflang, H1/H2, word count, Open Graph and
@@ -135,6 +124,7 @@ monthly users. Scores as above (5 is best)._
 | Website Popularity Rank Checker | `actors/website-popularity-rank` | 2026-11-10 | https://apify.com/pampa-data/website-popularity-rank |
 | Company Jobs Scraper | `actors/company-jobs-scraper` | 2026-11-11 | https://apify.com/pampa-data/company-jobs-scraper |
 | Keyword Suggestions Scraper (Google, YouTube, Bing) | `actors/keyword-suggestions-scraper` | 2026-11-12 | Not public yet (pending Damián) |
+| Apple App Store Scraper (iTunes Search API) | `actors/app-store-scraper` | 2026-11-20 | Not public yet (pending Damián) |
 
 ## Rejected
 
