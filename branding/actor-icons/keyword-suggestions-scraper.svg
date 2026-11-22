@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5DADE2"/><stop offset="1" stop-color="#A9D6F5"/></linearGradient>
+    <linearGradient id="land" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1F6F5C"/><stop offset="1" stop-color="#134B3E"/></linearGradient>
+    <clipPath id="c"><rect width="512" height="512" rx="112"/></clipPath>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="512" height="512" fill="url(#sky)"/>
+    <path d="M0 436 C 140 418, 300 430, 512 410 L512 512 L0 512 Z" fill="url(#land)"/>
+
+    <rect x="62" y="206" width="388" height="208" rx="30" fill="#FFFFFF" stroke="#0B2E4F" stroke-width="18"/>
+    <rect x="84" y="228" width="344" height="56" rx="14" fill="#FCE3A0"/>
+    <circle cx="116" cy="256" r="11" fill="none" stroke="#0B2E4F" stroke-width="6"/><rect x="142" y="248" width="220" height="18" rx="9" fill="#0B2E4F"/>
+    <circle cx="116" cy="316" r="11" fill="none" stroke="#5DADE2" stroke-width="6"/><rect x="142" y="308" width="260" height="18" rx="9" fill="#5DADE2"/>
+    <circle cx="116" cy="372" r="11" fill="none" stroke="#5DADE2" stroke-width="6"/><rect x="142" y="364" width="180" height="18" rx="9" fill="#5DADE2"/>
+    <rect x="62" y="88" width="388" height="96" rx="48" fill="#FFFFFF" stroke="#0B2E4F" stroke-width="20"/>
+    <circle cx="124" cy="132" r="22" fill="none" stroke="#0B2E4F" stroke-width="10"/>
+    <line x1="140" y1="148" x2="158" y2="166" stroke="#0B2E4F" stroke-width="11" stroke-linecap="round"/>
+    <rect x="182" y="124" width="140" height="18" rx="9" fill="#0B2E4F"/>
+    <line x1="340" y1="110" x2="340" y2="156" stroke="#F6B40E" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>
