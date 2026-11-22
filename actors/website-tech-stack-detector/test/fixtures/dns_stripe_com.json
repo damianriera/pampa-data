@@ -1,0 +1,61 @@
+{
+ "MX": [
+  "aspmx.l.google.com",
+  "alt1.aspmx.l.google.com",
+  "alt2.aspmx.l.google.com",
+  "aspmx2.googlemail.com",
+  "aspmx3.googlemail.com"
+ ],
+ "TXT": [
+  "00D50000000JV6w=1TBTQ0000000CIv;00DDn000000HWol=1TBVY00000002Hx;00D4x000003vxGL=1TBPQ00000008Tp;00Dfn00000BUlWD=1TBan0000000LPR",
+  "MS=ms80697640",
+  "VISA=38A3D7A1AA5D71E43525144DD886F6B8",
+  "_2m7hdcar6jar33f5vyr8h0xaru6rvrn",
+  "_c2ygqoyhcuwjjnqk7h1mcm0x144rm1z",
+  "anthropic-domain-verification-zk7x9c=QfN52ECybLPUWh51R9pKF0QO3",
+  "apple-domain-verification=8kIS0gmJTvILWQuI",
+  "asv=8de0c1a866b958297e22a36216e594a6",
+  "atlassian-domain-verification=upLp21qQgja1aHG2gnAb1AmXRqb/zG0UK1a0n3zTSXZg5DgOSttR3i5uzA3T9Cdk",
+  "canva-site-verification=xLypn0D9XANRy-lbwcMfHA",
+  "cloudflare_dashboard_sso=135ecd6078949a45f949f6c7035e0946",
+  "cursor-domain-verification-vncvvm=D0NzeIDbQa8PPgIf1ukp9UPiu",
+  "docker-verification=ccde1a0d-8d2c-44b5-9d20-6c4e19113fc9",
+  "docusign=4a93db58-af07-4632-a881-b569d41a6c57",
+  "docusign=4c9f5602-1c19-4e4c-bde7-77dc4b9ea8a0",
+  "edcbf4c7-b604-457b-870e-1b05f655e769",
+  "elevenlabs=NpcIkVJW_8Vyd2gLKzPviuaU1g5rz83KiWQQ3sWKGtI",
+  "facebook-domain-verification=m7id9rt8ehlgcg9tt2yggbsi6gro7i",
+  "fastly-domain-delegation-3c9tdnjzdwy7wfffvyyy-786084-2024-07-08",
+  "google-site-verification=NLkFgZLHeVMVYlR3t1UZC9_1LzmqCAefJyNDs6ZQqBA",
+  "google-site-verification=PrlpJHdk11CIkPsiXoHEAJevWHAk39JRFAqVSe9l7n0",
+  "google-site-verification=ZgGi2-xDdfnaWxdfjn5AqtUS11jKWqSXAV_EHODFzdE",
+  "google-site-verification=hPfjsDwiisKJ4RP1ExOst9gAOD_0P8Q7-kxdcKUvEcc",
+  "google-site-verification=pmz8ueKvWMPxNlwUDcVroF91-tq6I9VM6wSO_0i7-wc",
+  "google-site-verification=qjP3OAiraClha_40cX9Z9FrG5q3O_0InXSamXOswY-s",
+  "h1-domain-verification=KhpNX9YNAc7bX95agGvFsPPKbYTVe1KC6xj7P1zKZrRzxcuS",
+  "linear-domain-verification=prudk75mtrrj",
+  "liveramp-site-verification=7gyFkTwGYsvgd7IUQwyAOfImETwR06wgKjKiXq90KEY",
+  "neat-pulse-domain-verification-8GMn8nv=36eba03d-345e-421a-a823-d6d1f28938a4",
+  "openai-domain-verification=dv-9tiBE20GDN0Td9lCfVtA3DwG",
+  "postman-domain-verification=c3b168067b16085c452b04b643ae1000079b095e383b53d1074e409b0e600b6265e1c7963beca1ca87cc63c381dcea332544c92c919651e4cda69f9a6303079c",
+  "stripe-verification=82ce82470fb8324e19fa65abdb6fd370da5a8f90bba09712f259760f625d0790",
+  "v=MCPv1; k=ed25519; p=WMeka0C1fIH9HQLMtsSM9DD9cM6Bz6Wz34mHnK86UcM=",
+  "v=spf1 ip4:198.2.180.60/32 ip4:13.111.2.227/32 include:spf1.stripe.com include:greenhouse-outbound-mail.stripe.com include:_spf.qualtrics.com ~all",
+  "vercel-domain-verification-0x8270=XezzJjJYrYZwY6CahDneh2ruB",
+  "vercel-domain-verification-9rcztj=vE2uCkG0lJyU17dOW1DamoD7v",
+  "vercel-domain-verification-d2ks5d=rkbS4OdBoLxPogGq2IhBN1OZV",
+  "vercel-domain-verification-n462w8=JRePwTQbccpon6VAqYhidisHw",
+  "whimsical=253112f9add9790f3a27b9d9893626451fc4cda1",
+  "z4mthhzk10l6qc0rg4211mnnppkh2y5b"
+ ],
+ "NS": [
+  "ns-1087.awsdns-07.org",
+  "ns-1882.awsdns-43.co.uk",
+  "ns-423.awsdns-52.com",
+  "ns-705.awsdns-24.net"
+ ],
+ "SOA": [
+  "ns-1882.awsdns-43.co.uk awsdns-hostmaster.amazon.com"
+ ],
+ "CNAME": []
+}

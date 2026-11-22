@@ -1,0 +1,15 @@
+{
+    "actorSpecification": 1,
+    "name": "website-tech-stack-detector",
+    "title": "Website Tech Stack Detector (Bulk Technology Lookup)",
+    "description": "Find out what any website is built with, in bulk: CMS, ecommerce platform, analytics, tag managers, JavaScript frameworks, CDN, hosting, payments, live chat and e-mail provider, with versions when visible. 7,700+ technology fingerprints, one plain request per site.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "./Dockerfile",
+    "defaultMemoryMbytes": 1024,
+    "output": "./output_schema.json"
+}

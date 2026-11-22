@@ -12,18 +12,6 @@ _Approved by Damián on 2026-11-16 (ideas 3 to 6 from the 2026-11-12 Scout, 8 an
 Ideas 3 (Remote Jobs Aggregator, 2026-11-17) and 4 (Substack Newsletter Posts Scraper, 2026-11-18) were rejected by
 the Builder; see **Rejected**._
 
-### 5. Website Tech Stack Detector
-- What: bulk detect the technologies a website uses (CMS, ecommerce platform, analytics, frameworks, CDN, payment,
-  chat widgets) from its homepage HTML, headers, cookies and scripts, with categories and versions when visible.
-  Cross-sells with our Website Popularity Rank Checker.
-- Scores: demand 3, competition 4, access 4, legal 4, cost 4.
-- Main competitor: scrapemint/website-tech-stack-detector, 66 users, 5.0 (2 reviews), $0.01 per tech row (expensive).
-  Others: motivational_nickel (40 users, $0.0015/site), magicfingers (39 users, free, 4.31), automation-lab (32 users,
-  $0.0023/site + $0.035 start).
-- Access: one plain GET per site. Fingerprints from the open webappanalyzer dataset (GPL-3.0, reachable on GitHub);
-  credit it in the README. Sites that block plain requests are reported as failed and not charged.
-- Suggested price: $0.0015 per website. Expected users: 20 to 30 per month.
-
 ### 6. App Store Search and App Details (iTunes API)
 - What: search the Apple App Store by keyword, developer or app id in any country, returning app details (name,
   developer, price, rating, rating count, version, release dates, size, genres, screenshots, description). No reviews,
@@ -135,6 +123,7 @@ monthly users. Scores as above (5 is best)._
 | Website Popularity Rank Checker | `actors/website-popularity-rank` | 2026-11-10 | https://apify.com/pampa-data/website-popularity-rank |
 | Company Jobs Scraper | `actors/company-jobs-scraper` | 2026-11-11 | https://apify.com/pampa-data/company-jobs-scraper |
 | Keyword Suggestions Scraper (Google, YouTube, Bing) | `actors/keyword-suggestions-scraper` | 2026-11-12 | Not public yet (pending Damián) |
+| Website Tech Stack Detector | `actors/website-tech-stack-detector` | 2026-11-19 | Not public yet (pending Damián) |
 
 ## Rejected
 

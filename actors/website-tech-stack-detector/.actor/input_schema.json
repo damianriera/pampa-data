@@ -1,0 +1,44 @@
+{
+    "title": "Website Tech Stack Detector",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "websites": {
+            "title": "Websites",
+            "type": "array",
+            "description": "Websites to check, one per line. Domains (example.com) or full page URLs. Up to 5,000 per run.",
+            "editor": "stringList",
+            "prefill": ["wordpress.org", "allbirds.com", "nextjs.org"]
+        },
+        "includeDns": {
+            "title": "Check DNS records",
+            "type": "boolean",
+            "description": "Also reads the domain's MX, TXT (SPF and domain verification), NS and SOA records. Reveals the e-mail provider, DNS host and SaaS tools the company verified its domain with (Salesforce, HubSpot, Atlassian...). Listed in the companyTools column.",
+            "default": true
+        },
+        "includeDetails": {
+            "title": "Include technology details",
+            "type": "boolean",
+            "description": "Adds each technology's website, description, SaaS/open source flags, pricing tier and CPE id to the technologies list.",
+            "default": false
+        },
+        "minConfidence": {
+            "title": "Minimum confidence (0-100)",
+            "type": "integer",
+            "description": "Hide technologies detected with a lower confidence. Most detections are 100.",
+            "default": 0,
+            "minimum": 0,
+            "maximum": 100,
+            "sectionCaption": "Advanced"
+        },
+        "maxConcurrency": {
+            "title": "Parallel websites",
+            "type": "integer",
+            "description": "How many websites to check at the same time.",
+            "default": 5,
+            "minimum": 1,
+            "maximum": 20
+        }
+    },
+    "required": ["websites"]
+}
