@@ -175,9 +175,9 @@ monthly users. Scores as above (5 is best)._
 | Google Trends Scraper | `actors/google-trends-scraper` | 2026-11-02 | https://apify.com/pampa-data/google-trends-scraper |
 | Website Popularity Rank Checker | `actors/website-popularity-rank` | 2026-11-10 | https://apify.com/pampa-data/website-popularity-rank |
 | Company Jobs Scraper | `actors/company-jobs-scraper` | 2026-11-11 | https://apify.com/pampa-data/company-jobs-scraper |
-| Keyword Suggestions Scraper (Google, YouTube, Bing) | `actors/keyword-suggestions-scraper` | 2026-11-12 | Not public yet (pending Damián) |
-| Website Tech Stack Detector | `actors/website-tech-stack-detector` | 2026-11-19 | Not public yet (pending Damián) |
-| Apple App Store Scraper (iTunes Search API) | `actors/app-store-scraper` | 2026-11-20 | Not public yet (pending Damián) |
+| Keyword Suggestions Scraper (Google, YouTube, Bing) | `actors/keyword-suggestions-scraper` | 2026-11-12 | https://apify.com/pampa-data/keyword-suggestions-scraper |
+| Website Tech Stack Detector | `actors/website-tech-stack-detector` | 2026-11-19 | https://apify.com/pampa-data/website-tech-stack-detector |
+| Apple App Store Scraper (iTunes Search API) | `actors/app-store-scraper` | 2026-11-20 | https://apify.com/pampa-data/app-store-scraper |
 
 ## Rejected
 
