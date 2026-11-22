@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5DADE2"/><stop offset="1" stop-color="#A9D6F5"/></linearGradient>
+    <linearGradient id="land" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1F6F5C"/><stop offset="1" stop-color="#134B3E"/></linearGradient>
+    <clipPath id="c"><rect width="512" height="512" rx="112"/></clipPath>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="512" height="512" fill="url(#sky)"/>
+    <path d="M0 436 C 140 418, 300 430, 512 410 L512 512 L0 512 Z" fill="url(#land)"/>
+
+    <rect x="132" y="62" width="224" height="380" rx="44" fill="#FFFFFF" stroke="#0B2E4F" stroke-width="22"/>
+    <rect x="212" y="88" width="64" height="12" rx="6" fill="#0B2E4F"/>
+    <rect x="166" y="128" width="70" height="70" rx="18" fill="#5DADE2"/>
+    <rect x="252" y="128" width="70" height="70" rx="18" fill="#F6B40E"/>
+    <rect x="166" y="214" width="70" height="70" rx="18" fill="#1F6F5C"/>
+    <rect x="252" y="214" width="70" height="70" rx="18" fill="#0B2E4F"/>
+    <rect x="166" y="300" width="70" height="70" rx="18" fill="#F6B40E"/>
+    <circle cx="372" cy="360" r="78" fill="#0B2E4F" stroke="#FFFFFF" stroke-width="12"/>
+    <polygon points="372,306 386,342 424,344 394,368 405,405 372,384 339,405 350,368 320,344 358,342" fill="#F6B40E" stroke="#F6B40E" stroke-width="6" stroke-linejoin="round"/>
+  </g>
+</svg>
