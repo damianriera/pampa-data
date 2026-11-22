@@ -1,0 +1,28 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Website Tech Stack Detector output",
+    "properties": {
+        "overview": {
+            "type": "string",
+            "title": "Tech stack overview",
+            "description": "One item per website: main technologies by category.",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+        },
+        "marketing": {
+            "type": "string",
+            "title": "Marketing and sales tools",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=marketing"
+        },
+        "allResults": {
+            "type": "string",
+            "title": "All results (full JSON, with versions and categories)",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        },
+        "failed": {
+            "type": "string",
+            "title": "Websites that could not be checked",
+            "description": "Unreachable, blocked or invalid websites (not charged).",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/FAILED"
+        }
+    }
+}

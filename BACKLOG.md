@@ -9,39 +9,8 @@ Rules for every idea: public data only, no logins, no personal data, no bypassin
 ## Approved
 
 _Approved by Damián on 2026-11-16 (ideas 3 to 6 from the 2026-11-12 Scout, 8 and 9 from the 2026-11-16 Scout), in build order.
-Idea 3 (Remote Jobs Aggregator) was rejected by the Builder on 2026-11-17; see **Rejected**._
-
-### 4. Substack Newsletter Posts Scraper
-- What: post list and metadata (title, subtitle, date, URL, audience free/paid, reactions, comment count, word count)
-  for any Substack publication or custom domain, plus optional full text of free posts. No comments or reader data.
-- Scores: demand 4, competition 3, access 5, legal 4, cost 5.
-- Main competitor: automation-lab/substack-scraper, 181 users, no reviews, $0.00115/post + $0.005 start.
-  Also sourabhbgp/substack-scraper (52 users, $0.0003) and fatihtahta/substack-scraper (48 users, $0.0025).
-- Access: the public `/api/v1/archive` endpoint returned 200 with JSON on a real publication; robots.txt allows it.
-- Suggested price: $0.0008 per post. Expected users: 25 to 40 per month.
-
-### 5. Website Tech Stack Detector
-- What: bulk detect the technologies a website uses (CMS, ecommerce platform, analytics, frameworks, CDN, payment,
-  chat widgets) from its homepage HTML, headers, cookies and scripts, with categories and versions when visible.
-  Cross-sells with our Website Popularity Rank Checker.
-- Scores: demand 3, competition 4, access 4, legal 4, cost 4.
-- Main competitor: scrapemint/website-tech-stack-detector, 66 users, 5.0 (2 reviews), $0.01 per tech row (expensive).
-  Others: motivational_nickel (40 users, $0.0015/site), magicfingers (39 users, free, 4.31), automation-lab (32 users,
-  $0.0023/site + $0.035 start).
-- Access: one plain GET per site. Fingerprints from the open webappanalyzer dataset (GPL-3.0, reachable on GitHub);
-  credit it in the README. Sites that block plain requests are reported as failed and not charged.
-- Suggested price: $0.0015 per website. Expected users: 20 to 30 per month.
-
-### 6. App Store Search and App Details (iTunes API)
-- What: search the Apple App Store by keyword, developer or app id in any country, returning app details (name,
-  developer, price, rating, rating count, version, release dates, size, genres, screenshots, description). No reviews,
-  so no personal data.
-- Scores: demand 3, competition 4, access 5, legal 5, cost 5.
-- Main competitor: automation-lab/apple-app-store-scraper, 108 users, 5.0 (1 review), $0.00345/app + $0.005 start.
-  johnvc/apple-app-store-search has 20 users, 5.0 (4 reviews), $0.003/result + $0.005 setup.
-- Access: Apple's official iTunes Search and Lookup APIs returned 200 to plain requests (documented limit about
-  20 requests per minute, so we pace calls).
-- Suggested price: $0.001 per app. Expected users: 15 to 25 per month.
+Ideas 3 (Remote Jobs Aggregator, 2026-11-17) and 4 (Substack Newsletter Posts Scraper, 2026-11-18) were rejected by
+the Builder; see **Rejected**._
 
 ### 8. SEO On-Page Audit and Metadata Checker
 - What: for a list of URLs (or a sitemap), one row per page with HTTP status, redirect chain, response time, title and
@@ -205,6 +174,8 @@ monthly users. Scores as above (5 is best)._
 | Website Popularity Rank Checker | `actors/website-popularity-rank` | 2026-11-10 | https://apify.com/pampa-data/website-popularity-rank |
 | Company Jobs Scraper | `actors/company-jobs-scraper` | 2026-11-11 | https://apify.com/pampa-data/company-jobs-scraper |
 | Keyword Suggestions Scraper (Google, YouTube, Bing) | `actors/keyword-suggestions-scraper` | 2026-11-12 | Not public yet (pending Damián) |
+| Website Tech Stack Detector | `actors/website-tech-stack-detector` | 2026-11-19 | Not public yet (pending Damián) |
+| Apple App Store Scraper (iTunes Search API) | `actors/app-store-scraper` | 2026-11-20 | Not public yet (pending Damián) |
 
 ## Rejected
 
@@ -225,3 +196,4 @@ monthly users. Scores as above (5 is best)._
 | Domain Availability and WHOIS Checker (RDAP) | RDAP answers plain requests, but Verisign's RDAP terms (.com/.net, most of the demand) forbid using the data to "enable high volume, automated, electronic processes" except as reasonably necessary to register domains. A paid bulk checker is exactly that (2026-11-13). |
 | Y Combinator companies directory | ycombinator.com robots.txt disallows `/companies?*` (the filtered directory) and the leaders sell founder emails; leader memo23 has 68 users (2026-11-19). |
 | Remote Jobs Aggregator (Himalayas, Remotive, Remote OK, Arbeitnow, Jobicy) | The APIs answer plain requests, but the terms of the main sources forbid passing their jobs to third parties: Himalayas API terms (section 113c) ban giving jobs to "other job boards, aggregators"; Remotive's API notice bans submitting jobs to third-party sites and its robots.txt disallows `/api/*`; Jobicy's terms forbid reselling or redistributing its content without written consent. Remote OK (about 100 recent jobs) and Arbeitnow (mostly German onsite jobs, website terms say non-commercial) alone are too thin for a paid Actor (2026-11-17). |
+| Substack Newsletter Posts Scraper | The `/api/v1/archive` endpoint answers plain requests and robots.txt allows it, but Substack's Terms of Use (Acceptable Use Policy) forbid using Substack in a way that "crawls, scrapes, or spiders any page, data, or portion of Substack (through use of manual or automated means)" and copying or storing "any significant portion of the content". A paid post scraper is exactly that. Publications' public RSS feeds stay usable through idea 9 (RSS and Atom Feed Reader) (2026-11-18). |

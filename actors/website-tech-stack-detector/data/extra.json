@@ -1,0 +1,7 @@
+{
+    "_comment": "pampa-data additions for popular technologies whose upstream fingerprints need a browser (JavaScript globals). Merged into technologies.json at load time.",
+    "Next.js": { "scriptSrc": ["/_next/static/"], "html": ["<script id=\"__NEXT_DATA__\""], "dom": ["#__next"] },
+    "Remix": { "html": ["window\\.__remixContext"] },
+    "Squarespace": { "scriptSrc": ["(?:static1|assets)\\.squarespace\\.com"] },
+    "Vercel": { "headers": { "x-vercel-id": "" } }
+}

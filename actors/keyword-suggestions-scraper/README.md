@@ -60,6 +60,8 @@ After the run, the `SUMMARY` record shows the queries sent and suggestions found
 
 ### Pricing
 
+**$0.0005 per suggestion, which is $0.50 per 1,000 keywords**, with no start fee. A full A to Z expansion of one seed keyword on Google (about 250 keywords) costs about $0.13, and Apify's free plan credit of $5 a month covers about 10,000 keywords.
+
 You pay per suggestion in the results. The seed keyword itself is skipped by default and duplicates are removed before saving, so you only pay for new keywords. Failed requests are never charged.
 
 Rough sizes per seed keyword and source: plain keyword about 10 suggestions, with A to Z about 250, with every expansion about 300 to 400. Use **Max suggestions per keyword and source** or a maximum cost per run to cap spending; the Actor stops cleanly when the cap is reached.
@@ -70,6 +72,16 @@ Rough sizes per seed keyword and source: plain keyword about 10 suggestions, wit
 - Each source returns up to about 10 suggestions per typed query; expansions are how you get more.
 - Google may personalize or filter some suggestions (for example sensitive topics), and suggestions change over time.
 - Amazon suggestions are not included: Amazon's terms do not allow automated collection.
+
+### FAQ
+
+**Is this a free alternative to keyword tools like Ahrefs, Semrush or AnswerThePublic?** For finding keyword ideas, yes: those tools also start from autocomplete suggestions. This Actor does not give search volume or difficulty; use it to collect the long list, then check the best ideas in your SEO tool or with [Google Trends Scraper](https://apify.com/pampa-data/google-trends-scraper).
+
+**Does it work in Spanish, Portuguese and other languages?** Yes. Suggestions work in any language and country you set. Question expansion uses native question words for English, Spanish, Portuguese, French, German and Italian ("cómo", "por que", "wie"...) and English words for other languages; add your own with custom modifiers.
+
+**Can I get YouTube keyword ideas only?** Yes. Pick only `youtube` as the source. YouTube suggestions differ from Google's and are what viewers type in the YouTube search box, which is useful for video titles and tags.
+
+**How do I send the keywords to Google Sheets or an AI agent?** Export the dataset as CSV or Excel, or start the Actor from the Apify API, Make, Zapier or n8n and read the dataset when the run ends.
 
 ### Related Actors
 
