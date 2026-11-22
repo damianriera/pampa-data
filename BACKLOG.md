@@ -36,12 +36,7 @@ the Builder; see **Rejected**._
 - Access: feeds are published for machine reading; plain requests returned 200.
 - Suggested price: $0.0005 per item. Expected users: 15 to 25 per month.
 
-## Proposed
-
-_Niche Scout 2026-11-19. Numbered 13 to 17, after the 2026-11-16 batch (8 to 12). Competitor numbers are 30-day users from the
-Apify Store API on 2026-11-19; about 45 searches checked. Ranked by expected monthly users. Scores as below (5 is best):
-demand, weak competition, access, legal safety, cost per result. This batch leans on "tool" Actors that work on files or
-URLs the user gives us, so there is no third-party site whose terms can block them later (lesson from ideas 3 and 4)._
+_Approved by Damián on 2026-11-22 (ideas 13 to 15 from the 2026-11-19 Scout), built after 8 and 9 in this order._
 
 ### 13. PDF Text and Metadata Extractor
 - What: give PDF URLs (or files in a key-value store); returns one row per PDF with full text (plain or Markdown-ish with
@@ -78,6 +73,13 @@ URLs the user gives us, so there is no third-party site whose terms can block th
 - Access: one plain GET of the homepage plus small icon requests. Sites that block plain requests are reported as
   failed and not charged.
 - Suggested price: $0.0008 per website. Expected users: 15 to 25 per month.
+
+## Proposed
+
+_Niche Scout 2026-11-19. Numbered 13 to 17, after the 2026-11-16 batch (8 to 12). Ideas 13 to 15 were approved on 2026-11-22 and moved to **Approved**. Competitor numbers are 30-day users from the
+Apify Store API on 2026-11-19; about 45 searches checked. Ranked by expected monthly users. Scores as below (5 is best):
+demand, weak competition, access, legal safety, cost per result. This batch leans on "tool" Actors that work on files or
+URLs the user gives us, so there is no third-party site whose terms can block them later (lesson from ideas 3 and 4)._
 
 ### 16. Broken Link Checker
 - What: crawl a website (same domain, depth and page limits) or check a URL list, and report every link that fails:
