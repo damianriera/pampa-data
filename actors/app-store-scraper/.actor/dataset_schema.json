@@ -1,0 +1,30 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Apps",
+            "transformation": {
+                "fields": ["iconUrl", "name", "developer", "rating", "ratingCount", "formattedPrice", "primaryGenre", "version", "currentVersionReleaseDate", "country", "searchTerm", "position", "url"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "iconUrl": { "label": "Icon", "format": "image" },
+                    "name": { "label": "App", "format": "text" },
+                    "developer": { "label": "Developer", "format": "text" },
+                    "rating": { "label": "Rating", "format": "number" },
+                    "ratingCount": { "label": "Ratings", "format": "number" },
+                    "formattedPrice": { "label": "Price", "format": "text" },
+                    "primaryGenre": { "label": "Genre", "format": "text" },
+                    "version": { "label": "Version", "format": "text" },
+                    "currentVersionReleaseDate": { "label": "Last update", "format": "date" },
+                    "country": { "label": "Country", "format": "text" },
+                    "searchTerm": { "label": "Search term", "format": "text" },
+                    "position": { "label": "Rank", "format": "number" },
+                    "url": { "label": "App Store link", "format": "link" }
+                }
+            }
+        }
+    }
+}

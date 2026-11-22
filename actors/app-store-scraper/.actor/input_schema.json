@@ -1,0 +1,70 @@
+{
+    "title": "Apple App Store Scraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "searchTerms": {
+            "title": "Search terms",
+            "type": "array",
+            "description": "Keywords to search on the App Store, one per line, like in the App Store search box. Each search returns up to 200 apps in store order. Up to 500 per run.",
+            "editor": "stringList",
+            "prefill": ["habit tracker"]
+        },
+        "apps": {
+            "title": "Apps (URLs, ids or bundle ids)",
+            "type": "array",
+            "description": "Apps to look up, one per line: an App Store URL (https://apps.apple.com/us/app/spotify-music-and-podcasts/id324684580), a numeric app id (324684580) or a bundle id (com.spotify.client). Up to 10,000 per run.",
+            "editor": "stringList",
+            "prefill": ["https://apps.apple.com/us/app/spotify-music-and-podcasts/id324684580"]
+        },
+        "developers": {
+            "title": "Developers (URLs or ids)",
+            "type": "array",
+            "description": "List every app of a developer: paste the developer page URL (https://apps.apple.com/us/developer/meta-platforms-inc/id284882218) or its numeric id. Up to 200 apps per developer.",
+            "editor": "stringList"
+        },
+        "countries": {
+            "title": "Countries (App Store storefronts)",
+            "type": "array",
+            "description": "Two-letter country codes, for example us, gb, ar, de or jp. Every search, app and developer is fetched in each country, with local prices, ratings and availability. Up to 50.",
+            "editor": "stringList",
+            "prefill": ["us"],
+            "default": ["us"]
+        },
+        "platform": {
+            "title": "Platform for searches",
+            "type": "string",
+            "description": "Which apps a search returns. Mac searches also include iPhone and iPad apps that run on Mac (marked with platform ios).",
+            "editor": "select",
+            "enum": ["iphone", "ipad", "mac"],
+            "enumTitles": ["iPhone", "iPad", "Mac"],
+            "default": "iphone"
+        },
+        "maxResultsPerSearch": {
+            "title": "Max apps per search",
+            "type": "integer",
+            "description": "From 1 to 200 (the most Apple returns for one search).",
+            "default": 50,
+            "minimum": 1,
+            "maximum": 200
+        },
+        "language": {
+            "title": "Language",
+            "type": "string",
+            "description": "Optional language for names and descriptions where the store has it, like en_us or ja_jp. Leave empty for the country's default language.",
+            "editor": "textfield"
+        },
+        "includeDescription": {
+            "title": "Include description and release notes",
+            "type": "boolean",
+            "description": "The full app description. Turn off for smaller results.",
+            "default": true
+        },
+        "includeScreenshots": {
+            "title": "Include screenshot URLs",
+            "type": "boolean",
+            "description": "iPhone and iPad screenshot image links.",
+            "default": true
+        }
+    }
+}
