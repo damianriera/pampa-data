@@ -1,0 +1,25 @@
+{
+ "requestedUrl": "https://wordpress.org/sitemap.xml",
+ "url": "https://wordpress.org/sitemap.xml",
+ "statusCode": 200,
+ "contentType": "text/xml; charset=UTF-8",
+ "headers": {
+  "alt-svc": "clear",
+  "content-encoding": "gzip",
+  "content-type": "text/xml; charset=UTF-8",
+  "date": "Mon, 23 Nov 2026 12:44:53 GMT",
+  "server": "nginx",
+  "strict-transport-security": "max-age=3600",
+  "transfer-encoding": "chunked",
+  "vary": "Accept-Encoding,accept, content-type",
+  "x-frame-options": "SAMEORIGIN",
+  "x-nc": "MISS dca 1",
+  "x-olaf": "â",
+  "x-remembering": "Eric Binnion <https://friendsofericbinnion.wordpress.com/>"
+ },
+ "redirectChain": [],
+ "responseTimeMs": 300,
+ "bytes": 631,
+ "truncated": false,
+ "body": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCEtLWdlbmVyYXRvcj0namV0cGFjay0xNi4zJy0tPgo8IS0tSmV0cGFja19TaXRlbWFwX0J1ZmZlcl9NYXN0ZXJfWE1MV3JpdGVyLS0+Cjw/eG1sLXN0eWxlc2hlZXQgdHlwZT0idGV4dC94c2wiIGhyZWY9Ii8vd29yZHByZXNzLm9yZy9zaXRlbWFwLWluZGV4LnhzbCI/Pgo8c2l0ZW1hcGluZGV4IHhtbG5zPSJodHRwOi8vd3d3LnNpdGVtYXBzLm9yZy9zY2hlbWFzL3NpdGVtYXAvMC45Ij4KIDxzaXRlbWFwPgogIDxsb2M+aHR0cHM6Ly93b3JkcHJlc3Mub3JnL3NpdGVtYXAtMS54bWw8L2xvYz4KICA8bGFzdG1vZD4yMDI2LTExLTE5VDE2OjU0OjA3WjwvbGFzdG1vZD4KIDwvc2l0ZW1hcD4KIDxzaXRlbWFwPgogIDxsb2M+aHR0cHM6Ly93b3JkcHJlc3Mub3JnL2ltYWdlLXNpdGVtYXAtMS54bWw8L2xvYz4KICA8bGFzdG1vZD4yMDI2LTExLTEyVDE1OjIzOjEyWjwvbGFzdG1vZD4KIDwvc2l0ZW1hcD4KIDxzaXRlbWFwPgogIDxsb2M+aHR0cHM6Ly93b3JkcHJlc3Mub3JnL3ZpZGVvLXNpdGVtYXAtMS54bWw8L2xvYz4KICA8bGFzdG1vZD4yMDI2LTExLTAyVDE3OjQyOjQ5WjwvbGFzdG1vZD4KIDwvc2l0ZW1hcD4KPC9zaXRlbWFwaW5kZXg+Cg=="
+}

@@ -1,0 +1,15 @@
+{
+    "actorSpecification": 1,
+    "name": "seo-on-page-audit",
+    "title": "SEO On-Page Audit and Meta Tag Checker (Bulk)",
+    "description": "Bulk on-page SEO audit for URLs or a whole sitemap: status, redirects, title and meta description length, canonical, noindex, robots.txt, hreflang, H1/H2, word count, Open Graph, JSON-LD, image alt and links, with issues per page.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "./Dockerfile",
+    "defaultMemoryMbytes": 512,
+    "output": "./output_schema.json"
+}
