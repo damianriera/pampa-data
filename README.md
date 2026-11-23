@@ -10,6 +10,7 @@ Data tools published on the [Apify Store](https://apify.com/pampa-data) under th
 | Keyword Suggestions Scraper | [`actors/keyword-suggestions-scraper`](actors/keyword-suggestions-scraper) | Google, YouTube and Bing autocomplete suggestions with A to Z, question and custom modifier expansion. |
 | Website Tech Stack Detector | [`actors/website-tech-stack-detector`](actors/website-tech-stack-detector) | CMS, ecommerce, analytics, frameworks, CDN, hosting, payments and e-mail provider of up to 5,000 websites, from 7,700+ open fingerprints. |
 | Apple App Store Scraper | [`actors/app-store-scraper`](actors/app-store-scraper) | App Store search results, app details (price, rating, version, size, genres) and developer apps in any country, from Apple's official API. |
+| SEO On-Page Audit and Meta Tag Checker | [`actors/seo-on-page-audit`](actors/seo-on-page-audit) | Status, redirects, title and meta description, canonical, noindex, robots.txt, hreflang, headings, Open Graph, JSON-LD and issues for a list of URLs or a whole sitemap. |
 
 ## Working on an Actor
 

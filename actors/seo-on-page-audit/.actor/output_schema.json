@@ -1,0 +1,38 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "SEO On-Page Audit output",
+    "properties": {
+        "overview": {
+            "type": "string",
+            "title": "Audit overview",
+            "description": "One row per page: status, indexability and the issues found.",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+        },
+        "indexability": {
+            "type": "string",
+            "title": "Indexability and redirects",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=indexability"
+        },
+        "content": {
+            "type": "string",
+            "title": "Titles, descriptions and social tags",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=content"
+        },
+        "allResults": {
+            "type": "string",
+            "title": "All results (full JSON)",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        },
+        "summary": {
+            "type": "string",
+            "title": "Site summary: issue counts and duplicate titles",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/SUMMARY"
+        },
+        "failed": {
+            "type": "string",
+            "title": "Pages that could not be checked",
+            "description": "Unreachable or blocked pages and sitemap errors (not charged).",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/FAILED"
+        }
+    }
+}

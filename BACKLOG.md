@@ -9,20 +9,8 @@ Rules for every idea: public data only, no logins, no personal data, no bypassin
 ## Approved
 
 _Approved by Damián on 2026-11-16 (ideas 3 to 6 from the 2026-11-12 Scout, 8 and 9 from the 2026-11-16 Scout), in build order.
-Ideas 3 (Remote Jobs Aggregator, 2026-11-17) and 4 (Substack Newsletter Posts Scraper, 2026-11-18) were rejected by
+Idea 8 (SEO On-Page Audit) was built on 2026-11-23. Ideas 3 (Remote Jobs Aggregator, 2026-11-17) and 4 (Substack Newsletter Posts Scraper, 2026-11-18) were rejected by
 the Builder; see **Rejected**._
-
-### 8. SEO On-Page Audit and Metadata Checker
-- What: for a list of URLs (or a sitemap), one row per page with HTTP status, redirect chain, response time, title and
-  meta description (with lengths), canonical, robots meta and X-Robots-Tag, hreflang, H1/H2, word count, Open Graph and
-  Twitter tags, JSON-LD types, image alt coverage, internal/external link counts and a list of issues found. Cross-sells
-  with our Website Popularity Rank Checker (and the Sitemap and Tech Stack ideas if built).
-- Scores: demand 3, competition 4, access 4, legal 5, cost 4.
-- Main competitor: smart-digital/complete-seo-audit-tool, 86 users, 5.0 (4 reviews), $0.04 per page (expensive).
-  Also autofacts/metadata-scraper (31 users, 5.0 with 2 reviews, $0.005/page) and logiover/bulk-url-status-checker
-  (20 users, no reviews, $0.0025/URL).
-- Access: one plain GET per page, no browser. Pages that block plain requests are reported as failed and not charged.
-- Suggested price: $0.002 per page. Expected users: 20 to 30 per month.
 
 ### 9. RSS and Atom Feed Reader (with feed discovery)
 - What: give feed URLs or plain website URLs; finds the feed (`<link rel="alternate">`, common paths), parses RSS 1/2,
@@ -178,6 +166,7 @@ monthly users. Scores as above (5 is best)._
 | Keyword Suggestions Scraper (Google, YouTube, Bing) | `actors/keyword-suggestions-scraper` | 2026-11-12 | https://apify.com/pampa-data/keyword-suggestions-scraper |
 | Website Tech Stack Detector | `actors/website-tech-stack-detector` | 2026-11-19 | https://apify.com/pampa-data/website-tech-stack-detector |
 | Apple App Store Scraper (iTunes Search API) | `actors/app-store-scraper` | 2026-11-20 | https://apify.com/pampa-data/app-store-scraper |
+| SEO On-Page Audit and Meta Tag Checker | `actors/seo-on-page-audit` | 2026-11-23 | https://apify.com/pampa-data/seo-on-page-audit (private until published) |
 
 ## Rejected
 

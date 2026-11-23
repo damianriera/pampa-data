@@ -1,0 +1,71 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": ["finalUrl", "statusCode", "indexable", "issueCount", "issuesText", "title", "titleLength", "metaDescriptionLength", "h1Count", "wordCount", "responseTimeMs"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "finalUrl": { "label": "Page", "format": "link" },
+                    "statusCode": { "label": "Status", "format": "number" },
+                    "indexable": { "label": "Indexable", "format": "boolean" },
+                    "issueCount": { "label": "Issues", "format": "number" },
+                    "issuesText": { "label": "Issues found", "format": "text" },
+                    "title": { "label": "Title", "format": "text" },
+                    "titleLength": { "label": "Title length", "format": "number" },
+                    "metaDescriptionLength": { "label": "Description length", "format": "number" },
+                    "h1Count": { "label": "H1", "format": "number" },
+                    "wordCount": { "label": "Words", "format": "number" },
+                    "responseTimeMs": { "label": "Response (ms)", "format": "number" }
+                }
+            }
+        },
+        "indexability": {
+            "title": "Indexability and redirects",
+            "transformation": {
+                "fields": ["url", "finalUrl", "statusCode", "redirectCount", "indexable", "canonical", "canonicalIsSelf", "metaRobots", "xRobotsTag", "robotsTxtAllowed", "hreflang"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "url": { "label": "Requested URL", "format": "link" },
+                    "finalUrl": { "label": "Final URL", "format": "link" },
+                    "statusCode": { "label": "Status", "format": "number" },
+                    "redirectCount": { "label": "Redirects", "format": "number" },
+                    "indexable": { "label": "Indexable", "format": "boolean" },
+                    "canonical": { "label": "Canonical", "format": "link" },
+                    "canonicalIsSelf": { "label": "Self canonical", "format": "boolean" },
+                    "metaRobots": { "label": "Meta robots", "format": "text" },
+                    "xRobotsTag": { "label": "X-Robots-Tag", "format": "text" },
+                    "robotsTxtAllowed": { "label": "robots.txt allows", "format": "boolean" },
+                    "hreflang": { "label": "hreflang", "format": "array" }
+                }
+            }
+        },
+        "content": {
+            "title": "Titles, descriptions and social tags",
+            "transformation": {
+                "fields": ["finalUrl", "title", "metaDescription", "h1", "lang", "openGraph", "twitterCard", "jsonLdTypes", "imageCount", "imagesMissingAlt"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "finalUrl": { "label": "Page", "format": "link" },
+                    "title": { "label": "Title", "format": "text" },
+                    "metaDescription": { "label": "Meta description", "format": "text" },
+                    "h1": { "label": "H1", "format": "array" },
+                    "lang": { "label": "Language", "format": "text" },
+                    "openGraph": { "label": "Open Graph", "format": "object" },
+                    "twitterCard": { "label": "Twitter card", "format": "object" },
+                    "jsonLdTypes": { "label": "JSON-LD types", "format": "array" },
+                    "imageCount": { "label": "Images", "format": "number" },
+                    "imagesMissingAlt": { "label": "Images without alt", "format": "number" }
+                }
+            }
+        }
+    }
+}

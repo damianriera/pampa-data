@@ -1,0 +1,29 @@
+{
+ "requestedUrl": "https://www.python.org/robots.txt",
+ "url": "https://www.python.org/robots.txt",
+ "statusCode": 200,
+ "contentType": "text/plain",
+ "headers": {
+  "accept-ranges": "bytes",
+  "age": "72",
+  "content-encoding": "gzip",
+  "content-length": "297",
+  "content-security-policy-report-only": "default-src 'self'; frame-src 'self' https://console.python.org; object-src 'none'; base-uri 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://ajax.googleapis.com; script-src 'self' https://analytics.python.org https://media.ethicalads.io https://server.ethicalads.io https://ajax.googleapis.com; font-src 'self' data:; frame-ancestors 'self'; form-action 'self'; connect-src 'self' https://console.python.org https://analytics.python.org https://server.ethicalads.io https://2p66nmmycsj3.statuspage.io",
+  "content-type": "text/plain",
+  "date": "Mon, 23 Nov 2026 12:44:51 GMT",
+  "server": "nginx",
+  "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+  "vary": "Cookie, Accept-Encoding",
+  "via": "1.1 varnish, 1.1 varnish, 1.1 varnish",
+  "x-cache": "MISS, HIT, HIT",
+  "x-cache-hits": "0, 184, 0",
+  "x-frame-options": "SAMEORIGIN",
+  "x-served-by": "cache-iad-kcgs7200143-IAD, cache-iad-kcgs7200143-IAD, cache-iad-kcgs7200102-IAD, cache-chi-kigq8000068-CHI",
+  "x-timer": "S1795437891.320805,VS0,VE1"
+ },
+ "redirectChain": [],
+ "responseTimeMs": 300,
+ "bytes": 537,
+ "truncated": false,
+ "body": "IyBEaXJlY3Rpb25zIGZvciByb2JvdHMuICBTZWUgdGhpcyBVUkw6CiMgaHR0cDovL3d3dy5yb2JvdHN0eHQub3JnL3JvYm90c3R4dC5odG1sCiMgZm9yIGEgZGVzY3JpcHRpb24gb2YgdGhlIGZpbGUgZm9ybWF0LgoKVXNlci1hZ2VudDogSFRUcmFjawpVc2VyLWFnZW50OiBwdWYKVXNlci1hZ2VudDogTVNJRUNyYXdsZXIKRGlzYWxsb3c6IC8KCiMgVGhlIEtydWdsZSB3ZWIgY3Jhd2xlciAodGhvdWdoIGJhc2VkIG9uIE51dGNoKSBpcyBPSy4KVXNlci1hZ2VudDogS3J1Z2xlCkFsbG93OiAvCkRpc2FsbG93OiAvfmd1aWRvL29ybGlqbi8KRGlzYWxsb3c6IC93ZWJzdGF0cy8KCiMgTm8gb25lIHNob3VsZCBiZSBjcmF3bGluZyB1cyB3aXRoIE51dGNoLgpVc2VyLWFnZW50OiBOdXRjaApEaXNhbGxvdzogLwoKIyBIaWRlIG9sZCB2ZXJzaW9ucyBvZiB0aGUgZG9jdW1lbnRhdGlvbiBhbmQgdmFyaW91cyBsYXJnZSBzZXRzIG9mIGZpbGVzLgpVc2VyLWFnZW50OiAqCkRpc2FsbG93OiAvfmd1aWRvL29ybGlqbi8KRGlzYWxsb3c6IC93ZWJzdGF0cy8K"
+}

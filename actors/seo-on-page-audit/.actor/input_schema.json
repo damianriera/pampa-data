@@ -1,0 +1,61 @@
+{
+    "title": "SEO On-Page Audit",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "urls": {
+            "title": "Page URLs",
+            "type": "array",
+            "description": "Pages to audit, one per line. Full URLs (https://example.com/pricing) or domains (example.com, audits the homepage). Up to 10,000 per run.",
+            "editor": "stringList",
+            "prefill": ["https://www.python.org/", "https://developer.mozilla.org/en-US/docs/Web/HTML", "http://wordpress.org/"]
+        },
+        "sitemapUrls": {
+            "title": "Websites or sitemaps to audit in full",
+            "type": "array",
+            "description": "Audit every page listed in a website's sitemap. Give a sitemap URL (https://example.com/sitemap.xml, indexes and .gz files work) or just the website (example.com): the sitemaps are found from robots.txt or /sitemap.xml.",
+            "editor": "stringList"
+        },
+        "maxPages": {
+            "title": "Maximum pages",
+            "type": "integer",
+            "description": "Stop after this many pages in total (page URLs first, then sitemap pages).",
+            "default": 1000,
+            "minimum": 1,
+            "maximum": 10000
+        },
+        "sitemapUrlFilter": {
+            "title": "Only sitemap URLs matching",
+            "type": "string",
+            "description": "Optional regular expression; only sitemap pages whose URL matches are audited. Example: /blog/ or /products/.",
+            "editor": "textfield"
+        },
+        "checkRobotsTxt": {
+            "title": "Check robots.txt",
+            "type": "boolean",
+            "description": "Read each website's robots.txt once and report whether Googlebot may crawl each page (robotsTxtAllowed).",
+            "default": true
+        },
+        "includeHeadings": {
+            "title": "Include H2 headings",
+            "type": "boolean",
+            "description": "Adds the text of up to 30 H2 headings per page. H1 headings are always included.",
+            "default": true
+        },
+        "includeLinks": {
+            "title": "Include link lists",
+            "type": "boolean",
+            "description": "Adds every internal and external link (URL and anchor text) on each page. Counts are always included.",
+            "default": false
+        },
+        "maxConcurrency": {
+            "title": "Parallel pages",
+            "type": "integer",
+            "description": "How many pages to fetch at the same time. At most 3 at once per website, to stay polite.",
+            "default": 10,
+            "minimum": 1,
+            "maximum": 30,
+            "sectionCaption": "Advanced"
+        }
+    }
+}
