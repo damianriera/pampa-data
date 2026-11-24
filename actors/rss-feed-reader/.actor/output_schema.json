@@ -1,0 +1,33 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "RSS Feed Reader output",
+    "properties": {
+        "overview": {
+            "type": "string",
+            "title": "Feed items",
+            "description": "One row per article, post or episode, newest first per feed.",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+        },
+        "podcasts": {
+            "type": "string",
+            "title": "Podcast episodes and media",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=podcasts"
+        },
+        "allResults": {
+            "type": "string",
+            "title": "All results (full JSON)",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        },
+        "feeds": {
+            "type": "string",
+            "title": "Feeds read: title, type, language, last update, items found",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/FEEDS"
+        },
+        "failed": {
+            "type": "string",
+            "title": "Feeds or websites that could not be read",
+            "description": "Blocked, unreachable or no feed found (not charged).",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/FAILED"
+        }
+    }
+}

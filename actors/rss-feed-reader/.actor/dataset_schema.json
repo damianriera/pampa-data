@@ -1,0 +1,44 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": ["published", "title", "link", "feedTitle", "author", "categories", "summary", "image"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "published": { "label": "Published", "format": "date" },
+                    "title": { "label": "Title", "format": "text" },
+                    "link": { "label": "Link", "format": "link" },
+                    "feedTitle": { "label": "Feed", "format": "text" },
+                    "author": { "label": "Author", "format": "text" },
+                    "categories": { "label": "Categories", "format": "array" },
+                    "summary": { "label": "Summary", "format": "text" },
+                    "image": { "label": "Image", "format": "image" }
+                }
+            }
+        },
+        "podcasts": {
+            "title": "Podcast episodes and media",
+            "transformation": {
+                "fields": ["published", "title", "feedTitle", "durationSeconds", "enclosureUrl", "enclosureType", "enclosureLengthBytes", "link"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "published": { "label": "Published", "format": "date" },
+                    "title": { "label": "Episode", "format": "text" },
+                    "feedTitle": { "label": "Show", "format": "text" },
+                    "durationSeconds": { "label": "Duration (s)", "format": "number" },
+                    "enclosureUrl": { "label": "Audio or media file", "format": "link" },
+                    "enclosureType": { "label": "Type", "format": "text" },
+                    "enclosureLengthBytes": { "label": "Size (bytes)", "format": "number" },
+                    "link": { "label": "Page", "format": "link" }
+                }
+            }
+        }
+    }
+}

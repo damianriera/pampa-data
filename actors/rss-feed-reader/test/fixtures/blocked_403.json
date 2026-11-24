@@ -1,0 +1,17 @@
+{
+ "requestedUrl": "https://www.lemonde.fr/rss/une.xml",
+ "url": "https://www.lemonde.fr/rss/une.xml",
+ "statusCode": 403,
+ "contentType": "text/plain",
+ "headers": {
+  "content-length": "24",
+  "content-type": "text/plain",
+  "date": "Tue, 24 Nov 2026 12:46:05 GMT",
+  "x-block-reason": "hostname_blocked"
+ },
+ "redirectChain": [],
+ "responseTimeMs": 157,
+ "bytes": 24,
+ "truncated": false,
+ "body": "QmxvY2tlZCBieSBlZ3Jlc3MgcG9saWN5"
+}
