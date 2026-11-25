@@ -70,3 +70,4 @@ You pay per website checked successfully: **$1.50 per 1,000 websites**. Failed a
 - [Website Popularity Rank Checker](https://apify.com/pampa-data/website-popularity-rank): Tranco top 1M rank and trend for the same domains, to sort your lead list by size.
 - [Company Jobs Scraper](https://apify.com/pampa-data/company-jobs-scraper): open jobs of the companies you track, a strong buying signal next to their tech stack.
 - [Keyword Suggestions Scraper](https://apify.com/pampa-data/keyword-suggestions-scraper): what people search about a product or platform, from Google, YouTube and Bing autocomplete.
+- [SEO On-Page Audit and Meta Tag Checker](https://apify.com/pampa-data/seo-on-page-audit): titles, meta descriptions, canonical, noindex, headings, structured data and issues for a list of pages or a whole sitemap.

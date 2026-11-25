@@ -1,0 +1,87 @@
+{
+    "title": "RSS Feed Reader",
+    "type": "object",
+    "schemaVersion": 1,
+    "required": ["urls"],
+    "properties": {
+        "urls": {
+            "title": "Feeds or websites",
+            "type": "array",
+            "description": "RSS, Atom or JSON Feed URLs, or plain website addresses (stackoverflow.blog): the feed is found from the page's <link rel=\"alternate\"> tag or the usual paths (/feed, /rss.xml, /atom.xml...). Works for blogs, news sites, Medium (medium.com/feed/@name), podcasts and job boards. Up to 5,000 per run.",
+            "editor": "stringList",
+            "prefill": ["https://xkcd.com/atom.xml", "stackoverflow.blog", "https://github.blog/feed/"]
+        },
+        "publishedAfter": {
+            "title": "Only items published after",
+            "type": "string",
+            "description": "A date (2026-11-01) or a period back from now (24 hours, 7 days, 2 weeks). Items without a date are skipped when this is set. Leave empty for all items.",
+            "editor": "textfield"
+        },
+        "keywords": {
+            "title": "Only items mentioning",
+            "type": "array",
+            "description": "Keep items whose title, summary, categories or text contain at least one of these words (case and accents ignored). Matches are listed in matchedKeywords.",
+            "editor": "stringList"
+        },
+        "excludeKeywords": {
+            "title": "Skip items mentioning",
+            "type": "array",
+            "description": "Drop items that contain any of these words.",
+            "editor": "stringList"
+        },
+        "maxItemsPerFeed": {
+            "title": "Maximum items per feed",
+            "type": "integer",
+            "description": "Newest items first. Most feeds hold 10 to 50 items; podcasts can hold thousands of episodes.",
+            "default": 100,
+            "minimum": 1,
+            "maximum": 10000
+        },
+        "maxItems": {
+            "title": "Maximum items in total",
+            "type": "integer",
+            "description": "Stop the run after this many items across all feeds.",
+            "default": 5000,
+            "minimum": 1,
+            "maximum": 100000
+        },
+        "content": {
+            "title": "Full content",
+            "type": "string",
+            "description": "Add the full article text (when the feed includes it, as WordPress, Medium and most blogs do) in a 'content' field, as plain text (good for AI and RAG) or the original HTML.",
+            "editor": "select",
+            "enum": ["none", "text", "html"],
+            "enumTitles": ["No (title and summary only)", "Plain text", "HTML"],
+            "default": "none"
+        },
+        "summaryMaxLength": {
+            "title": "Summary length (characters)",
+            "type": "integer",
+            "description": "Summaries are cut at a word boundary after this many characters. 0 leaves the summary out.",
+            "default": 500,
+            "minimum": 0,
+            "maximum": 100000
+        },
+        "deduplicate": {
+            "title": "Remove duplicates across feeds",
+            "type": "boolean",
+            "description": "The same article in two feeds (same link, ignoring utm_ tracking parameters) is saved once.",
+            "default": true
+        },
+        "allFeedsPerWebsite": {
+            "title": "Read every feed a website declares",
+            "type": "boolean",
+            "description": "By default a website gives its main feed only. Turn on to also read category or language feeds the page lists (comment feeds are always skipped).",
+            "default": false,
+            "sectionCaption": "Advanced"
+        },
+        "maxConcurrency": {
+            "title": "Parallel feeds",
+            "type": "integer",
+            "description": "How many feeds to read at the same time (at most 2 at once per website).",
+            "default": 10,
+            "minimum": 1,
+            "maximum": 50
+        }
+    }
+}

@@ -88,3 +88,4 @@ Rough sizes per seed keyword and source: plain keyword about 10 suggestions, wit
 - [Google Trends Scraper](https://apify.com/pampa-data/google-trends-scraper): check which of your new keywords is growing, by region and over time.
 - [Website Popularity Rank Checker](https://apify.com/pampa-data/website-popularity-rank): popularity rank of the websites that rank for your keywords.
 - [Company Jobs Scraper](https://apify.com/pampa-data/company-jobs-scraper): open jobs of any company from Greenhouse, Lever, Ashby and Workday.
+- [SEO On-Page Audit and Meta Tag Checker](https://apify.com/pampa-data/seo-on-page-audit): titles, meta descriptions, canonical, noindex, headings, structured data and issues for a list of pages or a whole sitemap.

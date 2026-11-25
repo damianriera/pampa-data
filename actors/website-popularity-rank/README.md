@@ -71,3 +71,4 @@ You pay per domain in the results, including domains that are not in the top 1M 
 - [Company Jobs Scraper](https://apify.com/pampa-data/company-jobs-scraper): open jobs of the companies behind the domains you check, from Greenhouse, Lever, Ashby and Workday.
 - [Keyword Suggestions Scraper](https://apify.com/pampa-data/keyword-suggestions-scraper): long-tail keyword ideas from Google, YouTube and Bing autocomplete for the niches you research.
 - [Website Tech Stack Detector](https://apify.com/pampa-data/website-tech-stack-detector): CMS, ecommerce platform, analytics, CDN, hosting and e-mail provider of the same domains.
+- [SEO On-Page Audit and Meta Tag Checker](https://apify.com/pampa-data/seo-on-page-audit): titles, meta descriptions, canonical, noindex, headings, structured data and issues for a list of pages or a whole sitemap.
