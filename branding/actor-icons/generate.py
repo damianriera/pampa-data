@@ -68,3 +68,33 @@ icons["app-store-scraper"]=f'''
 '''
 for k,v in icons.items():
     open(f"{k}.svg","w").write(HEAD+v+TAIL)
+
+# Added 2026-11-25
+icons2 = {}
+icons2["seo-on-page-audit"] = f'''
+    <rect x="58" y="78" width="360" height="300" rx="28" fill="{W}" stroke="{N}" stroke-width="20"/>
+    <line x1="68" y1="140" x2="408" y2="140" stroke="{N}" stroke-width="16"/>
+    <circle cx="104" cy="110" r="10" fill="{Y}"/><circle cx="136" cy="110" r="10" fill="{S}"/><circle cx="168" cy="110" r="10" fill="{G}"/>
+    <polyline points="92,186 108,202 132,174" fill="none" stroke="{G}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="152" y="180" width="180" height="16" rx="8" fill="{N}"/>
+    <polyline points="92,240 108,256 132,228" fill="none" stroke="{G}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="152" y="234" width="130" height="16" rx="8" fill="{S}"/>
+    <path d="M94 286 L126 314 M126 286 L94 314" stroke="#D9534F" stroke-width="12" stroke-linecap="round"/>
+    <rect x="152" y="292" width="100" height="16" rx="8" fill="{S}"/>
+    <line x1="392" y1="372" x2="446" y2="426" stroke="{N}" stroke-width="36" stroke-linecap="round"/>
+    <circle cx="350" cy="330" r="70" fill="{W}" stroke="{N}" stroke-width="22"/>
+    <circle cx="350" cy="330" r="34" fill="{Y}"/>
+'''
+icons2["rss-feed-reader"] = f'''
+    <rect x="150" y="70" width="290" height="250" rx="30" fill="{W}" stroke="{N}" stroke-width="16" opacity="0.65"/>
+    <rect x="112" y="110" width="290" height="250" rx="30" fill="{W}" stroke="{N}" stroke-width="16"/>
+    <rect x="284" y="150" width="96" height="16" rx="8" fill="{N}"/>
+    <rect x="284" y="186" width="74" height="14" rx="7" fill="{S}"/>
+    <rect x="284" y="216" width="88" height="14" rx="7" fill="{S}"/>
+    <rect x="66" y="196" width="200" height="200" rx="40" fill="{Y}" stroke="{N}" stroke-width="18"/>
+    <circle cx="116" cy="346" r="20" fill="{N}"/>
+    <path d="M100 288 A62 62 0 0 1 174 362" fill="none" stroke="{N}" stroke-width="24" stroke-linecap="round"/>
+    <path d="M100 236 A114 114 0 0 1 226 362" fill="none" stroke="{N}" stroke-width="24" stroke-linecap="round"/>
+'''
+for k, v in icons2.items():
+    open(f"{k}.svg", "w").write(HEAD + v + TAIL)
