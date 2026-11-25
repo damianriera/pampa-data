@@ -50,16 +50,7 @@ _Approved by Damián on 2026-11-22 (ideas 13 to 15 from the 2026-11-19 Scout), b
   failed and not charged.
 - Suggested price: $0.0008 per website. Expected users: 15 to 25 per month.
 
-## Proposed
-
-_Niche Scout 2026-11-23. Numbered 18 to 22, after the 2026-11-19 batch (13 to 17). Competitor numbers are 30-day users
-from the Apify Store API on 2026-11-23 (about 45 searches plus the top 1,700 Actors by popularity). Ranked by expected
-monthly users. Scores as below (5 is best): demand, weak competition, access, legal safety, cost per result. Like the
-last batch, these are "tool" Actors that work on URLs or files the user gives us, so no platform's terms can shut them
-down. Also checked and dropped: dataset merge and dedupe (a free Actor has 529 users), audio/video converter and audio
-transcription (CPU cost per minute too high for our price), trademark registries (applicants include private people),
-VIN decoder, product recalls, security headers, robots.txt and redirect checkers, link previews, PubMed, OpenAlex,
-WooCommerce and recipe scrapers (all under 20 users for the leader)._
+_Approved by Damián on 2026-11-25 (ideas 18 to 20 from the 2026-11-23 Scout), built after 13 to 15 in this order._
 
 ### 18. Website Screenshot Generator
 - What: screenshots of a list of URLs with Playwright: viewport or full page, device presets (desktop, tablet, phone),
@@ -98,6 +89,17 @@ WooCommerce and recipe scrapers (all under 20 users for the leader)._
 - Access: plain downloads of the user's URLs (a 2.2 MB arXiv PDF returned 200). Legal note: the user is responsible
   for the files; we skip HTML pages and cap the file size and count per run.
 - Suggested price: $0.001 per file + $0.0005 per 10 MB. Expected users: 15 to 25 per month.
+
+## Proposed
+
+_Niche Scout 2026-11-23. Numbered 18 to 22, after the 2026-11-19 batch (13 to 17). Ideas 18 to 20 were approved on 2026-11-25 and moved to **Approved**. Competitor numbers are 30-day users
+from the Apify Store API on 2026-11-23 (about 45 searches plus the top 1,700 Actors by popularity). Ranked by expected
+monthly users. Scores as below (5 is best): demand, weak competition, access, legal safety, cost per result. Like the
+last batch, these are "tool" Actors that work on URLs or files the user gives us, so no platform's terms can shut them
+down. Also checked and dropped: dataset merge and dedupe (a free Actor has 529 users), audio/video converter and audio
+transcription (CPU cost per minute too high for our price), trademark registries (applicants include private people),
+VIN decoder, product recalls, security headers, robots.txt and redirect checkers, link previews, PubMed, OpenAlex,
+WooCommerce and recipe scrapers (all under 20 users for the leader)._
 
 ### 21. HTTP Request Runner (bulk API caller)
 - What: send many HTTP requests from a list or a template with variables (method, headers, JSON or form body, auth
