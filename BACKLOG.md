@@ -50,7 +50,78 @@ _Approved by Damián on 2026-11-22 (ideas 13 to 15 from the 2026-11-19 Scout), b
   failed and not charged.
 - Suggested price: $0.0008 per website. Expected users: 15 to 25 per month.
 
+_Approved by Damián on 2026-11-25 (ideas 18 to 20 from the 2026-11-23 Scout), built after 13 to 15 in this order._
+
+### 18. Website Screenshot Generator
+- What: screenshots of a list of URLs with Playwright: viewport or full page, device presets (desktop, tablet, phone),
+  PNG/JPEG/WebP, quality, wait for selector or delay, hide cookie banners with a CSS list, dark mode, optional PDF.
+  Each file saved to the key-value store with a public link; the dataset row has URL, final URL, status, title, size.
+- Scores: demand 5, competition 3, access 4, legal 5, cost 3.
+- Main competitor: apify/screenshot-url, 1,993 users, 3.88 (20 reviews), free (users pay compute), last updated
+  2026-01-29. cheapapi/website-screenshot-api has 315 users, 5.0 (1 review), $0.00089 per screenshot;
+  moonweil/url-screenshot-api 143 users, no reviews, $0.004 + $0.001 start; i-scraper 60 users, $0.006.
+- Access: the user's URLs. Local test: one Chromium, 5 sites, 0.5 to 4.5 s each (2.2 s average). Pages behind bot
+  protection fail and are not charged. Estimated cost about $0.0002 per screenshot at 1 GB.
+- Suggested price: $0.0015 per screenshot (cheaper than everyone except cheapapi, with more options).
+  Expected users: 25 to 40 per month.
+
+### 19. Image OCR Text Extractor
+- What: text from images (URLs or key-value store files): full text, per-line text with confidence and bounding boxes,
+  language selection (English, Spanish, Portuguese, French, German, Italian and more), optional PDF pages later via
+  idea 13. Images with no text are reported and not charged. For receipts, screenshots, scanned forms and memes.
+- Scores: demand 4, competition 4, access 5, legal 5, cost 3.
+- Main competitor: steadydata/image-ocr-text, 191 users, no reviews, $0.003 per image + $0.0005 start.
+  zenomastro/image-ocr-text-extractor has 129 users, no reviews, $0.005 per image; the Google Lens OCR Actors
+  (getascraper 73, zen-studio 58 users) depend on Google pages and are not an option for us.
+- Access: the user's images; OCR with `tesseract.js` (Apache-2.0), language data bundled in the image so nothing is
+  downloaded at run time. Local test: 0.7 s per 1000x700 screenshot on one core, about 3 s at 1 GB, about
+  $0.00025 per image.
+- Suggested price: $0.002 per image. Expected users: 20 to 35 per month.
+
+### 20. Bulk File Downloader
+- What: download a list of file URLs (or URLs found in another Actor's dataset field) into the key-value store or a
+  single ZIP, with file name templates, type and size filters, retries, and a dataset row per file (URL, final URL,
+  status, content type, bytes, public link, SHA-256). Useful after our App Store, Favicon/Logo and PDF Actors.
+- Scores: demand 4, competition 4, access 5, legal 4, cost 4.
+- Main competitor: rationalistic_candle_ucn/bulk-file-downloader, 123 users, no reviews, $0.002 per file + $0.001 per
+  10 MB, last updated 2026-09-10. chris_elder/bulk-file-downloader has 74 users ($0.002 + $0.0005 start);
+  automa-flow/parallel-bulk-file-downloader 56 users ($0.002 per file + $0.002 per 10 MB stored).
+- Access: plain downloads of the user's URLs (a 2.2 MB arXiv PDF returned 200). Legal note: the user is responsible
+  for the files; we skip HTML pages and cap the file size and count per run.
+- Suggested price: $0.001 per file + $0.0005 per 10 MB. Expected users: 15 to 25 per month.
+
 ## Proposed
+
+_Niche Scout 2026-11-23. Numbered 18 to 22, after the 2026-11-19 batch (13 to 17). Ideas 18 to 20 were approved on 2026-11-25 and moved to **Approved**. Competitor numbers are 30-day users
+from the Apify Store API on 2026-11-23 (about 45 searches plus the top 1,700 Actors by popularity). Ranked by expected
+monthly users. Scores as below (5 is best): demand, weak competition, access, legal safety, cost per result. Like the
+last batch, these are "tool" Actors that work on URLs or files the user gives us, so no platform's terms can shut them
+down. Also checked and dropped: dataset merge and dedupe (a free Actor has 529 users), audio/video converter and audio
+transcription (CPU cost per minute too high for our price), trademark registries (applicants include private people),
+VIN decoder, product recalls, security headers, robots.txt and redirect checkers, link previews, PubMed, OpenAlex,
+WooCommerce and recipe scrapers (all under 20 users for the leader)._
+
+### 21. HTTP Request Runner (bulk API caller)
+- What: send many HTTP requests from a list or a template with variables (method, headers, JSON or form body, auth
+  header from a secret input), with concurrency and rate limits, retries and backoff, and one dataset row per request
+  (status, timing, response headers, parsed JSON or text). Lets Make, n8n and Zapier users call any API in bulk from
+  Apify. Hard limits on concurrency per host so it cannot be used to flood a site.
+- Scores: demand 3, competition 4, access 5, legal 5, cost 5.
+- Main competitor: memo23/http-request, 114 users, 5.0 (1 review), $0.005 per request. riceman/send-http-requests has
+  63 users, 5.0 (2 reviews), $0.005 per request, last updated 2026-03-17; saliga/bulk-http-requests 11 users, $0.001.
+- Access: no third-party site; requests go where the user points them (httpbin test returned 200).
+- Suggested price: $0.0005 per request. Expected users: 10 to 20 per month.
+
+### 22. Article Text Extractor
+- What: for article URLs (or a news site's section page or RSS feed, linking with idea 9), the clean article: title,
+  author field, published date, lead image, language, main text as plain text, Markdown and HTML, word count and reading
+  time, using Mozilla Readability (Apache-2.0) plus JSON-LD dates. Good for LLM/RAG pipelines and media monitoring.
+- Scores: demand 3, competition 2, access 3, legal 3, cost 5.
+- Main competitor: lukaskrivka/article-extractor-smart, 152 users, 4.83 (10 reviews), free (made by an Apify
+  employee). tropical_prune/article-news-extractor has 24 users, 5.0 (4 reviews), $0.001 per article.
+- Access: one plain GET per URL (bbc.com/news returned 200). Paywalled or blocked pages are reported and not charged.
+  Legal note: the user decides which articles; we return text for their own analysis and the README says so.
+- Suggested price: $0.0005 per article. Expected users: 8 to 15 per month.
 
 _Niche Scout 2026-11-19. Numbered 13 to 17, after the 2026-11-16 batch (8 to 12). Ideas 13 to 15 were approved on 2026-11-22 and moved to **Approved**. Competitor numbers are 30-day users from the
 Apify Store API on 2026-11-19; about 45 searches checked. Ranked by expected monthly users. Scores as below (5 is best):
