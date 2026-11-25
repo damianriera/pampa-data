@@ -1,0 +1,28 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "PDF Text Extractor output",
+    "properties": {
+        "overview": {
+            "type": "string",
+            "title": "PDF text",
+            "description": "One row per PDF with its text and main details.",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+        },
+        "metadata": {
+            "type": "string",
+            "title": "PDF metadata",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=metadata"
+        },
+        "allResults": {
+            "type": "string",
+            "title": "All results (full JSON)",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        },
+        "failed": {
+            "type": "string",
+            "title": "PDFs that could not be read",
+            "description": "Unreachable, not a PDF, password-protected, too large or scanned without text (not charged).",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/FAILED"
+        }
+    }
+}

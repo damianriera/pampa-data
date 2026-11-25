@@ -1,0 +1,51 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": ["url", "title", "author", "pageCount", "wordCount", "language", "createdAt", "text"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "url": { "label": "PDF", "format": "link" },
+                    "title": { "label": "Title", "format": "text" },
+                    "author": { "label": "Author", "format": "text" },
+                    "pageCount": { "label": "Pages", "format": "number" },
+                    "wordCount": { "label": "Words", "format": "number" },
+                    "language": { "label": "Language", "format": "text" },
+                    "createdAt": { "label": "Created", "format": "date" },
+                    "text": { "label": "Text", "format": "text" }
+                }
+            }
+        },
+        "metadata": {
+            "title": "Metadata",
+            "transformation": {
+                "fields": ["url", "fileName", "title", "author", "subject", "keywords", "creator", "producer", "createdAt", "modifiedAt", "pdfVersion", "pageCount", "fileSizeBytes", "isFillableForm", "pagesWithoutText"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "url": { "label": "PDF", "format": "link" },
+                    "fileName": { "label": "File name", "format": "text" },
+                    "title": { "label": "Title", "format": "text" },
+                    "author": { "label": "Author", "format": "text" },
+                    "subject": { "label": "Subject", "format": "text" },
+                    "keywords": { "label": "Keywords", "format": "array" },
+                    "creator": { "label": "Made with", "format": "text" },
+                    "producer": { "label": "Producer", "format": "text" },
+                    "createdAt": { "label": "Created", "format": "date" },
+                    "modifiedAt": { "label": "Modified", "format": "date" },
+                    "pdfVersion": { "label": "PDF version", "format": "text" },
+                    "pageCount": { "label": "Pages", "format": "number" },
+                    "fileSizeBytes": { "label": "Size (bytes)", "format": "number" },
+                    "isFillableForm": { "label": "Form", "format": "boolean" },
+                    "pagesWithoutText": { "label": "Pages without text", "format": "array" }
+                }
+            }
+        }
+    }
+}

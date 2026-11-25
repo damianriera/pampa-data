@@ -1,0 +1,75 @@
+{
+    "title": "PDF Text Extractor",
+    "type": "object",
+    "schemaVersion": 1,
+    "required": ["urls"],
+    "properties": {
+        "urls": {
+            "title": "PDF URLs",
+            "type": "array",
+            "description": "Direct links to PDF files (reports, papers, invoices, manuals, forms). Files in your Apify key-value stores work too: use the record URL (https://api.apify.com/v2/key-value-stores/STORE_ID/records/KEY). Up to 10,000 per run.",
+            "editor": "stringList",
+            "prefill": ["https://www.irs.gov/pub/irs-pdf/fw9.pdf", "https://pdfobject.com/pdf/sample.pdf"]
+        },
+        "textFormat": {
+            "title": "Text format",
+            "type": "string",
+            "description": "Plain text keeps the line breaks of the PDF. Markdown also turns large-font lines into # headings and marks each page with <!-- page N -->, which works well for LLMs and RAG chunking.",
+            "editor": "select",
+            "enum": ["text", "markdown"],
+            "enumTitles": ["Plain text", "Markdown (headings and page markers)"],
+            "default": "text"
+        },
+        "includePages": {
+            "title": "Text per page",
+            "type": "boolean",
+            "description": "Add a 'pages' list with the text and word count of every page, for citations and page-level search.",
+            "default": false
+        },
+        "pageRange": {
+            "title": "Pages to read",
+            "type": "string",
+            "description": "Only read these pages, like 1-5, 8, 10- (from page 10 to the end) or -3 (the first three). Leave empty for every page.",
+            "editor": "textfield"
+        },
+        "maxChars": {
+            "title": "Maximum text length (characters)",
+            "type": "integer",
+            "description": "Cut the text at a word boundary after this many characters (textTruncated tells you when it happened). 0 keeps the full text.",
+            "default": 0,
+            "minimum": 0,
+            "maximum": 50000000
+        },
+        "includeLinks": {
+            "title": "Links in the PDF",
+            "type": "boolean",
+            "description": "Add the web links (clickable link annotations) found in the PDF.",
+            "default": false
+        },
+        "maxPages": {
+            "title": "Maximum pages per PDF",
+            "type": "integer",
+            "description": "Stop reading a PDF after this many pages (counted after the page range).",
+            "default": 2000,
+            "minimum": 1,
+            "maximum": 10000,
+            "sectionCaption": "Advanced"
+        },
+        "maxFileSizeMb": {
+            "title": "Maximum file size (MB)",
+            "type": "integer",
+            "description": "Larger files are skipped and not charged. Raise the run memory to 2 GB or more for files over 100 MB.",
+            "default": 50,
+            "minimum": 1,
+            "maximum": 200
+        },
+        "maxConcurrency": {
+            "title": "Parallel downloads",
+            "type": "integer",
+            "description": "How many PDFs to download and read at the same time (at most 2 at once per website).",
+            "default": 4,
+            "minimum": 1,
+            "maximum": 20
+        }
+    }
+}

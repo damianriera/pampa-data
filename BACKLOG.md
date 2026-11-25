@@ -12,20 +12,8 @@ _Approved by Damián on 2026-11-16 (ideas 3 to 6 from the 2026-11-12 Scout, 8 an
 Idea 8 (SEO On-Page Audit) was built on 2026-11-23 and idea 9 (RSS and Atom Feed Reader) on 2026-11-24. Ideas 3 (Remote Jobs Aggregator, 2026-11-17) and 4 (Substack Newsletter Posts Scraper, 2026-11-18) were rejected by
 the Builder; see **Rejected**._
 
-_Approved by Damián on 2026-11-22 (ideas 13 to 15 from the 2026-11-19 Scout), built after 8 and 9 in this order._
-
-### 13. PDF Text and Metadata Extractor
-- What: give PDF URLs (or files in a key-value store); returns one row per PDF with full text (plain or Markdown-ish with
-  page breaks), per-page text, page count, title, author field, creation/modification dates, producer, language guess,
-  word count, and a `hasTextLayer` flag so scanned PDFs are reported, not charged. Optional page range and max chars.
-  Good for RAG/LLM pipelines, invoices and reports.
-- Scores: demand 4, competition 3, access 5, legal 5, cost 4.
-- Main competitor: memo23/pdf-text-extractor, 196 users, 5.0 (2 reviews), $0.005 per PDF + $0.005 per start (OCR
-  $0.015/page). automation-lab/pdf-text-extractor has 117 users, no reviews, $0.003 per PDF + $0.005 start;
-  gochujang (37 users) charges $0.005 per PDF + $0.001 per page.
-- Access: plain download of the user's URLs (an arXiv PDF returned 200 `application/pdf`). Parsing with `unpdf`
-  (MIT, pdf.js based), no browser. No OCR in v1 (that is where the leaders' cost goes).
-- Suggested price: $0.002 per PDF, no start fee. Expected users: 25 to 40 per month.
+_Approved by Damián on 2026-11-22 (ideas 13 to 15 from the 2026-11-19 Scout), built after 8 and 9 in this order.
+Idea 13 (PDF Text and Metadata Extractor) was built on 2026-11-25._
 
 ### 14. Image Converter and Resizer
 - What: bulk convert and resize images from URLs: JPEG, PNG, WebP, AVIF, GIF (first frame) and TIFF in; WebP, AVIF,
@@ -227,6 +215,7 @@ monthly users. Scores as above (5 is best)._
 | Apple App Store Scraper (iTunes Search API) | `actors/app-store-scraper` | 2026-11-20 | https://apify.com/pampa-data/app-store-scraper |
 | SEO On-Page Audit and Meta Tag Checker | `actors/seo-on-page-audit` | 2026-11-23 | https://apify.com/pampa-data/seo-on-page-audit (private until published) |
 | RSS Feed Reader and Atom Parser (with Feed Finder) | `actors/rss-feed-reader` | 2026-11-24 | https://apify.com/pampa-data/rss-feed-reader (private until published) |
+| PDF Text Extractor: PDF to Text, Markdown and Metadata | `actors/pdf-text-extractor` | 2026-11-25 | https://apify.com/pampa-data/pdf-text-extractor (private until published) |
 
 ## Rejected
 
