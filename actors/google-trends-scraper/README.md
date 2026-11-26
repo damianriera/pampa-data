@@ -1,4 +1,6 @@
-# Google Trends Scraper
+# Google Trends Scraper & API: Interest, Regions, Trending Now
+
+**Google Trends API alternative with no API key and no Python setup.** Pay $2 per 1,000 results, export to JSON, CSV or Excel, or call it from your own code through the Apify API.
 
 Get Google Trends data as clean, ready-to-use JSON, CSV or Excel. For any search term, or up to 5 terms compared on the same scale, you get:
 

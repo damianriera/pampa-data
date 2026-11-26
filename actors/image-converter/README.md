@@ -1,4 +1,6 @@
-## Image Converter and Resizer (WebP, AVIF, JPEG, PNG)
+## Image Converter & Compressor: Bulk WebP, AVIF, JPEG, PNG
+
+**A bulk image converter and compressor: convert images to WebP or AVIF in bulk** and make them smaller. Pay $1 per 1,000 images, and broken links are free.
 
 **Convert and resize images in bulk from their URLs.** Paste image links (product photos, blog images, logos, the image column of another Actor's dataset) and get each one back as **WebP, AVIF, JPEG or PNG**, at the **width and height you want**, with **metadata stripped** and a **download link**. Every row also tells you the **original vs new size and the percent saved**.
 

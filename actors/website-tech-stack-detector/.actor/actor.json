@@ -1,8 +1,8 @@
 {
     "actorSpecification": 1,
     "name": "website-tech-stack-detector",
-    "title": "Website Tech Stack Detector (Bulk Technology Lookup)",
-    "description": "Find out what any website is built with, in bulk: CMS, ecommerce platform, analytics, tag managers, JavaScript frameworks, CDN, hosting, payments, live chat and e-mail provider, with versions when visible. 7,700+ technology fingerprints, one plain request per site.",
+    "title": "Tech Stack Detector: Wappalyzer & BuiltWith Alternative",
+    "description": "Website tech stack detector and Wappalyzer or BuiltWith alternative, in bulk: find the CMS, ecommerce platform, analytics, tag managers, JavaScript frameworks, CDN, hosting, payments, live chat and e-mail provider of any website, with versions. 7,700+ fingerprints. $1.50 per 1,000 sites.",
     "version": "0.1",
     "buildTag": "latest",
     "input": "./input_schema.json",

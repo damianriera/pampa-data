@@ -1,8 +1,8 @@
 {
     "actorSpecification": 1,
     "name": "image-converter",
-    "title": "Image Converter and Resizer: WebP, AVIF, JPEG, PNG",
-    "description": "Bulk convert and resize images from URLs to WebP, AVIF, JPEG or PNG. Set width, height, fit and quality, strip metadata, keep transparency or animation. Each file gets a download link, with original vs new size and the percent saved. Broken links and non-images are not charged.",
+    "title": "Image Converter & Compressor: Bulk WebP, AVIF, JPEG, PNG",
+    "description": "Bulk image converter, compressor and resizer: convert images from URLs to WebP, AVIF, JPEG or PNG. Set width, height, fit and quality, strip metadata, keep transparency or animation. Each file gets a download link, with original vs new size and the percent saved. $1 per 1,000 images.",
     "version": "0.1",
     "buildTag": "latest",
     "input": "./input_schema.json",

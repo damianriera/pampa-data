@@ -1,4 +1,6 @@
-## SEO On-Page Audit and Meta Tag Checker (Bulk)
+## SEO Audit Tool: Bulk On-Page SEO and Meta Tag Checker
+
+**A bulk SEO audit tool and meta tag checker** for whole sitemaps, not one page at a time. Pay $2 per 1,000 pages.
 
 Audit the on-page SEO of **thousands of pages at once**. Paste a list of URLs, or just a website, and get one row per page with its **status code, redirect chain, title and meta description (with lengths), canonical, noindex, robots.txt, hreflang, H1 and H2 headings, word count, Open Graph and Twitter tags, JSON-LD structured data, image alt text and links**, plus a plain-English **list of issues** to fix.
 

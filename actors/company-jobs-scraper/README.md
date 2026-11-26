@@ -1,4 +1,6 @@
-## Company Jobs Scraper (Greenhouse, Lever, Ashby, Workday)
+## ATS Jobs Scraper: Greenhouse, Lever, Ashby, Workday Jobs API
+
+**One jobs API for Greenhouse, Lever, Ashby and Workday career pages.** Pay $1 per 1,000 jobs, with the same columns for every company.
 
 Get **every open job of any company** straight from its own career page, in one clean table. Paste the career page links of the companies you follow and get title, department, location, remote or hybrid, employment type, **salary range when the company publishes it**, posted date and the apply link.
 

@@ -1,8 +1,8 @@
 {
     "actorSpecification": 1,
     "name": "seo-on-page-audit",
-    "title": "SEO On-Page Audit and Meta Tag Checker (Bulk)",
-    "description": "Bulk on-page SEO audit for URLs or a whole sitemap: status, redirects, title and meta description length, canonical, noindex, robots.txt, hreflang, H1/H2, word count, Open Graph, JSON-LD, image alt and links, with issues per page.",
+    "title": "SEO Audit Tool: Bulk On-Page SEO and Meta Tag Checker",
+    "description": "Bulk SEO audit tool and meta tag checker for URLs or a whole sitemap: status, redirects, title and meta description length, canonical, noindex, robots.txt, hreflang, H1/H2, word count, Open Graph, JSON-LD, image alt and links, with issues per page. $2 per 1,000 pages.",
     "version": "0.1",
     "buildTag": "latest",
     "input": "./input_schema.json",

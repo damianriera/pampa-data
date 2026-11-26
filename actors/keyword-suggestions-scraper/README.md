@@ -1,4 +1,6 @@
-## Keyword Suggestions Scraper (Google, YouTube, Bing Autocomplete)
+## Google Autocomplete & Keyword Suggestions: YouTube, Bing
+
+**A Google Autocomplete API alternative and bulk keyword suggestion tool** for SEO, YouTube and ads. Pay $0.50 per 1,000 suggestions, with no API key.
 
 Get **autocomplete keyword suggestions from Google, YouTube and Bing in one run**. Type in a few seed keywords and get every suggestion the search boxes show, for any **language and country**. Turn on **A to Z, question and preposition expansion** to grow one keyword into hundreds of real long-tail searches.
 

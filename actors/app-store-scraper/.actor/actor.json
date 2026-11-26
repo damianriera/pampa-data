@@ -1,8 +1,8 @@
 {
     "actorSpecification": 1,
     "name": "app-store-scraper",
-    "title": "Apple App Store Scraper: Search, App Details",
-    "description": "Search the Apple App Store by keyword in any country, look up apps by URL, id or bundle id, or list every app of a developer. Get name, developer, price, rating, rating count, version, release dates, size, genres, languages, icon, screenshots and description from Apple's official API.",
+    "title": "Apple App Store Scraper: iOS App Details, Ratings, Search",
+    "description": "Apple App Store scraper and App Store API alternative: search iOS apps by keyword in any country, look up apps by URL, id or bundle id, or list every app of a developer. Get name, developer, price, rating, rating count, version, dates, size, genres, icon and screenshots. $1 per 1,000 apps.",
     "version": "0.1",
     "buildTag": "latest",
     "input": "./input_schema.json",
