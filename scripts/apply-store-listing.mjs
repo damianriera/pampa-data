@@ -1,6 +1,8 @@
 // Applies an Actor's Store listing (categories, SEO title, SEO description) from
 // .actor/store-listing.json through the Apify API. These fields are not part of
-// actor.json, so `apify push` does not set them.
+// actor.json, so `apify push` does not set them. It also copies the title and
+// description from actor.json, because `apify push` does not always update them
+// on an Actor that already exists.
 //
 // Usage (from an Actor folder): APIFY_TOKEN=... node ../../scripts/apply-store-listing.mjs
 // Does nothing when the file is missing. Never changes pricing or visibility.
@@ -25,7 +27,9 @@ const body = Object.fromEntries(Object.entries(listing).filter(([key]) => ALLOWE
 if (body.seoTitle && body.seoTitle.length > 60) throw new Error('seoTitle is longer than 60 characters');
 if (body.seoDescription && body.seoDescription.length > 160) throw new Error('seoDescription is longer than 160 characters');
 
-const { name } = JSON.parse(await readFile('.actor/actor.json', 'utf8'));
+const { name, title, description } = JSON.parse(await readFile('.actor/actor.json', 'utf8'));
+if (title) body.title = title;
+if (description) body.description = description;
 const api = (path, init = {}) => fetch(`https://api.apify.com/v2${path}`, {
     ...init,
     headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },

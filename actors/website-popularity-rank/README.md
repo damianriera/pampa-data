@@ -1,4 +1,6 @@
-## Website Popularity Rank Checker
+## Website Rank Checker: Bulk Domain Popularity (Tranco Top 1M)
+
+**A bulk website rank checker and Alexa rank or Similarweb rank alternative**, built on the free research-grade Tranco list. Pay $1 per 1,000 domains, with no subscription and no seat.
 
 Check how popular any website is, for thousands of domains in one run. For each domain you get its rank in the **Tranco top 1 million** list, how that rank moved over the last month, and (optionally) a quick look at its homepage.
 

@@ -1,4 +1,6 @@
-## PDF Text Extractor: PDF to Text, Markdown and Metadata
+## PDF to Text & Markdown Converter: Bulk PDF Parser
+
+**A bulk PDF to text and PDF to Markdown converter you can call as an API.** Pay $2 per 1,000 PDFs, whatever the page count.
 
 **Extract the text of any PDF from its URL**, in bulk, as **plain text or Markdown** with headings kept, plus the **text of every page**, the **page count, title, author, subject, keywords, creation and modification dates, language, word count** and the **links** inside. Paste up to 10,000 PDF links and get **one clean row per PDF**, ready for **AI agents, RAG pipelines, search indexes and spreadsheets**.
 

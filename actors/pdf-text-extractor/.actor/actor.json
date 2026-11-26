@@ -1,8 +1,8 @@
 {
     "actorSpecification": 1,
     "name": "pdf-text-extractor",
-    "title": "PDF Text Extractor: PDF to Text, Markdown and Metadata",
-    "description": "Extract text from PDF URLs in bulk: full text as plain text or Markdown (headings kept), text per page, page count, title, author, dates, language, word count and links. Ready for AI, RAG and search. Scanned PDFs without text are flagged and not charged.",
+    "title": "PDF to Text & Markdown Converter: Bulk PDF Parser",
+    "description": "Convert PDF to text or Markdown in bulk from PDF URLs: full text (headings kept), text per page, page count, title, author, dates, language, word count and links. A fast PDF parser for AI, RAG and search. Scanned PDFs without text are flagged and not charged. $2 per 1,000 PDFs.",
     "version": "0.1",
     "buildTag": "latest",
     "input": "./input_schema.json",

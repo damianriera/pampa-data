@@ -1,8 +1,8 @@
 {
     "actorSpecification": 1,
     "name": "rss-feed-reader",
-    "title": "RSS Feed Reader and Atom Parser (with Feed Finder)",
-    "description": "Read any RSS, Atom or JSON feed, or just give a website and the feed is found for you. One clean row per article, podcast episode or post: title, link, date, author, categories, summary, image and audio, with date and keyword filters and dedup.",
+    "title": "RSS Feed Scraper & Parser: RSS, Atom, JSON Feed to JSON",
+    "description": "RSS to JSON converter and RSS feed parser: read any RSS, Atom or JSON feed, or just give a website and the feed is found for you. One clean row per article, podcast episode or post: title, link, date, author, categories, summary, image and audio, with filters and dedup. $0.50 per 1,000 items.",
     "version": "0.1",
     "buildTag": "latest",
     "input": "./input_schema.json",

@@ -1,4 +1,6 @@
-## RSS Feed Reader and Atom Parser (with Feed Finder)
+## RSS Feed Scraper & Parser: RSS, Atom, JSON Feed to JSON
+
+**An RSS to JSON API and RSS feed parser** for news monitoring, podcasts and AI pipelines. Pay $0.50 per 1,000 items.
 
 Turn **any RSS, Atom or JSON feed into clean, structured data**. Paste feed URLs, or just website addresses, and get **one row per article, post or podcast episode** with its **title, link, publish date, author, categories, summary, image, full text and audio file**, newest first.
 

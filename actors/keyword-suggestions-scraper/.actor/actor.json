@@ -1,8 +1,8 @@
 {
     "actorSpecification": 1,
     "name": "keyword-suggestions-scraper",
-    "title": "Keyword Suggestions Scraper: Google, YouTube, Bing",
-    "description": "Get autocomplete keyword suggestions from Google, YouTube and Bing in one run, for any language and country. Expand each seed keyword with A to Z, question words, prepositions or your own modifiers to find hundreds of long-tail keywords for SEO, ads and content ideas.",
+    "title": "Google Autocomplete & Keyword Suggestions: YouTube, Bing",
+    "description": "Google Autocomplete API alternative and keyword suggestion tool: get autocomplete keyword suggestions from Google, YouTube and Bing in one run, any language and country. Expand each seed with A to Z, questions or your own modifiers to find hundreds of long-tail keywords. $0.50 per 1,000 suggestions.",
     "version": "0.1",
     "buildTag": "latest",
     "input": "./input_schema.json",

@@ -1,4 +1,6 @@
-## Apple App Store Scraper: search, app details and developer apps
+## Apple App Store Scraper: iOS App Details, Ratings, Search
+
+**An Apple App Store scraper and App Store API alternative** for app market research and ASO. Pay $1 per 1,000 apps, with no login.
 
 Get **App Store app data in bulk** for any country: search the App Store by keyword, look up apps by link, id or bundle id, or list every app of a developer. Each app comes out as one clean row with name, developer, price, **rating and rating count**, version, release and last update dates, size, genres, languages, icon, screenshots and description.
 

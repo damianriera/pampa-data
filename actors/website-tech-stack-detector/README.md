@@ -1,4 +1,6 @@
-## Website Tech Stack Detector (Bulk Technology Lookup)
+## Tech Stack Detector: Wappalyzer & BuiltWith Alternative
+
+**A bulk website tech stack detector and Wappalyzer or BuiltWith alternative.** Pay $1.50 per 1,000 sites, with no subscription.
 
 Find out **what any website is built with**, for thousands of sites at once. Paste a list of domains and get, for each one, its CMS, ecommerce platform, analytics and tag managers, advertising pixels, JavaScript frameworks, web server, CDN, hosting, payment providers, live chat, cookie banner and **e-mail provider**, with **versions** when the site shows them.
 

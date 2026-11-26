@@ -1,8 +1,8 @@
 {
     "actorSpecification": 1,
     "name": "website-popularity-rank",
-    "title": "Website Popularity Rank Checker",
-    "description": "Check the popularity rank of thousands of websites at once: Tranco top 1M rank, daily history for the last month, trend, and optional homepage title, status and language. A free-data alternative to Similarweb rank checks.",
+    "title": "Website Rank Checker: Bulk Domain Popularity (Tranco Top 1M)",
+    "description": "Bulk website rank checker and Similarweb or Alexa rank alternative: get the Tranco top 1M popularity rank, daily history for the last month, rising or falling trend, and optional homepage title, status and language for up to 10,000 domains. $1 per 1,000 domains.",
     "version": "0.1",
     "buildTag": "latest",
     "input": "./input_schema.json",
