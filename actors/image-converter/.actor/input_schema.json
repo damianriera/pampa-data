@@ -1,0 +1,124 @@
+{
+    "title": "Image Converter and Resizer",
+    "type": "object",
+    "schemaVersion": 1,
+    "required": ["urls"],
+    "properties": {
+        "urls": {
+            "title": "Image URLs",
+            "type": "array",
+            "description": "Direct links to images (JPEG, PNG, WebP, AVIF, GIF or TIFF), for example product photos or the image column of another Actor's dataset. Files in your Apify key-value stores work too: use the record URL (https://api.apify.com/v2/key-value-stores/STORE_ID/records/KEY). Up to 10,000 per run.",
+            "editor": "stringList",
+            "prefill": ["https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png", "https://www.gstatic.com/webp/gallery/4.jpg"]
+        },
+        "format": {
+            "title": "Convert to",
+            "type": "string",
+            "description": "WebP is the best default for websites (small, transparent backgrounds, all browsers). AVIF is even smaller but slower to make (at the default 512 MB memory, AVIF output up to about 7 megapixels; set a width or give the run more memory for bigger images). JPEG for photos where WebP is not accepted; PNG for lossless graphics. 'Same as original' only resizes and recompresses.",
+            "editor": "select",
+            "enum": ["webp", "avif", "jpeg", "png", "original"],
+            "enumTitles": ["WebP", "AVIF", "JPEG", "PNG", "Same as original"],
+            "default": "webp"
+        },
+        "width": {
+            "title": "Width (px)",
+            "type": "integer",
+            "description": "Target width in pixels. Leave empty to keep the original width (or to follow the height and keep the aspect ratio).",
+            "minimum": 1,
+            "maximum": 10000
+        },
+        "height": {
+            "title": "Height (px)",
+            "type": "integer",
+            "description": "Target height in pixels. Leave empty to keep the original height (or to follow the width and keep the aspect ratio).",
+            "minimum": 1,
+            "maximum": 10000
+        },
+        "fit": {
+            "title": "Fit",
+            "type": "string",
+            "description": "How the image fits width x height when you set both. Inside: shrink to fit within the box, keep the aspect ratio (no cropping). Cover: fill the box exactly and crop the overflow (thumbnails). Contain: fit inside and pad to the exact box (transparent, or the background color for JPEG). Fill: stretch to the exact box. Outside: cover the box without cropping.",
+            "editor": "select",
+            "enum": ["inside", "cover", "contain", "fill", "outside"],
+            "enumTitles": ["Inside (no crop)", "Cover (crop to exact size)", "Contain (pad to exact size)", "Fill (stretch)", "Outside"],
+            "default": "inside"
+        },
+        "withoutEnlargement": {
+            "title": "Never enlarge",
+            "type": "boolean",
+            "description": "Keep small images at their size instead of upscaling them (upscaling makes them blurry and bigger).",
+            "default": true
+        },
+        "quality": {
+            "title": "Quality",
+            "type": "integer",
+            "description": "1 to 100. 75 to 85 looks the same as the original for photos and saves the most space. For PNG, below 100 uses a color palette (much smaller, like TinyPNG). AVIF uses the same scale (80 looks like a JPEG at 80).",
+            "default": 80,
+            "minimum": 1,
+            "maximum": 100
+        },
+        "lossless": {
+            "title": "Lossless",
+            "type": "boolean",
+            "description": "Lossless WebP or AVIF (pixel-perfect, larger files). For PNG it keeps all colors.",
+            "default": false
+        },
+        "keepMetadata": {
+            "title": "Keep metadata (EXIF, GPS, color profile)",
+            "type": "boolean",
+            "description": "By default EXIF, GPS location, camera data and XMP are removed: files are smaller and safer to publish. Turn on to keep them.",
+            "default": false
+        },
+        "keepAnimation": {
+            "title": "Keep animation",
+            "type": "boolean",
+            "description": "For animated GIF or WebP converted to WebP (or kept as GIF), keep every frame. Off: only the first frame is used (a still image).",
+            "default": false
+        },
+        "background": {
+            "title": "Background color",
+            "type": "string",
+            "description": "Hex color used behind transparent areas when converting to JPEG (JPEG has no transparency), and for padding with 'Contain' to JPEG.",
+            "editor": "textfield",
+            "default": "#ffffff"
+        },
+        "keyPrefix": {
+            "title": "File name prefix",
+            "type": "string",
+            "description": "Added before each file name in the key-value store, for example 'shop-2026-'. Names come from the original file name; repeats get -2, -3.",
+            "editor": "textfield",
+            "sectionCaption": "Output"
+        },
+        "keyValueStoreName": {
+            "title": "Save to a named key-value store",
+            "type": "string",
+            "description": "Save the converted files to this named store (created if needed) so they are kept after the run's data retention ends. Leave empty to use the run's own store.",
+            "editor": "textfield"
+        },
+        "maxFileSizeMb": {
+            "title": "Maximum file size (MB)",
+            "type": "integer",
+            "description": "Images larger than this are skipped and not charged.",
+            "default": 25,
+            "minimum": 1,
+            "maximum": 100,
+            "sectionCaption": "Advanced"
+        },
+        "maxMegapixels": {
+            "title": "Maximum megapixels",
+            "type": "integer",
+            "description": "Images with more pixels than this (width x height / 1,000,000) are skipped and not charged. 40 MP covers phone and most camera photos at the default 512 MB memory.",
+            "default": 40,
+            "minimum": 1,
+            "maximum": 100
+        },
+        "maxConcurrency": {
+            "title": "Parallel downloads",
+            "type": "integer",
+            "description": "Images downloaded at the same time (at most 2 per website). Conversions run 2 at a time.",
+            "default": 4,
+            "minimum": 1,
+            "maximum": 10
+        }
+    }
+}

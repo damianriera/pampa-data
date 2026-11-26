@@ -1,0 +1,28 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": ["outputUrl", "url", "inputFormat", "outputFormat", "inputWidth", "inputHeight", "outputWidth", "outputHeight", "inputBytes", "outputBytes", "savedPercent"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "outputUrl": { "label": "Converted image", "format": "image" },
+                    "url": { "label": "Original", "format": "link" },
+                    "inputFormat": { "label": "From", "format": "text" },
+                    "outputFormat": { "label": "To", "format": "text" },
+                    "inputWidth": { "label": "Original width", "format": "number" },
+                    "inputHeight": { "label": "Original height", "format": "number" },
+                    "outputWidth": { "label": "New width", "format": "number" },
+                    "outputHeight": { "label": "New height", "format": "number" },
+                    "inputBytes": { "label": "Original bytes", "format": "number" },
+                    "outputBytes": { "label": "New bytes", "format": "number" },
+                    "savedPercent": { "label": "Saved %", "format": "number" }
+                }
+            }
+        }
+    }
+}

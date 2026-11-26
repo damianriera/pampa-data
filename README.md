@@ -12,6 +12,7 @@ Data tools published on the [Apify Store](https://apify.com/pampa-data) under th
 | Apple App Store Scraper | [`actors/app-store-scraper`](actors/app-store-scraper) | App Store search results, app details (price, rating, version, size, genres) and developer apps in any country, from Apple's official API. |
 | SEO On-Page Audit and Meta Tag Checker | [`actors/seo-on-page-audit`](actors/seo-on-page-audit) | Status, redirects, title and meta description, canonical, noindex, robots.txt, hreflang, headings, Open Graph, JSON-LD and issues for a list of URLs or a whole sitemap. |
 | RSS Feed Reader and Atom Parser | [`actors/rss-feed-reader`](actors/rss-feed-reader) | Items of any RSS, Atom or JSON feed (or the feed found from a website) with dates, authors, images, podcast audio, keyword and date filters and dedup. |
+| Image Converter and Resizer | [`actors/image-converter`](actors/image-converter) | Bulk convert and resize images from URLs to WebP, AVIF, JPEG or PNG, with download links and the space saved. |
 
 ## Working on an Actor
 
