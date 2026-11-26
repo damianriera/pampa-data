@@ -78,7 +78,94 @@ _Approved by Damián on 2026-11-25 (ideas 18 to 20 from the 2026-11-23 Scout), b
   for the files; we skip HTML pages and cap the file size and count per run.
 - Suggested price: $0.001 per file + $0.0005 per 10 MB. Expected users: 15 to 25 per month.
 
+_Approved by Damián on 2026-11-26 (ideas 23 and 24 from the 2026-11-26 Scout), built after 18 to 20 in this order._
+
+### 23. Website Contact and Social Links Finder (company level)
+- What: for a list of company domains, read the homepage plus the contact, about and imprint pages (same domain, at
+  most about 5 pages) and return one row per website: company social profiles (LinkedIn company page, X, Facebook,
+  Instagram, YouTube, TikTok, GitHub, Pinterest), contact page URL, role-based emails only (info@, sales@, support@,
+  hello@ and similar), phone numbers and address from `tel:` links and schema.org `Organization`/`LocalBusiness`,
+  company name and logo from JSON-LD. Addresses that look like a person's name (john.smith@) are dropped, so we do not
+  sell personal data. Cross-sells with Tech Stack Detector, Website Popularity Rank and the Favicon/Logo Extractor.
+- Scores: demand 5, competition 3, access 4, legal 3, cost 5.
+- Main competitor: vdrmota/contact-info-scraper, 3,827 users, 4.23 (93 reviews), $0.002 per page plus extra events.
+  automation-lab/website-contact-finder has 246 users, no reviews, $0.033 start fee plus $0.0009 per page;
+  emastra/website-contact-scraper 80 users ($0.004 per site); betterdevsscrape 53 users ($0.001 per page).
+- Access: plain GETs of the user's domains, same fetch code as the Tech Stack Detector. Sites behind bot protection
+  are reported as failed and not charged (no bypassing).
+- Legal note: legal score is 3 because this is lead-gen territory. Keeping only company-level data (role emails,
+  company pages, switchboard phones) is what keeps it inside our "no personal data" rule; the README must say so.
+- Suggested price: $0.002 per website (one flat price, no start fee). Expected users: 30 to 50 per month.
+
+### 24. Bulk Lighthouse and Core Web Vitals Audit
+- What: run Google Lighthouse (Apache-2.0) on a list of URLs, mobile or desktop: performance, accessibility, best
+  practices and SEO scores, LCP, FCP, CLS, TBT, Speed Index, page weight, the top 5 failed audits with estimated
+  savings, and an optional HTML report saved to the key-value store. Optional user-supplied Google API key adds the
+  real-user CrUX field data from PageSpeed Insights. Pairs with our SEO On-Page Audit.
+- Scores: demand 4, competition 4, access 5, legal 5, cost 2.
+- Main competitor: josh99smith/pagespeed-insights-audit, 134 users, no reviews, $0.004 per audit (uses Google's
+  PageSpeed API). constant_quadruped/lighthouse-auditor 67 users, free; neverempty/pagespeed-lighthouse-audit 64 users,
+  $0.015 per URL + $0.01 start; nerolabs 47 users ($0.005); seemuapps 34 users ($0.008). None has a review.
+- Access: local test with Lighthouse 12 and the bundled Chromium: example.com 11 s, developer.mozilla.org 13 s,
+  bbc.com 67 s (heavy page). The keyless PageSpeed API returns 429, so we run Lighthouse ourselves. Estimated cost
+  $0.0015 to $0.005 per audit at 1 to 2 GB; cap the run time per URL at 90 s and do not charge timeouts.
+- Suggested price: $0.006 per audit. Expected users: 20 to 35 per month.
+
 ## Proposed
+
+_Niche Scout 2026-11-26. Numbered 23 to 27, after the 2026-11-23 batch (18 to 22). Ideas 23 and 24 were approved on 2026-11-26 and moved to **Approved**. Competitor numbers are 30-day users
+from the Apify Store API on 2026-11-26 (about 65 keyword searches plus the top 3,000 Actors by popularity). Ranked by
+expected monthly users. Scores as below (5 is best): demand, weak competition, access, legal safety, cost per result.
+Also checked and dropped: Pexels/Unsplash stock photos (pexels.com answers 403 to plain requests; Openverse and
+Wikimedia Commons Actors have under 20 users), ForexFactory/Investing economic calendar (calendar page 403, the open
+JSON export covers only the current week), App Store and Google Play reviews (reviewer names, leader charges
+$0.0001 per review), keyword search volume (needs a paid Google Ads or DataForSEO source), tennis and betting odds
+(SofaScore and bookmakers block and own the data), Google Sheets export (free official Actor, 880 users), and low
+demand niches: Deezer, BoardGameGeek, Roblox, Nintendo eShop, WCAG-only audits, font detection, brand colors, sanctions
+lists, tenders, grants, nonprofits, weather, lotteries (all under 30 users for the leader)._
+
+### 25. Dataset Merge, Dedupe and Transform
+- What: combine one or more Apify datasets, CSV, JSON/JSONL or XLSX files from URLs into one clean dataset: dedupe by
+  any field or field combination (URL and domain normalising), keep only rows that are new since the last run
+  (state in a named key-value store), filter by simple conditions, pick, rename and flatten fields, sort, and export to
+  CSV/XLSX in the key-value store. Glue for every other pampa-data Actor and for Make/n8n users.
+- Scores: demand 4, competition 2, access 5, legal 5, cost 5.
+- Main competitor: lukaskrivka/dedup-datasets, 241 users, made by an Apify employee and close to free (users pay
+  compute). humble-echidna/dataset-transform has 101 users, no reviews, $0.001 per row; nerolabs 62 users ($0.002 per
+  kept row); saliga 58 users ($0.0005 per row); tidydata 52 users ($0.00025 per row). Only the free one is strong.
+- Access: Apify API and the user's own files, no third-party site.
+- Suggested price: $0.0001 per output row (cheapest paid option; the "only new rows" mode is the hook against the free
+  one). Expected users: 10 to 20 per month.
+
+### 26. Fuel Prices from Official Open Data (Spain, France, Austria)
+- What: current fuel prices per station from government open data in one schema: station brand, address, city,
+  postcode, coordinates, opening hours, fuel type, price, currency, last update. Filters by country, region/postcode,
+  radius around a point, fuel type and brand; cheapest-N mode. More countries later (Italy MIMIT CSV, Argentina
+  Secretaría de Energía) once their endpoints answer from the cloud.
+- Scores: demand 3, competition 3, access 5, legal 5, cost 5.
+- Main competitor: johnvc/fuelprices, 55 users, 5.0 (6 reviews), $0.001 per result. The GasBuddy Actors (US) are
+  small: maximedupre 11 users ($0.00135), clearpath 7, silentflow 6, memo23 5.
+- Access: Spain's MITECO REST service returned 200 (12 MB JSON, all stations, 17 s), France's
+  data.economie.gouv.fr `prix-des-carburants-en-france-flux-instantane-v2` returned 200, Austria's E-Control
+  `api.e-control.at/sprit` returned 200. Italy's CSV timed out and Argentina's datos.energia.gob.ar answered 503 today.
+  Stations are businesses, so no personal data; Spain and France publish under open reuse licences with attribution
+  (Builder to confirm Austria's API terms).
+- Suggested price: $0.0005 per station row. Expected users: 8 to 15 per month.
+
+### 27. SEC Form D Startup Funding Tracker
+- What: new US private funding rounds from SEC Form D filings: company name, state, industry group, total offering
+  amount, amount sold, number of investors, minimum investment, first sale date, filing date, amendment flag, and the
+  EDGAR link. Filters by date range, state, industry and amount; daily "new since last run" mode. Related persons
+  (executives' names and addresses) are left out on purpose.
+- Scores: demand 2, competition 5, access 4, legal 4, cost 5.
+- Main competitor: datahyena/company-funding-rounds, 35 users, 4.59 (4 reviews), $0.07 per round + $0.03 per monitor
+  event. nexgendata/startup-funding-tracker has 19 users ($0.08 per record); pink_comic/sec-form-d-startup-funding-leads
+  10 users ($0.002); logiover/sec-edgar-form-d-scraper 7 users, 1.0 rating ($0.0035).
+- Access: EDGAR is public domain, but plain requests without a declared User-Agent get 403 (both `efts.sec.gov` and
+  `www.sec.gov/Archives`). SEC's fair-access policy asks for a User-Agent with a company name and contact email and at
+  most 10 requests per second; that is their documented rule, not bot blocking. The Builder needs a contact email for
+  pampa-data from Damián before building.
+- Suggested price: $0.002 per filing. Expected users: 8 to 15 per month.
 
 _Niche Scout 2026-11-23. Numbered 18 to 22, after the 2026-11-19 batch (13 to 17). Ideas 18 to 20 were approved on 2026-11-25 and moved to **Approved**. Competitor numbers are 30-day users
 from the Apify Store API on 2026-11-23 (about 45 searches plus the top 1,700 Actors by popularity). Ranked by expected
