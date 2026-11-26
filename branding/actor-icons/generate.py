@@ -98,3 +98,29 @@ icons2["rss-feed-reader"] = f'''
 '''
 for k, v in icons2.items():
     open(f"{k}.svg", "w").write(HEAD + v + TAIL)
+
+# Added 2026-11-26
+def photo(x, y, w, h, sw):
+    sx, sy, r = x + w * 0.70, y + h * 0.30, h * 0.12
+    m = f"{x+sw/2},{y+h-sw/2} {x+w*0.38},{y+h*0.45} {x+w*0.58},{y+h*0.68} {x+w*0.72},{y+h*0.55} {x+w-sw/2},{y+h-sw/2}"
+    return (f'    <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{w*0.1:.0f}" fill="{W}" stroke="{N}" stroke-width="{sw}"/>\n'
+            f'    <circle cx="{sx:.0f}" cy="{sy:.0f}" r="{r:.0f}" fill="{Y}"/>\n'
+            f'    <polygon points="{m}" fill="{G}" stroke="{N}" stroke-width="{sw*0.6:.0f}" stroke-linejoin="round"/>\n')
+icons3 = {}
+icons3["pdf-text-extractor"] = f'''
+    <path d="M110 64 H290 L370 144 V400 Q370 420 350 420 H130 Q110 420 110 400 Z" fill="{W}" stroke="{N}" stroke-width="20" stroke-linejoin="round"/>
+    <path d="M290 64 V124 Q290 144 310 144 H370" fill="#D6EAF8" stroke="{N}" stroke-width="20" stroke-linejoin="round"/>
+    <rect x="88" y="168" width="168" height="76" rx="14" fill="{N}"/>
+    <text x="172" y="226" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="58" fill="{W}">PDF</text>
+    <rect x="150" y="276" width="170" height="16" rx="8" fill="{S}"/>
+    <rect x="150" y="312" width="130" height="16" rx="8" fill="{S}"/>
+    <rect x="150" y="348" width="150" height="16" rx="8" fill="{S}"/>
+    <circle cx="372" cy="356" r="78" fill="{Y}" stroke="{N}" stroke-width="16"/>
+    <path d="M334 322 H410 M372 322 V398" fill="none" stroke="{N}" stroke-width="22" stroke-linecap="round"/>
+'''
+icons3["image-converter"] = photo(60, 70, 190, 150, 16) + photo(196, 196, 256, 206, 20) + f'''
+    <path d="M300 92 Q392 96 400 166" fill="none" stroke="{Y}" stroke-width="22" stroke-linecap="round"/>
+    <polygon points="372,156 428,156 400,198" fill="{Y}" stroke="{Y}" stroke-width="8" stroke-linejoin="round"/>
+'''
+for k, v in icons3.items():
+    open(f"{k}.svg", "w").write(HEAD + v + TAIL)
