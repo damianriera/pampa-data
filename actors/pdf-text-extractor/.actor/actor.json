@@ -1,0 +1,15 @@
+{
+    "actorSpecification": 1,
+    "name": "pdf-text-extractor",
+    "title": "PDF Text Extractor: PDF to Text, Markdown and Metadata",
+    "description": "Extract text from PDF URLs in bulk: full text as plain text or Markdown (headings kept), text per page, page count, title, author, dates, language, word count and links. Ready for AI, RAG and search. Scanned PDFs without text are flagged and not charged.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "./Dockerfile",
+    "defaultMemoryMbytes": 512,
+    "output": "./output_schema.json"
+}
