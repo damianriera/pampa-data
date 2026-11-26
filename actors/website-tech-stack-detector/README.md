@@ -65,6 +65,16 @@ You pay per website checked successfully: **$1.50 per 1,000 websites**. Failed a
 - Technologies found only through DNS (`companyTools`) belong to the company's domain, not necessarily to the page itself.
 - Fingerprints: [webappanalyzer](https://github.com/enthec/webappanalyzer) by Enthec, GPL-3.0, plus a few of our own for popular frameworks. This Actor's source is GPL-3.0 as well.
 
+### FAQ
+
+**Is this a Wappalyzer or BuiltWith alternative?** Yes, for bulk lookups. It uses the open-source fingerprints that Wappalyzer was built on, adds the e-mail provider and SaaS tools from DNS, and has no monthly plan: you pay only for the websites you check. 1,000 websites cost $1.50 and 10,000 cost $15.
+
+**How do I find every Shopify (or WordPress, or HubSpot) site in a list?** Run the Actor on your list, then filter the dataset on the `ecommerce`, `cms` or `technologyNames` column in Apify, Excel or Google Sheets. The Actor checks the websites you give; it does not search the whole web for sites using a technology.
+
+**Why is a technology I know the site uses missing?** The Actor reads the page the server sends, without running JavaScript. Tools that load only after a click, a login or a cookie banner, and internal back-office tools, cannot be seen from outside. DNS records still reveal many SaaS tools in `companyTools`.
+
+**Can I track when a prospect changes its stack?** Yes. Schedule the Actor weekly on your account list and compare runs, or send the results to Google Sheets, Slack or a webhook with Apify integrations, Make, Zapier or n8n.
+
 ### Related Actors
 
 - [Website Popularity Rank Checker](https://apify.com/pampa-data/website-popularity-rank): Tranco top 1M rank and trend for the same domains, to sort your lead list by size.

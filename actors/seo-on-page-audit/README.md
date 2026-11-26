@@ -90,6 +90,16 @@ You pay per page audited: **$2 per 1,000 pages** ($0.002 per page). Pages that a
 - Some sites block automated requests. They are reported as failed and not charged; we do not try to get around a site's blocking. Audit your own sites and your clients' sites freely.
 - Thresholds (60/30 characters for titles, 160/70 for descriptions, 300 words) follow common SEO tool defaults; use the length fields to apply your own.
 
+### FAQ
+
+**Is it a Screaming Frog or Ahrefs Site Audit alternative?** For on-page checks, yes: titles, meta descriptions, canonicals, noindex, headings, hreflang, structured data and redirects for up to 10,000 pages per run, with no desktop app or subscription. Auditing 1,000 pages costs $2. It does not measure backlinks, Core Web Vitals or rankings.
+
+**Can I audit a whole website without a list of URLs?** Yes. Put the domain (for example `example.com`) in **Websites or sitemaps to audit in full** and the Actor finds the sitemap from robots.txt or `/sitemap.xml` and audits every page in it. Use the URL filter to audit only one section, such as `/blog/`.
+
+**Does it see content rendered by JavaScript?** No. It audits the HTML the server sends, which is what most crawlers see first. If a single-page app adds its title or meta tags with JavaScript, those pages show `title_missing` or similar issues, which is worth knowing too.
+
+**How do I get alerted when a page gets `noindex` or breaks?** Schedule the Actor daily on your key pages and send the results to Slack, e-mail, Google Sheets or a webhook with Apify integrations, Make, Zapier or n8n. Filter on `indexable` = false or `issueCount` > 0.
+
 ### Related Actors
 
 - [Website Popularity Rank Checker](https://apify.com/pampa-data/website-popularity-rank): Tranco top 1M rank and trend of the same websites, to see how big a site or competitor is.
