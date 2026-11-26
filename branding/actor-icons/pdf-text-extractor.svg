@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5DADE2"/><stop offset="1" stop-color="#A9D6F5"/></linearGradient>
+    <linearGradient id="land" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1F6F5C"/><stop offset="1" stop-color="#134B3E"/></linearGradient>
+    <clipPath id="c"><rect width="512" height="512" rx="112"/></clipPath>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="512" height="512" fill="url(#sky)"/>
+    <path d="M0 436 C 140 418, 300 430, 512 410 L512 512 L0 512 Z" fill="url(#land)"/>
+
+    <path d="M110 64 H290 L370 144 V400 Q370 420 350 420 H130 Q110 420 110 400 Z" fill="#FFFFFF" stroke="#0B2E4F" stroke-width="20" stroke-linejoin="round"/>
+    <path d="M290 64 V124 Q290 144 310 144 H370" fill="#D6EAF8" stroke="#0B2E4F" stroke-width="20" stroke-linejoin="round"/>
+    <rect x="88" y="168" width="168" height="76" rx="14" fill="#0B2E4F"/>
+    <text x="172" y="226" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="58" fill="#FFFFFF">PDF</text>
+    <rect x="150" y="276" width="170" height="16" rx="8" fill="#5DADE2"/>
+    <rect x="150" y="312" width="130" height="16" rx="8" fill="#5DADE2"/>
+    <rect x="150" y="348" width="150" height="16" rx="8" fill="#5DADE2"/>
+    <circle cx="372" cy="356" r="78" fill="#F6B40E" stroke="#0B2E4F" stroke-width="16"/>
+    <path d="M334 322 H410 M372 322 V398" fill="none" stroke="#0B2E4F" stroke-width="22" stroke-linecap="round"/>
+  </g>
+</svg>
