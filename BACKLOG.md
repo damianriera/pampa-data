@@ -90,18 +90,7 @@ _Approved by Damián on 2026-11-25 (ideas 18 to 20 from the 2026-11-23 Scout), b
   for the files; we skip HTML pages and cap the file size and count per run.
 - Suggested price: $0.001 per file + $0.0005 per 10 MB. Expected users: 15 to 25 per month.
 
-## Proposed
-
-_Niche Scout 2026-11-26. Numbered 23 to 27, after the 2026-11-23 batch (18 to 22). Competitor numbers are 30-day users
-from the Apify Store API on 2026-11-26 (about 65 keyword searches plus the top 3,000 Actors by popularity). Ranked by
-expected monthly users. Scores as below (5 is best): demand, weak competition, access, legal safety, cost per result.
-Also checked and dropped: Pexels/Unsplash stock photos (pexels.com answers 403 to plain requests; Openverse and
-Wikimedia Commons Actors have under 20 users), ForexFactory/Investing economic calendar (calendar page 403, the open
-JSON export covers only the current week), App Store and Google Play reviews (reviewer names, leader charges
-$0.0001 per review), keyword search volume (needs a paid Google Ads or DataForSEO source), tennis and betting odds
-(SofaScore and bookmakers block and own the data), Google Sheets export (free official Actor, 880 users), and low
-demand niches: Deezer, BoardGameGeek, Roblox, Nintendo eShop, WCAG-only audits, font detection, brand colors, sanctions
-lists, tenders, grants, nonprofits, weather, lotteries (all under 30 users for the leader)._
+_Approved by Damián on 2026-11-26 (ideas 23 and 24 from the 2026-11-26 Scout), built after 18 to 20 in this order._
 
 ### 23. Website Contact and Social Links Finder (company level)
 - What: for a list of company domains, read the homepage plus the contact, about and imprint pages (same domain, at
@@ -133,6 +122,19 @@ lists, tenders, grants, nonprofits, weather, lotteries (all under 30 users for t
   bbc.com 67 s (heavy page). The keyless PageSpeed API returns 429, so we run Lighthouse ourselves. Estimated cost
   $0.0015 to $0.005 per audit at 1 to 2 GB; cap the run time per URL at 90 s and do not charge timeouts.
 - Suggested price: $0.006 per audit. Expected users: 20 to 35 per month.
+
+## Proposed
+
+_Niche Scout 2026-11-26. Numbered 23 to 27, after the 2026-11-23 batch (18 to 22). Ideas 23 and 24 were approved on 2026-11-26 and moved to **Approved**. Competitor numbers are 30-day users
+from the Apify Store API on 2026-11-26 (about 65 keyword searches plus the top 3,000 Actors by popularity). Ranked by
+expected monthly users. Scores as below (5 is best): demand, weak competition, access, legal safety, cost per result.
+Also checked and dropped: Pexels/Unsplash stock photos (pexels.com answers 403 to plain requests; Openverse and
+Wikimedia Commons Actors have under 20 users), ForexFactory/Investing economic calendar (calendar page 403, the open
+JSON export covers only the current week), App Store and Google Play reviews (reviewer names, leader charges
+$0.0001 per review), keyword search volume (needs a paid Google Ads or DataForSEO source), tennis and betting odds
+(SofaScore and bookmakers block and own the data), Google Sheets export (free official Actor, 880 users), and low
+demand niches: Deezer, BoardGameGeek, Roblox, Nintendo eShop, WCAG-only audits, font detection, brand colors, sanctions
+lists, tenders, grants, nonprofits, weather, lotteries (all under 30 users for the leader)._
 
 ### 25. Dataset Merge, Dedupe and Transform
 - What: combine one or more Apify datasets, CSV, JSON/JSONL or XLSX files from URLs into one clean dataset: dedupe by
