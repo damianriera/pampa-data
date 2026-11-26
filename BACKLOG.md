@@ -13,18 +13,7 @@ Idea 8 (SEO On-Page Audit) was built on 2026-11-23 and idea 9 (RSS and Atom Feed
 the Builder; see **Rejected**._
 
 _Approved by Damián on 2026-11-22 (ideas 13 to 15 from the 2026-11-19 Scout), built after 8 and 9 in this order.
-Idea 13 (PDF Text and Metadata Extractor) was built on 2026-11-25._
-
-### 14. Image Converter and Resizer
-- What: bulk convert and resize images from URLs: JPEG, PNG, WebP, AVIF, GIF (first frame) and TIFF in; WebP, AVIF,
-  JPEG or PNG out, with width/height/fit, quality, strip metadata, and the result saved to the key-value store with a
-  public link, plus original vs new size in the dataset. For ecommerce catalogs and site speed work.
-- Scores: demand 3, competition 4, access 5, legal 5, cost 4.
-- Main competitor: marielise.dev/image-converter, 92 users, no reviews, last updated 2026-09-14, $0.002 to $0.12 per
-  image by size. Others are small: gazidev (5 users, $0.0008), conserving_celerytop (3 users, $0.003 + $0.01 start).
-- Access: the user's own image URLs; processing with `sharp` (Apache-2.0). Images over a size cap (for example
-  25 MB or 40 megapixels) are skipped and not charged so 256 to 512 MB memory is enough.
-- Suggested price: $0.001 per image. Expected users: 15 to 25 per month.
+Idea 13 (PDF Text and Metadata Extractor) was built on 2026-11-25 and idea 14 (Image Converter and Resizer) on 2026-11-26; see **Built**._
 
 ### 15. Website Favicon and Logo Extractor
 - What: for a list of domains, find the favicon (all sizes), apple-touch-icon, web manifest icons, `og:image`, JSON-LD
@@ -303,6 +292,7 @@ monthly users. Scores as above (5 is best)._
 | SEO On-Page Audit and Meta Tag Checker | `actors/seo-on-page-audit` | 2026-11-23 | https://apify.com/pampa-data/seo-on-page-audit (private until published) |
 | RSS Feed Reader and Atom Parser (with Feed Finder) | `actors/rss-feed-reader` | 2026-11-24 | https://apify.com/pampa-data/rss-feed-reader (private until published) |
 | PDF Text Extractor: PDF to Text, Markdown and Metadata | `actors/pdf-text-extractor` | 2026-11-25 | https://apify.com/pampa-data/pdf-text-extractor (private until published) |
+| Image Converter and Resizer (WebP, AVIF, JPEG, PNG) | `actors/image-converter` | 2026-11-26 | https://apify.com/pampa-data/image-converter (private until published) |
 
 ## Rejected
 

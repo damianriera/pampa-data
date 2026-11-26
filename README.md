@@ -13,6 +13,7 @@ Data tools published on the [Apify Store](https://apify.com/pampa-data) under th
 | SEO On-Page Audit and Meta Tag Checker | [`actors/seo-on-page-audit`](actors/seo-on-page-audit) | Status, redirects, title and meta description, canonical, noindex, robots.txt, hreflang, headings, Open Graph, JSON-LD and issues for a list of URLs or a whole sitemap. |
 | RSS Feed Reader and Atom Parser | [`actors/rss-feed-reader`](actors/rss-feed-reader) | Items of any RSS, Atom or JSON feed (or the feed found from a website) with dates, authors, images, podcast audio, keyword and date filters and dedup. |
 | PDF Text Extractor | [`actors/pdf-text-extractor`](actors/pdf-text-extractor) | Text (plain or Markdown with headings), text per page and metadata of PDFs from URLs; scanned PDFs flagged and not charged. |
+| Image Converter and Resizer | [`actors/image-converter`](actors/image-converter) | Bulk convert and resize images from URLs to WebP, AVIF, JPEG or PNG, with download links and the space saved. |
 
 ## Working on an Actor
 

@@ -1,0 +1,29 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Image Converter output",
+    "properties": {
+        "overview": {
+            "type": "string",
+            "title": "Converted images",
+            "description": "One row per image with its download link, new size and the space saved.",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+        },
+        "allResults": {
+            "type": "string",
+            "title": "All results (full JSON)",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        },
+        "files": {
+            "type": "string",
+            "title": "Converted files",
+            "description": "The converted image files in the run's key-value store.",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/keys"
+        },
+        "failed": {
+            "type": "string",
+            "title": "Images that could not be converted",
+            "description": "Unreachable, not an image, unsupported type, too large or broken (not charged).",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/FAILED"
+        }
+    }
+}

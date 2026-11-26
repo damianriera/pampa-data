@@ -1,0 +1,15 @@
+{
+    "actorSpecification": 1,
+    "name": "image-converter",
+    "title": "Image Converter and Resizer: WebP, AVIF, JPEG, PNG",
+    "description": "Bulk convert and resize images from URLs to WebP, AVIF, JPEG or PNG. Set width, height, fit and quality, strip metadata, keep transparency or animation. Each file gets a download link, with original vs new size and the percent saved. Broken links and non-images are not charged.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "./Dockerfile",
+    "defaultMemoryMbytes": 512,
+    "output": "./output_schema.json"
+}
