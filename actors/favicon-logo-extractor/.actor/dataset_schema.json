@@ -1,0 +1,44 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": ["bestIcon", "logo", "domain", "siteName", "favicon", "bestIconSize", "logoSource", "logoType", "themeColor", "ogImage", "iconCount"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "bestIcon": { "label": "Icon", "format": "image" },
+                    "logo": { "label": "Logo", "format": "image" },
+                    "domain": { "label": "Website", "format": "text" },
+                    "siteName": { "label": "Name", "format": "text" },
+                    "favicon": { "label": "Favicon URL", "format": "link" },
+                    "bestIconSize": { "label": "Icon size", "format": "text" },
+                    "logoSource": { "label": "Logo found in", "format": "text" },
+                    "logoType": { "label": "Logo type", "format": "text" },
+                    "themeColor": { "label": "Theme color", "format": "text" },
+                    "ogImage": { "label": "Social image", "format": "link" },
+                    "iconCount": { "label": "Icons", "format": "number" }
+                }
+            }
+        },
+        "downloads": {
+            "title": "Download links",
+            "transformation": {
+                "fields": ["domain", "bestIconDownloadUrl", "logoDownloadUrl", "bestIcon", "logo"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "domain": { "label": "Website", "format": "text" },
+                    "bestIconDownloadUrl": { "label": "Icon file", "format": "link" },
+                    "logoDownloadUrl": { "label": "Logo file", "format": "link" },
+                    "bestIcon": { "label": "Icon source URL", "format": "link" },
+                    "logo": { "label": "Logo source URL", "format": "link" }
+                }
+            }
+        }
+    }
+}

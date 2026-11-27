@@ -13,19 +13,7 @@ Idea 8 (SEO On-Page Audit) was built on 2026-11-23 and idea 9 (RSS and Atom Feed
 the Builder; see **Rejected**._
 
 _Approved by Damián on 2026-11-22 (ideas 13 to 15 from the 2026-11-19 Scout), built after 8 and 9 in this order.
-Idea 13 (PDF Text and Metadata Extractor) was built on 2026-11-25 and idea 14 (Image Converter and Resizer) on 2026-11-26; see **Built**._
-
-### 15. Website Favicon and Logo Extractor
-- What: for a list of domains, find the favicon (all sizes), apple-touch-icon, web manifest icons, `og:image`, JSON-LD
-  `logo`, SVG logo in the header when obvious, and `theme-color`, with each image's URL, size and type, plus the best
-  pick. Optional download to the key-value store. For CRMs, lead lists and directories; cross-sells with our Website
-  Popularity Rank Checker and Tech Stack Detector.
-- Scores: demand 3, competition 4, access 4, legal 5, cost 5.
-- Main competitor: benthepythondev/favicon-extractor, 60 users, no reviews, $0.0018 per site + $0.005 start.
-  coder_luffy/website-logo-finder has 5 stars (9 reviews) but only 8 users now, $0.008 per site.
-- Access: one plain GET of the homepage plus small icon requests. Sites that block plain requests are reported as
-  failed and not charged.
-- Suggested price: $0.0008 per website. Expected users: 15 to 25 per month.
+Idea 13 (PDF Text and Metadata Extractor) was built on 2026-11-25, idea 14 (Image Converter and Resizer) on 2026-11-26 and idea 15 (Website Favicon and Logo Extractor) on 2026-11-27; see **Built**._
 
 _Approved by Damián on 2026-11-25 (ideas 18 to 20 from the 2026-11-23 Scout), built after 13 to 15 in this order._
 
@@ -293,6 +281,7 @@ monthly users. Scores as above (5 is best)._
 | RSS Feed Reader and Atom Parser (with Feed Finder) | `actors/rss-feed-reader` | 2026-11-24 | https://apify.com/pampa-data/rss-feed-reader (private until published) |
 | PDF Text Extractor: PDF to Text, Markdown and Metadata | `actors/pdf-text-extractor` | 2026-11-25 | https://apify.com/pampa-data/pdf-text-extractor (private until published) |
 | Image Converter and Resizer (WebP, AVIF, JPEG, PNG) | `actors/image-converter` | 2026-11-26 | https://apify.com/pampa-data/image-converter (private until published) |
+| Favicon and Logo Extractor | `actors/favicon-logo-extractor` | 2026-11-27 | https://apify.com/pampa-data/favicon-logo-extractor (private until published) |
 
 ## Rejected
 

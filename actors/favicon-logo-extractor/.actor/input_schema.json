@@ -1,0 +1,45 @@
+{
+    "title": "Favicon and Logo Extractor",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "websites": {
+            "title": "Websites",
+            "type": "array",
+            "description": "Websites to get the favicon and logo of, one per line. Domains (example.com) or full URLs. Up to 5,000 per run.",
+            "editor": "stringList",
+            "prefill": ["apify.com", "stripe.com", "wordpress.org"]
+        },
+        "downloadImages": {
+            "title": "Download images",
+            "type": "string",
+            "description": "Save image files to the run's key-value store and add a download link to each row. \"best\" saves the best icon, the logo and the favicon; \"all\" saves every image found.",
+            "editor": "select",
+            "enum": ["none", "best", "all"],
+            "enumTitles": ["No, links only", "Best icon, logo and favicon", "All images found"],
+            "default": "none"
+        },
+        "checkImages": {
+            "title": "Check every image",
+            "type": "boolean",
+            "description": "Download each icon and logo to read its real file type and pixel size and drop broken links. Turn off for a faster run that trusts the sizes the page declares.",
+            "default": true
+        },
+        "includeHeaderSvg": {
+            "title": "Include inline SVG logos",
+            "type": "boolean",
+            "description": "Many sites draw their header logo as inline SVG code instead of an image file. When on, such a logo is returned as a self-contained SVG data URI (and saved as an .svg file when downloading).",
+            "default": true,
+            "sectionCaption": "Advanced"
+        },
+        "maxConcurrency": {
+            "title": "Parallel websites",
+            "type": "integer",
+            "description": "How many websites to check at the same time.",
+            "default": 5,
+            "minimum": 1,
+            "maximum": 20
+        }
+    },
+    "required": ["websites"]
+}

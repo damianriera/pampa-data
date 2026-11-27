@@ -1,0 +1,15 @@
+{
+    "actorSpecification": 1,
+    "name": "favicon-logo-extractor",
+    "title": "Favicon & Logo Extractor: Bulk Website Logo Grabber",
+    "description": "Get the favicon, high-resolution icon, apple-touch-icon, company logo (JSON-LD or header, SVG included), og:image and brand theme color of any website, in bulk. Every image checked for real type and size, optional download. $0.80 per 1,000 sites.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "./Dockerfile",
+    "defaultMemoryMbytes": 256,
+    "output": "./output_schema.json"
+}

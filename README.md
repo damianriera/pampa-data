@@ -14,6 +14,7 @@ Data tools published on the [Apify Store](https://apify.com/pampa-data) under th
 | RSS Feed Reader and Atom Parser | [`actors/rss-feed-reader`](actors/rss-feed-reader) | Items of any RSS, Atom or JSON feed (or the feed found from a website) with dates, authors, images, podcast audio, keyword and date filters and dedup. |
 | PDF Text Extractor | [`actors/pdf-text-extractor`](actors/pdf-text-extractor) | Text (plain or Markdown with headings), text per page and metadata of PDFs from URLs; scanned PDFs flagged and not charged. |
 | Image Converter and Resizer | [`actors/image-converter`](actors/image-converter) | Bulk convert and resize images from URLs to WebP, AVIF, JPEG or PNG, with download links and the space saved. |
+| Favicon and Logo Extractor | [`actors/favicon-logo-extractor`](actors/favicon-logo-extractor) | Favicon, high-resolution icon, company logo (JSON-LD, header or inline SVG), og:image and brand colors of up to 5,000 websites, with real image sizes and optional download. |
 
 ## Working on an Actor
 
