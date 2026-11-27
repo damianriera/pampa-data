@@ -1,0 +1,28 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Favicon and Logo Extractor output",
+    "properties": {
+        "overview": {
+            "type": "string",
+            "title": "Favicons and logos",
+            "description": "One item per website: favicon, best icon, logo, theme color and social image.",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+        },
+        "downloads": {
+            "type": "string",
+            "title": "Download links (when downloading is on)",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=downloads"
+        },
+        "allResults": {
+            "type": "string",
+            "title": "All results (full JSON, every icon with type and size)",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        },
+        "failed": {
+            "type": "string",
+            "title": "Websites that could not be checked",
+            "description": "Unreachable, blocked or invalid websites, and sites with no icon at all (not charged).",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/FAILED"
+        }
+    }
+}
